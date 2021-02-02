@@ -1,7 +1,7 @@
 ---
-sort: 3
+sort: 1
 ---
 
-# Page Usage
+# Article Digests
 
 {% include list.liquid all=true %}

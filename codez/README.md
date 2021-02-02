@@ -1,7 +1,7 @@
 ---
-sort: 3
+sort: 2
 ---
 
-# Page Usage
+# Codez
 
 {% include list.liquid all=true %}
