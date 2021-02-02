@@ -1,8 +1,6 @@
-# jekyll-rtd-theme
+# Kaleido's Personal Page
 
-
-
-Just another documentation theme compatible with GitHub Pages
+Just Private HomePage for Kaleido XD
 
 ## What it does?
 
