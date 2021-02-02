@@ -1,6 +1,6 @@
 # Kaleido's Personal Page
 
-Just Private HomePage for Kaleido XD
+Just A Private HomePage for Kaleido XD
 
 ## What it does?
 
