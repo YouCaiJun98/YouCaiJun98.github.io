@@ -1,7 +1,3 @@
----
-sort: 7
----
-
 # Avatar Test
 
 ```

@@ -1,7 +1,3 @@
----
-sort: 2
----
-
 # Toasts Card
 
 THIS IS TOO LONG, NEED UPDATE! HERE IS SOME IDEAS:

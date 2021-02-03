@@ -1,7 +1,3 @@
----
-sort: 3
----
-
 # Code Blocks
 
 `inline code`

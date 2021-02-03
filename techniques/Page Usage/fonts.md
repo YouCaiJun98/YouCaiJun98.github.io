@@ -1,5 +1,4 @@
 ---
-sort: 9
 text: |
   ABCDEFGHIJKLMNOPQRSTUVWXYZ
   abcdefghijklmnopqrstuvwxyz

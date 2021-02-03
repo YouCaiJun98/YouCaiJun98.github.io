@@ -1,7 +1,3 @@
----
-sort: 5
----
-
 # Emoji Test
 
 ```

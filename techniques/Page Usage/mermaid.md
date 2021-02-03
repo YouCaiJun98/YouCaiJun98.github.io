@@ -1,7 +1,3 @@
----
-sort: 4
----
-
 # Mermaid Test
 
     ```mermaid

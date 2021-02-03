@@ -1,7 +1,3 @@
----
-sort: 8
----
-
 # Mentions Test
 
 ```

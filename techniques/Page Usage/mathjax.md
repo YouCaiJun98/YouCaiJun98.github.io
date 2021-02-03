@@ -1,7 +1,3 @@
----
-sort: 10
----
-
 # Mathjax Test
 
 $$
