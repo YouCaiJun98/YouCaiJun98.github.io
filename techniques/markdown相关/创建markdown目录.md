@@ -17,10 +17,6 @@ New Trick！
 
 ![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202102030007.png)  
 
-<div style="align: center">
-<img src="https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202102030007.png"/>
-</div>
-
 保存后生成目录：  
 
 ![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202102030008.png)
