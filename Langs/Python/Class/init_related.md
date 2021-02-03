@@ -2,18 +2,19 @@
 2021/2/3  
 好久不看不写Python和NN，乍一看代码就是头大，而且基本的东西都忘光了，实在丢人。  
 所以重新捡一捡一些基本的python知识。  
-本篇中的基本内容包括：
+本篇中的基本内容包括：  
  
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [__init__方法](#__init__方法)
-- [继承](#继承)
-- [super函数的用法](#super函数的用法)
-- [*args, **kwargs的含义](#args-kwargs的含义)
-- [五种下划线](#五种下划线)
-- [](#)
+- [Python的杂货知识——Class相关](#python的杂货知识class相关)
+  - [__init__方法](#__init__方法)
+  - [继承](#继承)
+  - [super函数的用法](#super函数的用法)
+  - [*args, **kwargs的含义](#args-kwargs的含义)
+  - [五种下划线](#五种下划线)
+  - [待续](#待续)
 
 <!-- /code_chunk_output -->
 
@@ -68,4 +69,4 @@ This is from succeeded class.
 ## 五种下划线
 
 
-## 
+## 待续

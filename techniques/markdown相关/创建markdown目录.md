@@ -11,6 +11,7 @@
 <!-- /code_chunk_output -->
 New Trick！  
 在写博客的时候发现自己手敲一个目录出来太麻烦，[TOC]在github又不能用...所以就找到了使用**VSCode + MarkDown_Previewed_Enhanced**的解决方案！  
+官方文档在[这里](https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/toc)！  
 首先需要在VSCode中安装`MarkDown Previewed Enhanced`插件，打开需要生成目录的md文件，按下`ctrl + shift + P`并搜索`Markdown Preview Enhanced: Create Toc`来创建[TOC],效果如下：  
 ![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202102030006.png)
 接下来我们创建三个测试用标题：
