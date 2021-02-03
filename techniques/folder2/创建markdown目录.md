@@ -1,5 +1,7 @@
 # 创建MarkDown目录
+
 2021/2/3  
+
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
 <!-- code_chunk_output -->
@@ -9,6 +11,7 @@
   - [测试标题三](#测试标题三)
 
 <!-- /code_chunk_output -->
+
 New Trick！  
 在写博客的时候发现自己手敲一个目录出来太麻烦，[TOC]在github又不能用...所以就找到了使用**VSCode + MarkDown_Previewed_Enhanced**的解决方案！  
 首先需要在VSCode中安装`MarkDown Previewed Enhanced`插件，打开需要生成目录的md文件，按下`ctrl + shift + P`并搜索`Markdown Preview Enhanced: Create Toc`来创建[TOC],效果如下：  
