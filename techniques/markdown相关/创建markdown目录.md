@@ -30,10 +30,12 @@ New Trick！
 * depthFrom, depthTo设置目录深度  
 * ignoreLink 如果设置为`true`，那么`TOC`将不会被超链接  
 
+发现下面的标题中出现了`{ignore=true}`，这在本地是没有的（预览自动将这个mark屏蔽了），解决的方法也很简单，关掉VSCode中的预览页面，再对标题进行修改，保存即可。
+
 ## 测试标题一
 无内容。  
 
-## 测试标题二 {ignore=true}
+## 测试标题二 
 内鬼。  
 
 ## 测试标题三
