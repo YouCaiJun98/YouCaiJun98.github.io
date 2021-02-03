@@ -1,7 +1,0 @@
----
-sort: 4
----
-
-# Page Usage
-
-{% include list.liquid all=true %}
