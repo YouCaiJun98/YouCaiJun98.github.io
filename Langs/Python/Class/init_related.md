@@ -66,10 +66,79 @@ This is from succeeded class.
 * `self`在定义时不可以省略，但是定义类方法时（定义和后续调用时均不传类实例）可以不写。
   * 类方法里如果不写的话会有解释器会产生警告，有点奇妙（大概是某种危险操作）
 
-~~还有两条莫名其妙的性质，大概还用不到，需要的时候去查第二个参考文章。~~  
+~~还有两条莫名其妙的性质，大概还用不到，需要的时候去查第一篇参考文章。~~  
 
 ### *args与**kwargs
+* `*args`是将参数打包成tuple给函数体调用
+  * 例一：  
+  ```
+  def function(x, y, *args):
+    print(x, y, args)
+    print(x, y, *args)
 
+  function(1, 2, 3, 4, 5) 
+  ```
+  运行结果：  
+  ```
+  1 2 (3, 4, 5)
+  1 2 3 4 5
+  ```
+  看起来在调用的时候`args`是后续传入参数打包后的tuple，`*args`则是解耦的原始参数。  
+  * 例二：  
+  ```
+  class base_model:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+
+  class second_model(base_model):
+      def __init__(self, *args, **kwargs):
+          super(second_model, self).__init__(*args, **kwargs)
+          self.c = 30
+          self.d = 40
+
+      def print(self):
+          print(self.a)
+          print(self.b)
+          print(self.c)
+          print(self.d)
+
+  instance = second_model(10, 20)
+  instance.print()
+  ```
+  运行结果显然是：  
+  ```
+  10
+  20
+  30
+  40
+  ```
+
+* `**kwargs` 将关键字参数打包成`dict`给函数体调用。 
+  * 例如：  
+  ```
+  def function1(**kwargs):
+    print(kwargs)
+
+  def function2(**kwargs):
+      print(**kwargs)
+
+  function1(a=1, b=2, c=3)
+  function2(a=1, b=2, c=3)
+  ```
+  输出结果为：  
+  ```
+  Traceback (most recent call last):
+  File "F:/codes_learning/AWNAS/aw_nas_private/aw_nas/final/test.py", line 101, in <module>
+    function2(a=1, b=2, c=3)
+  File "F:/codes_learning/AWNAS/aw_nas_private/aw_nas/final/test.py", line 98, in function2
+    print(**kwargs)
+  TypeError: 'a' is an invalid keyword argument for print()
+  {'a': 1, 'b': 2, 'c': 3}
+  ```
+  显然字典就没有“拆包”一说了（~~合理~~）  
+
+* 参数arg、*args、\**kwargs三个参数的位置必须是一定的。必须是(arg,*args,\**kwargs)这个顺序，否则程序会报错。  
 
 ## 继承
 
