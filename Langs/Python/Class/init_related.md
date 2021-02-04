@@ -11,10 +11,10 @@
 - [Python的杂货知识——Class相关](#python的杂货知识class相关)
   - [__init__方法](#__init__方法)
   - [继承](#继承)
-  - [super函数的用法](#super函数的用法)
-  - [*args, **kwargs的含义](#args-kwargs的含义)
+    - [self](#self)
+    - [super函数的用法](#super函数的用法)
+    - [*args, **kwargs的含义](#args-kwargs的含义)
   - [五种下划线](#五种下划线)
-  - [待续](#待续)
 
 <!-- /code_chunk_output -->
 
@@ -57,19 +57,47 @@ This is from succeeded class.
 
 ## 继承
 
-这里有篇很有趣的[博文](https://www.cnblogs.com/KbMan/p/11247473.html)，讲的是继承。
+这里有篇很有趣的[博文](https://www.cnblogs.com/KbMan/p/11247473.html)，讲的是继承。  
+**定义：继承是一种创建新的类的方式，新创建的叫子类，继承的叫父类、超类、基类。子类可以使用父类的属性。**  
+**作用：减少代码冗余、提高重用性。**  
+继承的方式包括：  
+* 单继承  
+  * 类在定义的时候执行**类体代码**，执行顺序是从上到下，例如
+  ```
+  class base_class:
+    #def __init__(self):
+      print("This is from base class.")
+
+  class second_class(base_class):
+    #def __init__(self):
+      print("This is from the second class.")
+
+  class third_class(second_class):
+    #def __init__(self):
+      print("This is from the third class.")
+
+  instant = third_class()
+  ```
+  * 输出的结果是：
+  ```
+  This is from base class.
+  This is from the second class.
+  This is from the third class.
+  ```
+  (实际上会在初始化的时候使用`super`调用父类的初始化函数吧，所以执行顺序其实是可变的)
+* 多继承  
+
 
 ### self
 
-## super函数的用法
+### super函数的用法
 
 
 
-## *args, **kwargs的含义
+### *args, **kwargs的含义
 
 
 
 ## 五种下划线
 
 
-## 待续
