@@ -10,9 +10,9 @@
 
 - [Python的杂货知识——Class相关](#python的杂货知识class相关)
   - [__init__方法](#__init__方法)
-  - [继承](#继承)
     - [self](#self)
-    - [*args, **kwargs的含义](#args-kwargs的含义)
+    - [*args与**kwargs](#args与kwargs)
+  - [继承](#继承)
   - [五种下划线](#五种下划线)
 
 <!-- /code_chunk_output -->
@@ -53,6 +53,23 @@ This is from succeeded class.
 ```
 上面这个例子中用到了**继承**，后面也得复习一下，总之是定义了两个类`base_test`和`succeeded_class`，分别称之为“基类”和“继承类”，基类中的`__init__`方法给这个类的两个属性`self.prop_a`与`self.prop_b`赋初值，实例化的时候需要传入参数prop_a；继承类在实例化的时候需要传入三个参数`prop_a`、`prop_c`、`prop_d`，其中参数`prop_a`是基类所需要的，调用了`super`函数（后面也得复习一下）来访问继承类的父类（也就是基类）中的方法或属性，这里是调用了父类中的初始化方法。  
 上面输出的结果"This is ..."是为了说明在实例化的时候就调用这两个`__init__`方法，输出的顺序和子类中的定义顺序一致。  
+需要注意的是：  
+* `__init__`方法的第一参数永远是`self`，表示创建的类实例本身，因此，在`__init__`方法内部，就可以把各种属性绑定到`self`，因为`self`就指向创建的实例本身。  
+* 有了`__init__`方法，在创建实例的时候就不能传入空的参数了，必须传入与`__init__`方法匹配的参数，但`self`不需要传，Python解释器会自己把实例变量传进去。  
+在这里顺便说一下经常见到的`self`、`*args`和`**kwargs`。  
+
+主要的参考文章是[这个](https://blog.csdn.net/CLHugh/article/details/75000104)还有[这个](https://www.cnblogs.com/yunguoxiaoqiao/p/7626992.html)。  
+### self  
+* `self`代表类的**实例**，而非类。  
+  * 但是，`self.__class__`则指向实例对应的类。  
+  * 注意，把`self`换成`this`，结果也一样，但最好使用Python中常用的`self`。  
+* `self`在定义时不可以省略，但是定义类方法时（定义和后续调用时均不传类实例）可以不写。
+  * 类方法里如果不写的话会有解释器会产生警告，有点奇妙（大概是某种危险操作）
+
+~~还有两条莫名其妙的性质，大概还用不到，需要的时候去查第二个参考文章。~~  
+
+### *args与**kwargs
+
 
 ## 继承
 
@@ -86,6 +103,7 @@ This is from succeeded class.
   This is from the second class.
   This is from the third class.
   ```   
+
   (实际上会在初始化的时候使用`super`调用父类的初始化函数吧，所以执行顺序其实是可变的)  
 
 * **多继承**  
@@ -120,11 +138,6 @@ This is from succeeded class.
   类名称.你要调的父类的属性或方法(self)
   ```
   当你继承一个现有的类，并且你覆盖了父类的init方法时，必须在初始化方法的第一行调用父类的初始化方法，并传入父类所需的参数。  
-### self
-
-### *args, **kwargs的含义
-
-
 
 ## 五种下划线
 
