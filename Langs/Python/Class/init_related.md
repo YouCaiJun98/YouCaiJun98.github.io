@@ -116,7 +116,7 @@ This is from succeeded class.
 
 * `**kwargs` 将关键字参数打包成`dict`给函数体调用。 
   * 例如：  
-  ```
+  ```   
   def function1(**kwargs):
     print(kwargs)
 
@@ -125,9 +125,9 @@ This is from succeeded class.
 
   function1(a=1, b=2, c=3)
   function2(a=1, b=2, c=3)
-  ```
+  ```   
   输出结果为：  
-  ```
+  ```   
   Traceback (most recent call last):
   File "F:/codes_learning/AWNAS/aw_nas_private/aw_nas/final/test.py", line 101, in <module>
     function2(a=1, b=2, c=3)
@@ -135,7 +135,7 @@ This is from succeeded class.
     print(**kwargs)
   TypeError: 'a' is an invalid keyword argument for print()
   {'a': 1, 'b': 2, 'c': 3}
-  ```
+  ```   
   显然字典就没有“拆包”一说了（~~合理~~）  
 
 * 参数arg、*args、\**kwargs三个参数的位置必须是一定的。必须是(arg,*args,\**kwargs)这个顺序，否则程序会报错。  
