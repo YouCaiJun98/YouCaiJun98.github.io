@@ -71,6 +71,7 @@ This is from succeeded class.
 ### *args与**kwargs
 * `*args`是将参数打包成tuple给函数体调用
   * 例一：  
+
   ```
   def function(x, y, *args):
     print(x, y, args)
@@ -78,13 +79,17 @@ This is from succeeded class.
 
   function(1, 2, 3, 4, 5) 
   ```
+
   运行结果：  
+
   ```
   1 2 (3, 4, 5)
   1 2 3 4 5
   ```
+
   看起来在调用的时候`args`是后续传入参数打包后的tuple，`*args`则是解耦的原始参数。  
   * 例二：  
+
   ```
   class base_model:
     def __init__(self, a, b):
@@ -106,7 +111,9 @@ This is from succeeded class.
   instance = second_model(10, 20)
   instance.print()
   ```
+
   运行结果显然是：  
+  
   ```
   10
   20
@@ -139,7 +146,7 @@ This is from succeeded class.
   TypeError: 'a' is an invalid keyword argument for print()
   {'a': 1, 'b': 2, 'c': 3}
   ```   
-  
+
   显然字典就没有“拆包”一说了（~~合理~~）  
 
 * 参数arg、*args、\**kwargs三个参数的位置必须是一定的。必须是(arg,*args,\**kwargs)这个顺序，否则程序会报错。  
