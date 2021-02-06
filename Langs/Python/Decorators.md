@@ -53,7 +53,7 @@ print(a())
 
 还可以打印出`hi()()`，这会输出 `now you are in the greet() function`。  
 
-* **将函数作为参数传给另一个函数**
+* **将函数作为参数传给另一个函数**  
 ~~接着嫖例子~~  
 
 ```python  
@@ -87,7 +87,7 @@ a_function_requiring_decoration()
 @a_new_decorator
 def a_function_requiring_decoration():
     print("I am the function which needs some decoration to \
-          "remove my foul smell")
+          remove my foul smell")
  
 a_function_requiring_decoration()
 #outputs: I am doing some boring work before executing a_func()
@@ -128,9 +128,10 @@ print(a_function_requiring_decoration.__name__)
 # Output: a_function_requiring_decoration
 ```  
 
-## 装饰需要传入参数的函数
+## 装饰需要传入参数的函数&修饰有返回值的函数
 当需要装饰的函数有若干需要传入的参数时，可以将装饰器拆成两层，第一层还是装饰器的外壳，第二层也仍为定义的内部函数，但是多了`*args, **kwargs`作为传入参数：  
-```python
+
+```python  
 def decorator(func):
     def print_note(*args, **kwargs):
         func(*args, **kwargs)
@@ -142,6 +143,34 @@ def func_with_paras(a):
     print("a = " + str(a))
 
 func_with_paras(1)
+```  
+
+如果需要用到被修饰函数的返回值也是个问题（注意顺序，特别是在多层修饰中）：  
+(摘自第二篇参考文献，显然作者忘记了)  
+
+```python  
+import time
+def test(func):
+    def wrapper():
+        start = time.clock()
+        print("this is a order test, if you need not it, delete it") # 用于测试执行顺序,可以跟着走一遍
+        a = func()
+        end = time.clock()
+        print("start:", start, " end:", end)
+        return a # 这种获得返回值的方法可能在多层修饰器的时候有矛盾,我先用!!!标记, 等理顺后再回来修改,如果我发布之后这里依然存在...说明我忘记了...
+    return wrapper
+
+@test
+def foo():
+    print("this is a test")
+    return "this is a return value"
+
+print(foo())
+# 输出
+# this is a test wrapper, if you need not it, delete it
+# this is a test
+# start: 4.44444839506524e-07  end: 1.8222238419767486e-05
+# this is a return value
 ```  
 
 ## 含有参数的装饰器
