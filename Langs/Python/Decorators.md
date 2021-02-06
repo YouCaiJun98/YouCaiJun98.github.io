@@ -29,6 +29,7 @@ print(greet())
 
 * **函数（名）作为返回值**
 函数的名字（实际上是指针？）可以作为返回值，区别于带`()`的执行返回：  
+
 ```python  
 def hi(name="yasoob"):
     def greet():
@@ -49,6 +50,7 @@ print(a)
 print(a())
 #outputs: now you are in the greet() function
 ```  
+
 还可以打印出`hi()()`，这会输出 `now you are in the greet() function`。  
 
 * **将函数作为参数传给另一个函数**
@@ -96,4 +98,155 @@ a_function_requiring_decoration()
 #a_function_requiring_decoration = a_new_decorator(a_function_requiring_decoration)
 ```  
 
+要注意的是，定义的装饰器**返回值一定是内部定义函数的名字**！  
+但是包裹后的函数会丢失一些内省信息，比如：  
 
+```python  
+print(a_function_requiring_decoration.__name__)
+# Output: wrapTheFunction
+```  
+
+上面函数名被warpTheFunction替代了，装饰器重写了函数的名字和注释文档(docstring)，解决问题可以用到`functools.wraps`函数。`@wraps`接受一个函数来进行装饰，并加入了复制函数名称、注释文档、参数列表等等的功能。这使得我们可以在装饰器里面访问在装饰之前的函数的属性：  
+
+```python  
+from functools import wraps
+ 
+def a_new_decorator(a_func):
+    @wraps(a_func)
+    def wrapTheFunction():
+        print("I am doing some boring work before executing a_func()")
+        a_func()
+        print("I am doing some boring work after executing a_func()")
+    return wrapTheFunction
+ 
+@a_new_decorator
+def a_function_requiring_decoration():
+    print("I am the function which needs some decoration to "
+          "remove my foul smell")
+ 
+print(a_function_requiring_decoration.__name__)
+# Output: a_function_requiring_decoration
+```  
+
+## 装饰需要传入参数的函数
+当需要装饰的函数有若干需要传入的参数时，可以将装饰器拆成两层，第一层还是装饰器的外壳，第二层也仍为定义的内部函数，但是多了`*args, **kwargs`作为传入参数：  
+```python
+def decorator(func):
+    def print_note(*args, **kwargs):
+        func(*args, **kwargs)
+        print("This is from the decorator.")
+    return print_note
+
+@decorator
+def func_with_paras(a):
+    print("a = " + str(a))
+
+func_with_paras(1)
+```  
+
+## 含有参数的装饰器
+下面的例子用到了含参装饰器、装饰需要传入参数的函数这两部分的知识：  
+
+```python
+from functools import wraps
+ 
+def logit(logfile='out.log'):
+    def logging_decorator(func):
+        @wraps(func)
+        def wrapped_function(*args, **kwargs):
+            log_string = func.__name__ + " was called"
+            print(log_string)
+            # 打开logfile，并写入内容
+            with open(logfile, 'a') as opened_file:
+                # 现在将日志打到指定的logfile
+                opened_file.write(log_string + '\n')
+            return func(*args, **kwargs)
+        return wrapped_function
+    return logging_decorator
+ 
+@logit()
+def myfunc1():
+    pass
+ 
+myfunc1()
+# Output: myfunc1 was called
+# 现在一个叫做 out.log 的文件出现了，里面的内容就是上面的字符串
+ 
+@logit(logfile='func2.log')
+def myfunc2():
+    pass
+ 
+myfunc2()
+# Output: myfunc2 was called
+# 现在一个叫做 func2.log 的文件出现了，里面的内容就是上面的字符串
+```
+
+## 装饰器类
+类也可以用来构建装饰器，装饰的方法还是`@decorator`(本质原因应该是类中定义了`__call__`方法)：    
+
+```python
+from functools import wraps
+ 
+class logit(object):
+    def __init__(self, logfile='out.log'):
+        self.logfile = logfile
+ 
+    def __call__(self, func):
+        @wraps(func)
+        def wrapped_function(*args, **kwargs):
+            log_string = func.__name__ + " was called"
+            print(log_string)
+            # 打开logfile并写入
+            with open(self.logfile, 'a') as opened_file:
+                # 现在将日志打到指定的文件
+                opened_file.write(log_string + '\n')
+            # 现在，发送一个通知
+            self.notify()
+            return func(*args, **kwargs)
+        return wrapped_function
+ 
+    def notify(self):
+        # logit只打日志，不做别的
+        pass
+```  
+
+## 使用场景
+包括但不限于：  
+* 授权(Authorization)  
+装饰器有助于检查某个人是否被授权去使用一个web应用的端点(endpoint)，被大量使用于Flask和Django web框架中：  
+
+```python  
+from functools import wraps
+ 
+def requires_auth(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        auth = request.authorization
+        if not auth or not check_auth(auth.username, auth.password):
+            authenticate()
+        return f(*args, **kwargs)
+    return decorated
+```  
+
+* 日志(Logging)  
+直接偷例子：  
+
+```python  
+from functools import wraps
+ 
+def logit(func):
+    @wraps(func)
+    def with_logging(*args, **kwargs):
+        print(func.__name__ + " was called")
+        return func(*args, **kwargs)
+    return with_logging
+ 
+@logit
+def addition_func(x):
+   """Do some math."""
+   return x + x
+ 
+ 
+result = addition_func(4)
+# Output: addition_func was called
+```  
