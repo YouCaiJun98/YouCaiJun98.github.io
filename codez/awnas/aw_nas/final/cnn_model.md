@@ -1,5 +1,7 @@
 # CNN_model.py
 
+2021/2/5  
+
 包括：  
 * `AuxiliaryHead(nn.Module)`  
 * `AuxiliaryHeadImageNet(nn.Module)`  
