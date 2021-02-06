@@ -80,7 +80,7 @@ a_function_requiring_decoration()
 #        I am doing some boring work after executing a_func()
 ```  
 
-## `@修饰器名称`实际上是一种语法糖
+## `@decorator`实际上是一种语法糖
 刚才的例子可以用`@`改写为：  
 
 ```python  
