@@ -4,7 +4,8 @@ Just A Private HomePage for Kaleido XD
 
 ## What's up?  
 ### 2021/2/21
-* 上传了[staticmethod]()
+* upload a blog [staticmethod](https://youcaijun98.github.io/Langs/Python/Decorators/staticmethod.html)  
+
 
 
 ## The license
