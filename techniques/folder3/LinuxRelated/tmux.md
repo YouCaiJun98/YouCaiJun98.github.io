@@ -49,6 +49,7 @@ $ brew install tmux
 ## Usage  
 (我似乎弄混了窗口和session...不过不是大问题)  
 * 启动和退出`tmux`:  
+
 ```bash  
 # 启动tmux
 $ tmux
@@ -58,19 +59,24 @@ $ exit 或 Ctrl+D
 ```  
 
 * 创建新的`tmux`窗口，注意不能在`tmux`里套`tmux`（似乎有强行套的可能）,下面的方法可以创建带名字的窗口：  
+
 ```bash  
 # 启动命名tmux
 $ tmux new -s <name>
 ```  
 
 * 在`tmux`窗口里使用下面的命令可以**分离窗口**（从当前窗口弹出）:  
+
 ```bash  
 # 分离会话
 $ tmux detach
 ```  
 
+
 * 使用`tmux ls`则可以查看当前所有的`tmux`窗口。  
+
 * 通过`tmux detach`关闭`tmux`伪窗口后可以使用`tmux attach`**重新接回**原tmux会话：  
+
 ```bash  
 # 重接会话 使用伪窗口编号
 $ tmux attach -t 0
@@ -79,7 +85,9 @@ $ tmux attach -t 0
 $ tmux attach -t test01
 ```  
 
+
 * **彻底关闭某个会话**可以通过：  
+
 ```bash  
 # 使用会话编号
 $ tmux kill-session -t 0
@@ -89,6 +97,7 @@ $ tmux kill-session -t <name>
 ```  
 
 * 在`tmux`会话间**切换**可以通过：  
+
 ```bash  
 # 使用会话编号
 $ tmux switch -t 0
@@ -97,11 +106,31 @@ $ tmux switch -t 0
 $ tmux switch -t <session-name>
 ```  
 
+* 重命名会话：  
 
+```bash  
+$ tmux rename-session -t 0 <new-name>
+```  
 
+其他基础用法，包括列出所有快捷键、列出所有`Tmux`命令及其参数、列出当前所有`Tmux`会话的信息、重新加载当前的`Tmux`配置：  
 
+```bash  
+# 列出所有快捷键，及其对应的 Tmux 命令
+$ tmux list-keys
+
+# 列出所有 Tmux 命令及其参数
+$ tmux list-commands
+
+# 列出当前所有 Tmux 会话的信息
+$ tmux info
+
+# 重新加载当前的 Tmux 配置
+$ tmux source-file ~/.tmux.conf
+```  
 
 ## Advanced Usage  
+
+
 
 ## Keyboard shortcut modification  
 通过`vi ~/.tmux.conf `打开`tmux`的`config`文件，这里直接嫖了tc的设置：  
