@@ -263,3 +263,5 @@ set -g @plugin 'tmux-plugins/tmux-resurrect'
 run '~/.tmux/plugins/tpm/tpm'
 ```  
 
+上面的设置是将激活控制键由`Ctrl+b`改成了`Ctrl+q`，同时把resize的快捷键前面加了个`Ctrl`。  
+
