@@ -60,3 +60,5 @@ class SpecialSpmmFunction(torch.autograd.Function):
             grad_b = a.t().matmul(grad_output)
         return None, grad_values, None, grad_b
 ```  
+
+这个[知乎问题](https://www.zhihu.com/question/366882609/answer/982196400)进一步讨论了`ctx.save_for_backward`和直接`ctx.input = input`的区别，但是并没有很懂。  

@@ -44,6 +44,41 @@ BiReal原文暂时没看，看完之后再考虑填坑。（似乎对应原文�
 
 ### SkipConnectV2
 继承自`nn.Module`类。  
+根据C_in、C_out、stride确定并执行操作，目的是对齐通道。  
+含有方法：  
+* `__init__`：`self.conv_ds`是什么的bool变量？似乎是支持任意channel的？C和C_out不用对齐？对输入的activations做group conv？**判断流程**：先判断stride是不是2：`if self.conv_ds`->op1=`nn.AvgPool2d(2)`，op2=`XNORGroupConv`；else判断C_in和C_out是不是相等或2倍关系，（这边写得感觉有点烂...）如果是的话就取average_pool（1个或2个，看expansion）；`stride == 1`就op=`Identity()`。  
+* `forward`：**非静态方法**。按照上面反着来  
+    * `self.stride == 1`则op=`Identity()`  
+    * `self.stride == 2`  
+        * `self.conv_ds`则op1=`nn.AvgPool2d(2)`，op2=`XNORGroupConv`  
+        * `not self.conv_ds`
+            * `self.expansion == 2`则op1=op2=`nn.AvgPool2d(2)`，结果concate  
+            * `self.expansion == 1`则op=`nn.AvgPool2d(2)`  
+
+### BinaryConvBNReLU  
+基本的binary conv bn relu block。  
+
+```python  
+"""
+xnor-conv-bn-relu should be the basic building block and contain all the possiible ops
+
+It should contain the args:
+    - ch disalignment arrangement
+    - shortcut_op_type(simple parameter-free shorcut)
+    - reduction_op_type(avgpool2d / factorized reduce)
+    - layer-order
+    - relu
+    - group
+    - dilation
+    - binary_conv_cfgs
+        - bi_w_scale
+        - bi_act_method
+        - bias(zero-mean)
+
+"""
+```  
+
+
 
 
 
@@ -52,12 +87,13 @@ BiReal原文暂时没看，看完之后再考虑填坑。（似乎对应原文�
 
 ## 问题集合  
 ~~1. `forward`和`backward`中出现的`ctx`是什么意思？~~  
-A：解决了，在[这里]()给了详细的区分。  
-2. 与Question1相关联，为什么在`StraightThroughBinaryActivation`里面需要在`forward`里把`inputs`和`method`存起来，`backward`里拿出来又不用？  
+A：解决了，在[这里](https://youcaijun98.github.io/Langs/Python/Packets/Torch/ctxvesusself.html)给了详细的区分。  
+~~2. 与Question1相关联，为什么在`StraightThroughBinaryActivation`里面需要在`forward`里把`inputs`和`method`存起来，`backward`里拿出来又不用？~~  
+A：可以用，没用到。但是不是存进去必须要取出来呢？  
 3. `apply`的用法？是torch专门的方法吗？  
 4. Line120以下，对梯度clip的时候门槛也要乘scaling factor吗？  
 5. Line217为什么full precision weights初始化的时候不用`.cuda()`，bias的初始化用？  
-6. 
+6. Line259`XNORGroupConv`在哪？请见其他`class SkipConnectV2`的问题。    
 
 ## To-Do
 * `nn.Module`是个重要的类...需要仔细研究。  
