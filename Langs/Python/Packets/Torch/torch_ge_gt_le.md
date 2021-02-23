@@ -2,7 +2,7 @@
 
 2021/2/23  
 
-读bnn_ops.py的时候遇到的torch相关属性。[参考资料](https://www.cnblogs.com/lqchen/p/12346748.html)。  
+读[bnn_ops.py](https://youcaijun98.github.io/codez/awnas/aw_nas/ops/bnn_ops.html)的时候遇到的torch相关属性。[参考资料](https://www.cnblogs.com/lqchen/p/12346748.html)。  
 
 ## torch.ge  
 torch.ge(input, other, out=None) → Tensor  

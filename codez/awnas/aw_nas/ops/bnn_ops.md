@@ -13,7 +13,12 @@
 * BinaryResNetBlock(nn.Module)  
 * BinaryVggBlock(nn.Module)  
 * NIN(nn.Module)  
-方法。  
+类。  
+
+## New Methods
+* [torch.ge,gt, etc.](https://youcaijun98.github.io/Langs/Python/Packets/Torch/torch_ge_gt_le.html)  
+
+
 
 ## Class  
 ### BirealBinaryActivation  
@@ -33,13 +38,29 @@ BiReal原文暂时没看，看完之后再考虑填坑。（似乎对应原文�
 
 ### BinaryConv2d
 继承自`torch.nn.Module`类。  
+含有方法：  
+* `__init__`：初始化，调用`BinaryConv2d`的父类的初始化方法，用`torch.zeros`开个全精度参数的数组，在(0,0.05)上`normal_`初始化，再初始化bias。  
+* `forward`：写一个`binarize_cfgs`字典出来，binarize activations&weights，然后调用`torch.nn.functional.conv2d`用**binary weights**对**binary activations**做卷积。  
+
+### SkipConnectV2
+继承自`nn.Module`类。  
+
+
+
 
 
 
 ## 问题集合  
-1. `forward`和`backward`中出现的`ctx`是什么意思？  
+~~1. `forward`和`backward`中出现的`ctx`是什么意思？~~  
+A：解决了，在[这里]()给了详细的区分。  
 2. 与Question1相关联，为什么在`StraightThroughBinaryActivation`里面需要在`forward`里把`inputs`和`method`存起来，`backward`里拿出来又不用？  
 3. `apply`的用法？是torch专门的方法吗？  
 4. Line120以下，对梯度clip的时候门槛也要乘scaling factor吗？  
+5. Line217为什么full precision weights初始化的时候不用`.cuda()`，bias的初始化用？  
+6. 
+
+## To-Do
+* `nn.Module`是个重要的类...需要仔细研究。  
+* `nn.Parameter`也很重要。。  
 
 
