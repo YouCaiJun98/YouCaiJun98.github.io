@@ -5,7 +5,9 @@ Just A Private HomePage for Kaleido XD
 ## What's up?  
 ### 2021/2/23  
 * going through [bnn_ops.py](https://youcaijun98.github.io/codez/awnas/aw_nas/ops/bnn_ops.html)  
-* usage of [torch.ge\gt\le]()  
+* usage of [torch.ge\gt\le](https://youcaijun98.github.io/Langs/Python/Packets/Torch/torch_ge_gt_le.html)  
+* tell `ctx` by `self` -> [This page](https://youcaijun98.github.io/Langs/Python/Packets/Torch/ctxvesusself.html)  
+
 
 ### 2021/2/22  
 * learn the usage of [tmux](https://youcaijun98.github.io/techniques/folder3/LinuxRelated/tmux.html), with great pain.  
