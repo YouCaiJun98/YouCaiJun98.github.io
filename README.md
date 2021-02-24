@@ -5,7 +5,8 @@ Just A Private HomePage for Kaleido XD
 ## What's up?  
 ### 2021/2/24  
 * continue going through [bnn_ops.py](https://youcaijun98.github.io/codez/awnas/aw_nas/ops/bnn_ops.html)  
-* learn the usage of [torch.nn.functional.pad]()
+* learn the usage of [torch.nn.functional.pad](https://youcaijun98.github.io/Langs/Python/Packets/Torch/torch_nn_functional_pad.html)  
+* learn the [difference](https://youcaijun98.github.io/Langs/Python/Packets/Torch/nn_Sequentialversusnn_ModuleList.html) between `nn.Sequential` and `nn.ModuleList`  
 
 
 ### 2021/2/23  
