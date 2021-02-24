@@ -84,7 +84,7 @@ It should contain the args:
 ~~`x.size(2)`是什么？channel out？~~  
 A：推测是w or h，这里应该假定了w==h。  
 pad方式也不是很懂。  
-A：其实这里已经规定了stride=2了，所以就算padding最多也只padding1...然后pad第二个传入参数是指定pad的位置（(1,0,1,0)表示在上方左方pad） **这里我认为padded x经过factorized reduction之后产生的activations w*h是一样的，虽然内心非常不安（主要是op后的尺寸能否对应）。** 两个conv后的activations能不能直接和同一个shortcut绑在一起的疑惑暂时消除了，因为与其担心这个**不如担心对pad后的x进行卷积产生的影响了。（无关紧要）**  
+A：其实这里已经规定了stride=2了，所以就算padding最多也只padding1...然后pad第二个传入参数是指定pad的位置（(1,0,1,0)表示在上方左方pad） **这里我认为padded x经过factorized reduction之后产生的activations w×h是一样的，虽然内心非常不安（主要是op后的尺寸能否对应）。** 两个conv后的activations能不能直接和同一个shortcut绑在一起的疑惑暂时消除了，因为与其担心这个**不如担心对pad后的x进行卷积产生的影响了。（无关紧要）**  
 ~~shortcut是直接加在一起？不是concate？~~  
 A：shortcut的前后tensor shape是不变的，所以shortcut是tensor按元素相加。需要注意的是加shortcut的时候是让padded x过shortcut再concate，所以不会有w*h上对应的问题。  
 
