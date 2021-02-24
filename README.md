@@ -3,6 +3,10 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/2/24  
+* continue going through [bnn_ops.py](https://youcaijun98.github.io/codez/awnas/aw_nas/ops/bnn_ops.html)  
+
+
 ### 2021/2/23  
 * going through [bnn_ops.py](https://youcaijun98.github.io/codez/awnas/aw_nas/ops/bnn_ops.html)  
 * usage of [torch.ge\gt\le](https://youcaijun98.github.io/Langs/Python/Packets/Torch/torch_ge_gt_le.html)  

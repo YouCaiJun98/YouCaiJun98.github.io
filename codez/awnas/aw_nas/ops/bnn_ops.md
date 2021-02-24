@@ -81,9 +81,10 @@ It should contain the args:
 含有方法：  
 * `__init__`：正常初始化，要注意的是`shortcut`只有在特定的情况下（对应Line382-Line390）才能用。支持`"conv_bn_relu", "bn_conv_relu"`两种layer order。目前似乎只支持`self.shortcut_op_type == "simple"`。`self.bn`的初始化要考虑layer order（对应不同的channel数目）。根据`stride`初始化`self.convs`。根据`self.shortcut_op_type`初始化`self.shortcut`。  
 * `forward`：在最开始或后面过BN，最后过relu（不重要）。`if self.stride == 2 and self.reduction_op_type == "factorized"`下面，~~`"factorized"`指什么？~~ A：当某一个operation是reduction的时候(stride=2)，原始的resnet提出了一种叫做factorzied reduce的结构。这个模块等价于一个stride=2,expansion=2的卷积； 它是用了两个stride=2的expansion=1的卷积，他们实际apply的时候，kernel在原图上移动的区域，相差了一个像素(看图里青色和紫色的部分)；然后把他们的结果concat起来，最后输出的还是2C。  
-~~`x.size(2)`是什么？channel out？~~ A：推测是w or h，这里应该假定了w==h。  
+~~`x.size(2)`是什么？channel out？~~  
+A：推测是w or h，这里应该假定了w==h。  
 pad方式也不是很懂。  
-A：其实这里已经规定了stride=2了，所以就算padding最多也只padding1...然后pad第二个传入参数是指定pad的位置（(1,0,1,0)表示在上方左方pad）**这里我认为padded x经过factorized reduction之后产生的activations w*h是一样的，虽然内心非常不安（主要是op后的尺寸能否对应）。** 两个conv后的activations能不能直接和同一个shortcut绑在一起的疑惑暂时消除了，因为与其担心这个**不如担心对pad后的x进行卷积产生的影响了。（无关紧要）**  
+A：其实这里已经规定了stride=2了，所以就算padding最多也只padding1...然后pad第二个传入参数是指定pad的位置（(1,0,1,0)表示在上方左方pad） **这里我认为padded x经过factorized reduction之后产生的activations w*h是一样的，虽然内心非常不安（主要是op后的尺寸能否对应）。** 两个conv后的activations能不能直接和同一个shortcut绑在一起的疑惑暂时消除了，因为与其担心这个**不如担心对pad后的x进行卷积产生的影响了。（无关紧要）**  
 ~~shortcut是直接加在一起？不是concate？~~  
 A：shortcut的前后tensor shape是不变的，所以shortcut是tensor按元素相加。需要注意的是加shortcut的时候是让padded x过shortcut再concate，所以不会有w*h上对应的问题。  
 
@@ -108,7 +109,7 @@ A5：这个可能纯粹是写的时候没注意…后面会用`model.to(device)`
 ~~6. Line259`XNORGroupConv`在哪？请见其他`class SkipConnectV2`的问题。~~  
 A6：没有改过来的历史遗留问题。`XNORGroupConv`貌似是之前的接口，可以看作和现在`BinaryConv2d`相对应。`class SkipConnectV2`中的问题已在之前回答过了。  
 ~~7. `BinaryConvBNReLU`的问题。~~  
-A：因为shortcut的前后tensor shape是不变的，所以**shortcut是tensor按元素相加**。  
+A7：因为shortcut的前后tensor shape是不变的，所以**shortcut是tensor按元素相加**。  
 
 ## To-Do
 * `nn.Module`是个重要的类...需要仔细研究。  
