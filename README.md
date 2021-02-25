@@ -6,7 +6,8 @@ Just A Private HomePage for Kaleido XD
 ### 2021/2/25  
 * finish viewing [bnn_ops.py](https://youcaijun98.github.io/codez/awnas/aw_nas/ops/bnn_ops.html)  
 * dive into [nn.avgpool2d](https://youcaijun98.github.io/Langs/Python/Packets/Torch/nn_avgpool2d.html)  
-* relearn [concatenate]()
+* relearn [concatenate](https://youcaijun98.github.io/Langs/Python/Packets/Torch/torch_cat.html)  
+
 
 
 ### 2021/2/24  

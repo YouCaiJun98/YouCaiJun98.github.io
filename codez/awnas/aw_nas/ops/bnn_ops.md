@@ -90,11 +90,63 @@ A：其实这里已经规定了stride=2了，所以就算padding最多也只padd
 A：shortcut的前后tensor shape是不变的，所以shortcut是tensor按元素相加。需要注意的是加shortcut的时候是让padded x过shortcut再concate，所以不会有w*h上对应的问题。  
 
 ### ResNetDownSample
+继承自`nn.Module`。看样子是ResNet中的降采样层。
+含有方法：  
+* `__init__`：用了`kernel_size=1, stride=2`的`nn.AvgPool2d`，也就是隔一个采一个值，有点粗暴。  
+* `forward`：有点奇怪，最后是`x`与`x.mul(0)`按channel concatenate在一起（不该是原样concatenate吗？）  
+
+### BinaryResNetBlock 
+继承自`nn.Module`。看样子是binary resnet的building block...嗯。  
+含有方法：  
+* `__init__`：正常的初始化，后面跟了op_1和op_2的初始化，两个op都是`BinaryConvBNReLU`，但是第二个op保持了输入输出维度相同（都是C_out）。从三种方式`["conv", "avgpool", "binary_conv"]`中选一个downsample的方法。选择的流程是：  
+    * 如果`downsample == "conv"`：  
+        * 如果`stride == 1`那么`self.skip_op = Identity()`  
+        * 否则`self.skip_op = ConvBNReLU()`  
+    * 如果`downsample == "avgpool"`：  
+        * 如果`stride == 1`那么`self.skip_op = Identity()`  
+        * 否则`self.skip_op = ResNetDownSample()`  
+    * 如果`downsample == "binary_conv"`：  
+        * 如果`stride == 1`那么`self.skip_op = Identity()`  
+        * 否则`self.skip_op = BinaryConvBNReLU()`  
+* `forward`：有丶特色。前传的时候，先对input进行op_1，把结果和skip_op(input)加在一起变成中间结果inner，然后对inner进行op_2，再加上inner作为输出。  
+
+### 注册方法
+* Line570-595：`xnor_resnet_block`  
+* Line597-620：`bireal_resnet_block`  
+* Line683-694：`xnor_vgg_block`  
+* Line696-707：`bireal_vgg_block`  
+* Line712-733：`xnor_conv_3x3_noskip`  
+* Line735-740：`xnor_conv_1x1_noskip`  
+* Line745-771：`xnor_conv_3x3_cond_skip_v0`  
+* Line774-779：`xnor_conv_3x3_cond_skip`  
+* Line782-787：`xnor_skip_connect`  
+* Line791-811：`xnor_conv_3x3_skip_connect`  
+* Line903：`xnor_nin`  
 
 
 
 
+### BinaryVggBlock
+继承自`nn.Module`。building block of binary vgg.  
+含有方法：  
+* `__init__`：注意Line660 vgg block没有shortcut。判断`downsample`是`"avgpool"`（目前应该只支持这个，或者vgg只对应这个），然后根据stride确定实际`downsample`的操作。  
+* `forward`：先`op`再`pool`，正常。  
 
+### NIN
+继承自`nn.Module`。应该是一个弃用了的方法，因为里面到处都是老的`XNORConvBNReLU`。  
+含有方法：  
+* `__init__`：注册了好多op。最后用一个`self.modules()`保存了这些op（有点像`ModuleList`）
+Line 872附近的代码有点参考价值（方法层面）：  
+
+```python  
+for m in self.modules():
+    if isinstance(m, (nn.BatchNorm2d, nn.BatchNorm1d)):
+        if hasattr(m.weight, "data"):
+            m.weight.data.zero_().add_(1.0)
+```  
+
+这里的`self.modules`保存了之前的所有模块（具体的“模块”可以参考[这篇](https://blog.csdn.net/dss_dssssd/article/details/83958518)博客...虽然又多了个`self.children()`有点更难李姐）。下面是判断`self.modules`中的元素是不是`nn.BatchNorm2d`和`nn.BatchNorm1d`中的一种，然后把它的权重先变成0再变成1，**函数加了下划线的属于内建函数，将要改变原来的值，没有加下划线的并不会改变原来的数据，引用时需要另外赋值给其他变量**。  
+* `forward`：前传的时候对BN的data有一个`clamp_`操作，夹紧到0.01以内。最后有个`x.squeeze()`把为1的维度去掉。    
 
 
 ## 问题集合  
@@ -112,10 +164,13 @@ A5：这个可能纯粹是写的时候没注意…后面会用`model.to(device)`
 A6：没有改过来的历史遗留问题。`XNORGroupConv`貌似是之前的接口，可以看作和现在`BinaryConv2d`相对应。`class SkipConnectV2`中的问题已在之前回答过了。  
 ~~7. `BinaryConvBNReLU`的问题。~~  
 A7：因为shortcut的前后tensor shape是不变的，所以**shortcut是tensor按元素相加**。  
+8. `ResNetDownSample`的concatenat需要确认一下。  
+9. `BinaryVggBlock`注释似乎有问题。而且默认的`downsample`是`conv`，但是后面有`assert downsample == "avgpool"`有些矛盾。  
+10. `register_primitive`的用法？  
 
 ## To-Do
 * `nn.Module`是个重要的类...需要仔细研究。  
 * `nn.Parameter`也很重要。。  
-* `ModuleList`需要研究  
+* ~~`ModuleList`需要研究~~  
 
 
