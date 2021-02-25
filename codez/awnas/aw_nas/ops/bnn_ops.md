@@ -81,6 +81,7 @@ It should contain the args:
 含有方法：  
 * `__init__`：正常初始化，要注意的是`shortcut`只有在特定的情况下（对应Line382-Line390）才能用。支持`"conv_bn_relu", "bn_conv_relu"`两种layer order。目前似乎只支持`self.shortcut_op_type == "simple"`。`self.bn`的初始化要考虑layer order（对应不同的channel数目）。根据`stride`初始化`self.convs`。根据`self.shortcut_op_type`初始化`self.shortcut`。  
 * `forward`：在最开始或后面过BN，最后过relu（不重要）。`if self.stride == 2 and self.reduction_op_type == "factorized"`下面，~~`"factorized"`指什么？~~ A：当某一个operation是reduction的时候(stride=2)，原始的resnet提出了一种叫做factorzied reduce的结构。这个模块等价于一个stride=2,expansion=2的卷积； 它是用了两个stride=2的expansion=1的卷积，他们实际apply的时候，kernel在原图上移动的区域，相差了一个像素(看图里青色和紫色的部分)；然后把他们的结果concat起来，最后输出的还是2C。  
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202102250001.png)  
 ~~`x.size(2)`是什么？channel out？~~  
 A：推测是w or h，这里应该假定了w==h。  
 pad方式也不是很懂。  
@@ -89,6 +90,7 @@ A：其实这里已经规定了stride=2了，所以就算padding最多也只padd
 A：shortcut的前后tensor shape是不变的，所以shortcut是tensor按元素相加。需要注意的是加shortcut的时候是让padded x过shortcut再concate，所以不会有w*h上对应的问题。  
 
 ### ResNetDownSample
+
 
 
 
