@@ -3,6 +3,9 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/2/28  
+* read [Bi-Real Net: Enhancing the Performance of 1-bit CNNs With Improved Representational Capability and Advanced Training Algorithm](https://youcaijun98.github.io/articles/BNN/Bi_Real.html)  
+
 ### 2021/2/25  
 * finish viewing [bnn_ops.py](https://youcaijun98.github.io/codez/awnas/aw_nas/ops/bnn_ops.html)  
 * dive into [nn.avgpool2d](https://youcaijun98.github.io/Langs/Python/Packets/Torch/nn_avgpool2d.html)  
