@@ -30,5 +30,8 @@ Contributions：
 
 Results：略  
 
+2021/3/1 update：  
+details：  
+* **没有**对weights & activations使用scaling factor（inference阶段）以节约FLOP和memory。（原文P14 Part5前）  
 
 
