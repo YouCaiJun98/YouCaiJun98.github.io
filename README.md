@@ -5,11 +5,11 @@ Just A Private HomePage for Kaleido XD
 ## What's up?  
 ### 2021/3/2  
 * did some easy verification experiments yet only to find that I've trained the wrong model...  
-* read [layer2/bi_final_model.py]()  
+* read [layer2/bi_final_model.py](https://youcaijun98.github.io/codez/awnas/aw_nas/btcs/layer2/bi_final_model.html)  
 
 ### 2021/2/28  
 * read [Bi-Real Net: Enhancing the Performance of 1-bit CNNs With Improved Representational Capability and Advanced Training Algorithm](https://youcaijun98.github.io/articles/BNN/Bi_Real.html)  
-* start learning [layer2/final_model.py]()  
+* start learning [layer2/final_model.py](https://youcaijun98.github.io/codez/awnas/aw_nas/btcs/layer2/final_model.html)  
 
 ### 2021/2/25  
 * finish viewing [bnn_ops.py](https://youcaijun98.github.io/codez/awnas/aw_nas/ops/bnn_ops.html)  
