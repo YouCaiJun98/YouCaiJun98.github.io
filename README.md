@@ -3,6 +3,12 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/3/3  
+* continue reading final_model.py  
+* learn the usage of [defaultdict]()  
+
+
+
 ### 2021/3/2  
 * did some easy verification experiments yet only to find that I've trained the wrong model...  
 * read [layer2/bi_final_model.py](https://youcaijun98.github.io/codez/awnas/aw_nas/btcs/layer2/bi_final_model.html)  
