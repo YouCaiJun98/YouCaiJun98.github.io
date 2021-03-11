@@ -3,9 +3,13 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/3/11  
+* document [BATS: Binary ArchitecTure Search](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/BNN/BATS%20Binary%20ArchitecTure%20Search.pdf)  
+* 
+
 ### 2021/3/3  
 * continue reading final_model.py  
-* learn the usage of [defaultdict]()  
+* learn the usage of [defaultdict](https://youcaijun98.github.io/Langs/Python/defaultdict.html)  
 
 
 
