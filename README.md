@@ -3,12 +3,17 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/3/16
+* continue reading [final_model.py](https://youcaijun98.github.io/codez/awnas/aw_nas/btcs/layer2/final_model.html)  
+* learn [trivial trick](https://youcaijun98.github.io/Langs/Python/%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0.html) of python  
+
+
 ### 2021/3/11  
 * document [BATS: Binary ArchitecTure Search](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/BNN/BATS%20Binary%20ArchitecTure%20Search.pdf)  
-* 
+
 
 ### 2021/3/3  
-* continue reading final_model.py  
+* continue reading [final_model.py](https://youcaijun98.github.io/codez/awnas/aw_nas/btcs/layer2/final_model.html)    
 * learn the usage of [defaultdict](https://youcaijun98.github.io/Langs/Python/defaultdict.html)  
 
 
