@@ -3,6 +3,10 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/3/17  
+* read [High-Capacity Expert Binary Networks]()  
+
+
 ### 2021/3/16
 * continue reading [final_model.py](https://youcaijun98.github.io/codez/awnas/aw_nas/btcs/layer2/final_model.html)  
 * learn [trivial trick](https://youcaijun98.github.io/Langs/Python/%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0.html) of python  
