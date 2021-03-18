@@ -4,8 +4,7 @@ Just A Private HomePage for Kaleido XD
 
 ## What's up?  
 ### 2021/3/18  
-* read [BinaryDuo: Reducing Gradient Mismatch in Binary Activation Network by Coupling Binary Activations]()  
-
+* read [BinaryDuo: Reducing Gradient Mismatch in Binary Activation Network by Coupling Binary Activations](https://youcaijun98.github.io/articles/BNN/binaryduo.html)  
 
 
 ### 2021/3/17  
