@@ -3,8 +3,13 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/3/18  
+* read [BinaryDuo: Reducing Gradient Mismatch in Binary Activation Network by Coupling Binary Activations]()  
+
+
+
 ### 2021/3/17  
-* read [High-Capacity Expert Binary Networks]()  
+* read [High-Capacity Expert Binary Networks](https://youcaijun98.github.io/articles/BNN/High-Capacity%20Expert%20Binary%20Networks.html)  
 
 
 ### 2021/3/16
