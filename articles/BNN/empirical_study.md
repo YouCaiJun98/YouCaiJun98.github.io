@@ -3,64 +3,128 @@
 2021/3/20  
 
 来源：ICLR2019  
-resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/BNN/Training%20Binary%20Neural%20Networks%20with%20Real-to-Bina.pdf)的包括ipad标注的pdf版本。  
+resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/BNN/An%20Empirical%20study%20of%20Binary%20Neural%20Networks'%20Opt.pdf)的包括ipad标注的pdf版本。  
 文章的作者是Oxford的Milad Alizadeh, Javier Fernandez-Marqu ´ es, Nicholas D. Lane & Yarin Gal，做这种empirical study是想进军BNN？但是为什么后面没声音了？~~讲道理我要是能发一篇ICLR就算成功，可以跑路了~~。  
 
-**Summary**：文章比较一般，最突出的贡献是提了2-stage的training scheme（之前应该有人提过，但是这个是第一个中的？~~有人也是这仨~~）。感觉 **rating 3.5/5** 的样子（还是要比BinaryDuo更有Insight一点的）。文章先~~通过堆料~~搭出了个SOTA的模型，接着提出用multi-stage的方法通过match FP model和binary model各个block输出的feature map来训，还提了个用输入数据计算activation scaling factor~~的添头，懂的都懂~~。  
+**Summary**：文章还不错，挺有insight的，而且有一些比较想要的结果？~~可我为什么还是觉得做empirical study的工作很水~~。 **rating 3.5/5** 吧。文章挺散的，讲了很多点。大概说在end-to-end训练中Adam优化器挺好使的，gradient&weight clipping在训练早期太慢，可以先放一放（改用vanilla STE）然后在训练后期再用standard binary STE，或者将训练拆成2-stage，对pretrained model finetune。因为accuracy在训练中出现plateau的地方和最高的accuracy都一定距离，所以不要用早停。  
 
-文章的贡献有：  
-* ~~堆料~~搭了个SOTA的baseline（~~这也好意思说？~~）；  
-* 一种2/multi-stage 的 training scheme，实际上这个应该是和他们的类KD方法（即缩小FP/binary model在对应位置输出的feature maps之间的差距:原文称是attention matching strategy）紧密耦合在一起的；  
-* 一种基于输入数据的activation scaling factor（与XNOR-Net的不同在于本文的scaling factor计算函数里有trainable para/XNOR-Net是一种analytic的方法，与19年一篇文献中可训练的scaling factor的差别在于，后者不是input-based）。  
+文章的贡献主要是提供了一些insight：  
+* 
  
-## Abstract  
-本文核心论点：**减少binary和其对应的FP conv之间输出的差距可以提点。**  
-
-## 1 Introdution  
-基本上就是稍详细地展开了上面的contributions，有点有趣的是Figure1，囊括了本文的贡献：  
-
-![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202103190001.jpg)  
-
-
-## 2 Related Work  
-作者在这里argue了一下和KD的区别，称Zhuang et al.2018  
+## 2 Background  
+* （小insight）引用Hubara et al. 2017的文章，称将量化融到训练过程才能保持模型性能。  
+* 似乎STE不是BNN独有的？原始的STE似乎是vanilla STE？BinaryConnect做了一些调整（使得STE后来成了BNN的paradim）：（1）gradient clipping，当weights的绝对值大于1的时候就用掩码把梯度置为0？后面半句不是很理解，放在下面：  
 
 ```  
-owever, (Zhuang et al., 2018) tries to match whole feature maps of the to-be-quantized network 
-with the quantized feature maps of a real-valued network that is trained in parallel with the 
-to-be-quantized network.
+Gradient clipping stops gradient flow if the weight’s magnitude is larger than 1.
+This effectively means gradients are computed with respect to hard tanh function.
 ```  
 
-## 4 Method 
-### 4.1 building a stronger baseline  
-作者这里提了一个有点意思的结论，改变了block中的连接顺序后，BN中的bias成了一种可以训练的threshold。  
-
-### 4.2 Real-to-Binary Attention Matching  
-这边提了他们核心假设：  
+（2）weight clipping，当weights由gradient更新之后将它们限制到一个范围里：  
 
 ```  
-We make the reasonable assumption that if a binary network is trained so that the output of each
-binary convolution more closely matches the output of a real convolution in the corresponding layer
-of a real-valued network, then significant accuracy gains can be obtained.
+Weight clipping is applied to weights after gradients have been applied to keep them within a range.
 ```  
 
-<font color='Silver'>一些细节：这种attention feature map的对齐是在模型中很多个点之间的，这样切断了end-to-end的梯度传播，可能对梯度的误差有好处。</font>  
-<font color='Silver'>再来一些细节：network的最后好像也有用standard logit matching loss。</font>  
-<font color='Silver'>细得不能再细了：不同训练阶段好像用得sign函数不一样？</font>  
+* （又是个小insight）kernels稀疏的时候有0会让硬件实现更有效（指的是ternary的情况）。  
 
-### 4.3 Data-Driven Channel Re-scaling  
-这里有点细节，前面说的对activation rescale的只是个添头，实际上weights的scaling factor α还是照常用了的（~~实际上是主角吧~~）。  
 
-### 5.2 Ablation Studies  
-玄学之activation scaling单独不work，搭上attention matching才work。解释非常牵强：  
+## 3 A Systematic Study of Existing Methodologies in BNNs  
+总结了下第三节的内容，挺有用的：  
+* 说明optimizer的重要性  
+* 评估了gradient&weights clipping和BN hyperparam对收敛速度和精度的影响  
+* 测试了一些常用技巧的影响（真的有吗？我没看到？）  
+
+### 3.1 Impact of Optimizer  
+<font color='red'>非常有启发。</font>  
+首先介绍了**4种不同的optimizer**，这是我所不了解的：  
 
 ```  
-It seems clear from this result that both are interconnected: the extra supervisory signal is necessary 
-to properly guide the training, while the extra flexibility added through the gating mechanism boosts 
-the capacity of the network to mimic the attention map.
+(1) history-free optimisers such as mini-batch SGD that do not take previous jumps or gradients into account, 
+(2) momentum optimisers that maintain and use a running average of previous jumps such as Momentum
+  and Nesterov (Sutskever et al., 2013), 
+(3) Adaptive optimisers that adjust learning rate for each parameter separately such as AdaGrad 
+(Duchi et al., 2011) and AdaDelta (Zeiler, 2012), and finally, 
+(4) optimisers that combine elements from categories above such as ADAM which combines momentum with 
+adaptive learning rate.
 ```  
 
-"额外的监督信号对指导训练非常必要，gating mechanism（activations scaling）带来的额外灵活性提升了网络模仿attention map的能力"。那不是当然吗，XNOR-Net里面的scaling factor也可以啊？那你单独不work是怎么回事？  
+第一种应该是最朴素的optimizer，是和过去历史无关的optimizer，和过去的`jumps`或者`gradient`没有关系，比如`mini-batch SGD`；第二种是包括了过去的`jumps`的`running average`的optimizer，比如`Momentum`和`Nesterov`；第三种是可以为param分别调LR的optimizer，比如`AdaGrad`和`AdaDelta`；第四种应该是集大成者，比如`ADAM`。  
+
+下面的这些摘录很重要，非常insightful。  
+
+```  
+Our first observation is that vanilla SGD generally fails in optimising binary models using STE. We note that 
+reducing SGD’s stochasticity (by increasing batch size) improves performance initially. However, it still fails 
+to obtain the best possible accuracy. SGD momentum and Nesterov optimisers perform better than SGD when they are
+carefully fine-tuned. However, they perform significantly slower compared to optimsing non-binary models and have 
+to be used for many more epochs than normally used for CIFAR-10 and MNIST datasets. Similar to SGD, increasing 
+momentum rate improves training speed significantly but results in worse final model accuracy.
+```  
+
+首先说vanilla SGD基本上不能优化使用STE的BNN，**通过增加batch size以降低SGD的随机性在开始时可以改善性能，但是后面就拉了**。`SGD momentum`和`Nesterov`相比`SGD`性能要好些，但是收敛速度要慢非常多。和`SGD`类似，增加momentum rate可以加快训练，但是会掉点。  
+
+```  
+A possible hypothesis is that early stages of training binary models require more averaging for the
+optimiser to proceed in presence of binarisaton operation. On the other hand, in the late stages of the
+training, we rely on noisier sources to increase exploration power of the optimiser. This is reinforced
+by our observation that binary models are often trained long after the training or validation accuracy
+stop showing improvements. Reducing the learning rate in these epochs does not improve things
+either. Yet, the best validations are often found in these epochs. In other words, using early stopping
+for training binary models would terminate the training early on and would result in suboptimal
+accuracies.
+```  
+
+一个合理的假设是，**在训练早期需要更平均一些（比如batch size更大一些？），在训练的后期需要更加noisy来increase exploration**。一个观察：**BNN在停止涨点（出现plateau）之后还要再训训，而且在这时降低LR也不起作用（可是最好的模型会在这附近出现）**——>不能用早停。  
+
+### 3.2 Impact of Gradient and Weight Clipping  
+* Weight Clipping单独作用没什么效果，但是和Gradient Clipping搭配在一起会好些。  
+* 上面这两种Clipping对`SGD`和`Momentum`的速度影响不大，但是ADAM对这种限制敏感。  
+
+### 3.3 Impact of Batch Normalization  
+
+```  
+Reducing the momentum rate in BN can help to cancel the effect of long training. The effect is small 
+but consistent.
+```  
+
+### 3.4 Impact of Pooling and LR  
+* 改block内op的顺序中有一个是调Pooling的位置，合理，要趁vector是FP的时候做pooling，不然都是1了。  
+* scaling LR有点说法，似乎还会牵扯到weights clipping的门槛：  
+
+```  
+In BinaryConnect Courbariaux et al. (2015) propose scaling
+learning rates of each convolutional or fully connected layer by the inverse of Xavier initialisation’s
+variance value. The same value is also used as the range in weight clipping after gradient update.
+```  
+
+## 4 Training BNNs Faster: Empirical Insights Put into Practice   
+* 一种现象：BNN训得要比FP counterpart慢。  
+* 对上述现象的一种解释：BNN不能用大LR训，所以训得慢。  
+* 本文通过实验说明STE本身不会对训练速度产生太大影响。  
+* 文章说训练慢是clipping引起的，但是不用clipping同时采用大LR会导致直接训不动。  
+* 文章的**Core Insight**之：  
+
+```  
+While weight and gradient clipping help achieve better accuracy, our hypothesis is that they are only required 
+in the later stages of training where the noise added by clipping weights and gradients increases the exploration 
+of the optimiser.
+```  
+
+* 文章的**Core Insight**之“最后一公里问题”：  
+
+```  
+while we can quickly get to the point where training and validation accuracies stagnate, there is a small gap 
+between the achieved accuracy and the best possible one. This gap can only be filled by continuing training for 
+many epochs.
+```  
+
+同时argue“最后一公里”和STE capacity无关，倒和对param空间的随机探索有关：  
+
+```  
+last mile of model performance has little dependence on the STE’s capability and mostly relies on a 
+stochastic exploration of the parameter space
+```  
 
 ## Remained Questions
 待补充。  
