@@ -1,8 +1,8 @@
-# Training Binary Neural Networks with Real-to-Binary Convlutions  
+# An Empirical study of Binary Neural Networks' Optimisation  
 
-2021/3/19  
+2021/3/20  
 
-来源：ICLR2020  
+来源：ICLR2019  
 resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/BNN/Training%20Binary%20Neural%20Networks%20with%20Real-to-Bina.pdf)的包括ipad标注的pdf版本。  
 又是Brais Martinez&Adrian Bulat！总是Brais Martinez&Adrian Bulat！~~Brais Martinez&Adrian Bulat发文的神！~~  
 

@@ -3,8 +3,14 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+
+### 2021/3/20  
+* re-read [An Empirical study of Binary Neural Networks' Optimisation]()  
+
+
 ### 2021/3/19  
-* read [Training Binary Neural Networks with Real-to-Binary Convlutions]()  
+* read [Training Binary Neural Networks with Real-to-Binary Convlutions](https://youcaijun98.github.io/articles/BNN/Real_to_Bi.html)  
+
 
 ### 2021/3/18  
 * read [BinaryDuo: Reducing Gradient Mismatch in Binary Activation Network by Coupling Binary Activations](https://youcaijun98.github.io/articles/BNN/binaryduo.html)  
