@@ -3,6 +3,8 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/3/26
+* had a hard time building BMXNet, see [my docu]()
 
 ### 2021/3/20  
 * re-read [An Empirical study of Binary Neural Networks' Optimisation](https://youcaijun98.github.io/articles/BNN/empirical_study.html)  

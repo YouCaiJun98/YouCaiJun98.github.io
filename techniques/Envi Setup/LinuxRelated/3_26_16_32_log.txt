@@ -1,0 +1,340 @@
+shixiangsheng@sxs-eva8:~/projects/test/BMXNet-v2/build$ cmake .. -G Ninja
+-- The C compiler identification is GNU 7.5.0
+-- The CXX compiler identification is GNU 7.5.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- CMAKE_CROSSCOMPILING FALSE
+-- CMAKE_HOST_SYSTEM_PROCESSOR x86_64
+-- CMAKE_SYSTEM_PROCESSOR x86_64
+-- CMAKE_SYSTEM_NAME Linux
+-- CMake version '3.12.3' using generator 'Ninja'
+-- Performing Test SUPPORT_CXX11
+-- Performing Test SUPPORT_CXX11 - Success
+-- Performing Test SUPPORT_CXX0X
+-- Performing Test SUPPORT_CXX0X - Success
+-- Performing Test SUPPORT_MSSE3
+-- Performing Test SUPPORT_MSSE3 - Success
+-- Performing Test SUPPORT_MSSE2
+-- Performing Test SUPPORT_MSSE2 - Success
+-- Determining F16C support
+-- Performing Test COMPILER_SUPPORT_MF16C
+-- Performing Test COMPILER_SUPPORT_MF16C - Success
+-- F16C enabled
+-- Downloading MKLML...
+-- [download 100% complete]
+-- [download 0% complete]
+-- [download 1% complete]
+-- [download 2% complete]
+-- [download 3% complete]
+-- [download 4% complete]
+-- [download 5% complete]
+-- [download 6% complete]
+-- [download 7% complete]
+-- [download 8% complete]
+-- [download 9% complete]
+-- [download 10% complete]
+-- [download 11% complete]
+-- [download 12% complete]
+-- [download 13% complete]
+-- [download 14% complete]
+-- [download 15% complete]
+-- [download 16% complete]
+-- [download 17% complete]
+-- [download 18% complete]
+-- [download 19% complete]
+-- [download 20% complete]
+-- [download 21% complete]
+-- [download 22% complete]
+-- [download 23% complete]
+-- [download 24% complete]
+-- [download 25% complete]
+-- [download 26% complete]
+-- [download 27% complete]
+-- [download 28% complete]
+-- [download 29% complete]
+-- [download 30% complete]
+-- [download 31% complete]
+-- [download 32% complete]
+-- [download 33% complete]
+-- [download 34% complete]
+-- [download 35% complete]
+-- [download 36% complete]
+-- [download 37% complete]
+-- [download 38% complete]
+-- [download 39% complete]
+-- [download 40% complete]
+-- [download 41% complete]
+-- [download 42% complete]
+-- [download 43% complete]
+-- [download 44% complete]
+-- [download 45% complete]
+-- [download 46% complete]
+-- [download 47% complete]
+-- [download 48% complete]
+-- [download 49% complete]
+-- [download 50% complete]
+-- [download 51% complete]
+-- [download 52% complete]
+-- [download 53% complete]
+-- [download 54% complete]
+-- [download 55% complete]
+-- [download 56% complete]
+-- [download 57% complete]
+-- [download 58% complete]
+-- [download 59% complete]
+-- [download 60% complete]
+-- [download 61% complete]
+-- [download 62% complete]
+-- [download 63% complete]
+-- [download 64% complete]
+-- [download 65% complete]
+-- [download 66% complete]
+-- [download 67% complete]
+-- [download 68% complete]
+-- [download 69% complete]
+-- [download 70% complete]
+-- [download 71% complete]
+-- [download 72% complete]
+-- [download 73% complete]
+-- [download 74% complete]
+-- [download 75% complete]
+-- [download 76% complete]
+-- [download 77% complete]
+-- [download 78% complete]
+-- [download 79% complete]
+-- [download 80% complete]
+-- [download 81% complete]
+-- [download 82% complete]
+-- [download 83% complete]
+-- [download 84% complete]
+-- [download 85% complete]
+-- [download 86% complete]
+-- [download 87% complete]
+-- [download 88% complete]
+-- [download 89% complete]
+-- [download 90% complete]
+-- [download 91% complete]
+-- [download 92% complete]
+-- [download 93% complete]
+-- [download 94% complete]
+-- [download 95% complete]
+-- [download 96% complete]
+-- [download 97% complete]
+-- [download 98% complete]
+-- [download 99% complete]
+-- [download 100% complete]
+-- Setting MKLROOT path to /home/shixiangsheng/projects/test/BMXNet-v2/build/mklml/mklml_lnx_2019.0.5.20190502
+-- CMAKE_BUILD_TYPE is unset, defaulting to Release
+-- This is a product build
+-- Detecting Intel(R) MKL: trying mklml_intel
+-- Intel(R) MKL: include /home/shixiangsheng/projects/test/BMXNet-v2/build/mklml/mklml_lnx_2019.0.5.20190502/include
+-- Intel(R) MKL: lib /home/shixiangsheng/projects/test/BMXNet-v2/build/mklml/mklml_lnx_2019.0.5.20190502/lib/libmklml_intel.so
+-- Found OpenMP_C: -fopenmp (found version "4.5")
+-- Found OpenMP_CXX: -fopenmp (found version "4.5")
+-- Found OpenMP: TRUE (found version "4.5")
+-- OpenMP lib: /home/shixiangsheng/projects/test/BMXNet-v2/build/mklml/mklml_lnx_2019.0.5.20190502/lib/libiomp5.so
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE)
+-- VTune profiling environment is unset
+-- Found Git: /usr/bin/git (found version "2.17.1")
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE
+-- Found CUDA: /opt/cuda-10.0 (found version "10.0")
+-- Found NVTX: /opt/cuda-10.0/include
+-- Found NVTX (include: /opt/cuda-10.0/include, library: /opt/cuda-10.0/lib64/libnvToolsExt.so)
+-- Could NOT find MKL (missing: MKL_INCLUDE_DIR MKL_RT_LIBRARY)
+-- Found OpenBLAS libraries: /usr/lib/x86_64-linux-gnu/libopenblas.so
+-- Found OpenBLAS include: /usr/include/x86_64-linux-gnu
+CMake Warning (dev) at 3rdparty/mshadow/cmake/mshadow.cmake:11 (find_package):
+  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  CMake variable MKL_ROOT is set to:
+
+    MKL_ROOT-NOTFOUND
+
+  For compatibility, CMake is ignoring the variable.
+Call Stack (most recent call first):
+  CMakeLists.txt:330 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Could NOT find MKL (missing: MKL_INCLUDE_DIR MKL_RT_LIBRARY)
+-- Found OpenBLAS libraries: /usr/lib/x86_64-linux-gnu/libopenblas.so
+-- Found OpenBLAS include: /usr/include/x86_64-linux-gnu
+-- CUDA detected: 10.0
+-- Found cuDNN (include: /opt/cuda-10.0/include, library: /opt/cuda-10.0/lib64/libcudnn.so)
+-- Running GPU architecture autodetection
+-- Found CUDA arch 7.5 7.5 7.5 7.5 7.5 7.5 7.5 7.5
+-- Added CUDA NVCC flags for: sm_75
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1")
+-- Could NOT find Jemalloc (missing: JEMALLOC_LIBRARY JEMALLOC_INCLUDE_DIR)
+-- Found OpenCV: /usr (found version "3.2.0") found components:  core highgui imgproc imgcodecs
+-- OpenCV 3.2.0 found (/usr/share/OpenCV)
+--  OpenCV_LIBS=opencv_core;opencv_highgui;opencv_imgproc;opencv_imgcodecs
+-- Found OpenMP_C: -fopenmp
+-- Found OpenMP_CXX: -fopenmp
+-- Found OpenMP: TRUE
+-- Performing Test LIBOMP_HAVE_STD_CPP11_FLAG
+-- Performing Test LIBOMP_HAVE_STD_CPP11_FLAG - Success
+-- Performing Test LIBOMP_HAVE_FNO_EXCEPTIONS_FLAG
+-- Performing Test LIBOMP_HAVE_FNO_EXCEPTIONS_FLAG - Success
+-- Performing Test LIBOMP_HAVE_FNO_RTTI_FLAG
+-- Performing Test LIBOMP_HAVE_FNO_RTTI_FLAG - Success
+-- Performing Test LIBOMP_HAVE_X_CPP_FLAG
+-- Performing Test LIBOMP_HAVE_X_CPP_FLAG - Success
+-- Performing Test LIBOMP_HAVE_WERROR_FLAG
+-- Performing Test LIBOMP_HAVE_WERROR_FLAG - Success
+-- Performing Test LIBOMP_HAVE_WNO_UNUSED_FUNCTION_FLAG
+-- Performing Test LIBOMP_HAVE_WNO_UNUSED_FUNCTION_FLAG - Success
+-- Performing Test LIBOMP_HAVE_WNO_UNUSED_LOCAL_TYPEDEF_FLAG
+-- Performing Test LIBOMP_HAVE_WNO_UNUSED_LOCAL_TYPEDEF_FLAG - Failed
+-- Performing Test LIBOMP_HAVE_WNO_UNUSED_VALUE_FLAG
+-- Performing Test LIBOMP_HAVE_WNO_UNUSED_VALUE_FLAG - Success
+-- Performing Test LIBOMP_HAVE_WNO_UNUSED_VARIABLE_FLAG
+-- Performing Test LIBOMP_HAVE_WNO_UNUSED_VARIABLE_FLAG - Success
+-- Performing Test LIBOMP_HAVE_WNO_SWITCH_FLAG
+-- Performing Test LIBOMP_HAVE_WNO_SWITCH_FLAG - Success
+-- Performing Test LIBOMP_HAVE_WNO_COVERED_SWITCH_DEFAULT_FLAG
+-- Performing Test LIBOMP_HAVE_WNO_COVERED_SWITCH_DEFAULT_FLAG - Failed
+-- Performing Test LIBOMP_HAVE_WNO_DEPRECATED_REGISTER_FLAG
+-- Performing Test LIBOMP_HAVE_WNO_DEPRECATED_REGISTER_FLAG - Failed
+-- Performing Test LIBOMP_HAVE_WNO_SIGN_COMPARE_FLAG
+-- Performing Test LIBOMP_HAVE_WNO_SIGN_COMPARE_FLAG - Success
+-- Performing Test LIBOMP_HAVE_WNO_GNU_ANONYMOUS_STRUCT_FLAG
+-- Performing Test LIBOMP_HAVE_WNO_GNU_ANONYMOUS_STRUCT_FLAG - Failed
+-- Performing Test LIBOMP_HAVE_WNO_UNKNOWN_PRAGMAS_FLAG
+-- Performing Test LIBOMP_HAVE_WNO_UNKNOWN_PRAGMAS_FLAG - Success
+-- Performing Test LIBOMP_HAVE_WNO_MISSING_FIELD_INITIALIZERS_FLAG
+-- Performing Test LIBOMP_HAVE_WNO_MISSING_FIELD_INITIALIZERS_FLAG - Success
+-- Performing Test LIBOMP_HAVE_WNO_MISSING_BRACES_FLAG
+-- Performing Test LIBOMP_HAVE_WNO_MISSING_BRACES_FLAG - Success
+-- Performing Test LIBOMP_HAVE_WNO_COMMENT_FLAG
+-- Performing Test LIBOMP_HAVE_WNO_COMMENT_FLAG - Success
+-- Performing Test LIBOMP_HAVE_WNO_SELF_ASSIGN_FLAG
+-- Performing Test LIBOMP_HAVE_WNO_SELF_ASSIGN_FLAG - Failed
+-- Performing Test LIBOMP_HAVE_WNO_VLA_EXTENSION_FLAG
+-- Performing Test LIBOMP_HAVE_WNO_VLA_EXTENSION_FLAG - Failed
+-- Performing Test LIBOMP_HAVE_WNO_FORMAT_PEDANTIC_FLAG
+-- Performing Test LIBOMP_HAVE_WNO_FORMAT_PEDANTIC_FLAG - Failed
+-- Performing Test LIBOMP_HAVE_MSSE2_FLAG
+-- Performing Test LIBOMP_HAVE_MSSE2_FLAG - Success
+-- Performing Test LIBOMP_HAVE_FTLS_MODEL_FLAG
+-- Performing Test LIBOMP_HAVE_FTLS_MODEL_FLAG - Success
+-- Performing Test LIBOMP_HAVE_MMIC_FLAG
+-- Performing Test LIBOMP_HAVE_MMIC_FLAG - Failed
+-- Performing Test LIBOMP_HAVE_M32_FLAG
+-- Performing Test LIBOMP_HAVE_M32_FLAG - Failed
+-- Performing Test LIBOMP_HAVE_X_FLAG
+-- Performing Test LIBOMP_HAVE_X_FLAG - Success
+-- Performing Test LIBOMP_HAVE_WARN_SHARED_TEXTREL_FLAG
+-- Performing Test LIBOMP_HAVE_WARN_SHARED_TEXTREL_FLAG - Success
+-- Performing Test LIBOMP_HAVE_AS_NEEDED_FLAG
+-- Performing Test LIBOMP_HAVE_AS_NEEDED_FLAG - Success
+-- Performing Test LIBOMP_HAVE_VERSION_SCRIPT_FLAG
+-- Performing Test LIBOMP_HAVE_VERSION_SCRIPT_FLAG - Success
+-- Performing Test LIBOMP_HAVE_STATIC_LIBGCC_FLAG
+-- Performing Test LIBOMP_HAVE_STATIC_LIBGCC_FLAG - Success
+-- Performing Test LIBOMP_HAVE_Z_NOEXECSTACK_FLAG
+-- Performing Test LIBOMP_HAVE_Z_NOEXECSTACK_FLAG - Success
+-- Performing Test LIBOMP_HAVE_FINI_FLAG
+-- Performing Test LIBOMP_HAVE_FINI_FLAG - Success
+-- Found Perl: /usr/bin/perl (found version "5.26.1")
+-- Performing Test LIBOMP_HAVE_VERSION_SYMBOLS
+-- Performing Test LIBOMP_HAVE_VERSION_SYMBOLS - Success
+-- Performing Test LIBOMP_HAVE___BUILTIN_FRAME_ADDRESS
+-- Performing Test LIBOMP_HAVE___BUILTIN_FRAME_ADDRESS - Success
+-- Performing Test LIBOMP_HAVE_WEAK_ATTRIBUTE
+-- Performing Test LIBOMP_HAVE_WEAK_ATTRIBUTE - Success
+-- Looking for include files windows.h, psapi.h
+-- Looking for include files windows.h, psapi.h - not found
+-- Looking for EnumProcessModules in psapi
+-- Looking for EnumProcessModules in psapi - not found
+-- LIBOMP: Operating System     -- Linux
+-- LIBOMP: Target Architecture  -- x86_64
+-- LIBOMP: Build Type           -- Release
+-- LIBOMP: OpenMP Version       -- 50
+-- LIBOMP: Library Kind         -- SHARED
+-- LIBOMP: Library Type         -- normal
+-- LIBOMP: Fortran Modules      -- FALSE
+-- LIBOMP: Build                -- 20140926
+-- LIBOMP: Use Stats-gathering  -- FALSE
+-- LIBOMP: Use Debugger-support -- FALSE
+-- LIBOMP: Use ITT notify       -- TRUE
+-- LIBOMP: Use OMPT-support     -- FALSE
+-- LIBOMP: Use Adaptive locks   -- TRUE
+-- LIBOMP: Use quad precision   -- TRUE
+-- LIBOMP: Use TSAN-support     -- FALSE
+-- LIBOMP: Use Hwloc library    -- FALSE
+-- Found PythonInterp: /usr/bin/python (found version "2.7.17")
+-- Looking for sqrt in m
+-- Looking for sqrt in m - found
+-- Looking for __atomic_load_1
+-- Looking for __atomic_load_1 - not found
+-- Looking for __atomic_load_1 in atomic
+-- Looking for __atomic_load_1 in atomic - found
+-- LIBOMP: Cannot find llvm-lit.
+-- LIBOMP: Please put llvm-lit in your PATH, set LIBOMP_LLVM_LIT_EXECUTABLE to its full path or point OPENMP_LLVM_TOOLS_DIR to its directory
+CMake Warning at 3rdparty/openmp/runtime/cmake/LibompUtils.cmake:21 (message):
+  LIBOMP: The check-libomp target will not be available!
+Call Stack (most recent call first):
+  3rdparty/openmp/runtime/test/CMakeLists.txt:62 (libomp_warning_say)
+
+
+USE_LAPACK is ON
+-- Could NOT find Jemalloc (missing: JEMALLOC_LIBRARY JEMALLOC_INCLUDE_DIR)
+CMake Warning at 3rdparty/googletest/googletest/CMakeLists.txt:47 (project):
+  VERSION keyword not followed by a value or was followed by a value that
+  expanded to nothing.
+
+
+-- Found GTest: gtest
+-- Found cuDNN (include: /opt/cuda-10.0/include, library: /opt/cuda-10.0/lib64/libcudnn.so)
+-- Looking for clock_gettime in rt
+-- Looking for clock_gettime in rt - found
+-- Looking for fopen64
+-- Looking for fopen64 - not found
+-- Looking for C++ include cxxabi.h
+-- Looking for C++ include cxxabi.h - found
+-- Looking for nanosleep
+-- Looking for nanosleep - found
+-- Looking for backtrace
+-- Looking for backtrace - found
+-- backtrace facility detected in default set of libraries
+-- Found Backtrace: /usr/include
+-- Check if the system is big endian
+-- Searching 16 bit integer
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of unsigned short
+-- Check size of unsigned short - done
+-- Using unsigned short
+-- Check if the system is big endian - little endian
+-- /home/shixiangsheng/projects/test/BMXNet-v2/3rdparty/dmlc-core/cmake/build_config.h.in -> /home/shixiangsheng/projects/test/BMXNet-v2/3rdparty/dmlc-core/include/dmlc/build_config.h
+-- Found OpenMP_C: -fopenmp
+-- Found OpenMP_CXX: -fopenmp
+-- enabling popcnt...
+-- Using uint32_t as container for binarized values
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/shixiangsheng/projects/test/BMXNet-v2/build
