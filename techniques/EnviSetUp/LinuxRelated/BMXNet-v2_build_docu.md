@@ -14,6 +14,7 @@ sudo apt-get install libatlas-base-dev libopenblas-dev
 sudo apt-get install libopencv-dev
 wget https://cmake.org/files/v3.12/cmake-3.12.3-Linux-x86_64.tar.gz
 sudo apt-get install ninja-build
+sudo apt-get install doxygen
 #最后记得在创建的环境里安装gluoncv
 ```  
 
@@ -150,5 +151,18 @@ sudo apt-get install nvidia-367
 删除原来的build文件夹，重新`cmake`和`ninja`，尽管中间又出现了好多warning和failed，但总算没有fatal ones，build成功：  
 
 ![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202103260008.png)  
+
+
+### 在eva10上的部署
+吐了，真是一台服务器一个样...  
+首先遇到的问题是有很多  
+
+```log  
+/sbin/ldconfig.real: /usr/local/cuda/lib64/libcuinj64.so.10.0 is not a symbolic link
+```  
+
+这样的错误（出现在sudo apt-get阶段），似乎是软连接出了问题，**没有处理**。实在没法处理，出错的软连接**实在太多了**。  
+
+
 
 
