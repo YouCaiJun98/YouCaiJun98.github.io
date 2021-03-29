@@ -4,6 +4,18 @@
 
 部署别人的项目是真难，配环境配到头秃。~~以后我有了成果一定也整点难配的环境，一报还一报~~  
 这篇博客从时间上来说是乱序呢...  
+主要的参考文献是Ubuntu上的[安装指南](https://github.com/hpi-xnor/BMXNet-v2-wiki/blob/master/building-ubuntu.md)，问题是太年久失修了，里面有很多疏漏，所以还要配合BMXNet的README食用。  
+
+### 小小的总结——需要安装的集合  
+```bash  
+sudo apt-get update
+sudo apt-get install build-essential
+sudo apt-get install libatlas-base-dev libopenblas-dev
+sudo apt-get install libopencv-dev
+wget https://cmake.org/files/v3.12/cmake-3.12.3-Linux-x86_64.tar.gz
+sudo apt-get install ninja-build
+#最后记得在创建的环境里安装gluoncv
+```  
 
 ### 一些稀碎的点
 * 用bash命令`pwd`可以查看当前路径。  
