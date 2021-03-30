@@ -12,7 +12,11 @@ sudo apt-get update
 sudo apt-get install build-essential
 sudo apt-get install libatlas-base-dev libopenblas-dev
 sudo apt-get install libopencv-dev
+mkdir -p ~/utils
 wget https://cmake.org/files/v3.12/cmake-3.12.3-Linux-x86_64.tar.gz
+tar -zxvf cmake-3.12.3-Linux-x86_64.tar.gz
+alias cmake="cmake-3.12.3-Linux-x86_64/bin/cmake"
+rm cmake-3.12.3-Linux-x86_64.tar.gz
 sudo apt-get install ninja-build
 sudo apt-get install doxygen
 #最后记得在创建的环境里安装gluoncv
@@ -163,6 +167,10 @@ sudo apt-get install nvidia-367
 
 这样的错误（出现在sudo apt-get阶段），似乎是软连接出了问题，**没有处理**。实在没法处理，出错的软连接**实在太多了**。  
 
+接下来**假装**那些东西都装好了，直接build，出现了[新的状况](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/techniques/EnviSetUp/LinuxRelated/3_29_20_59_log.txt)，后来发现是**Cmake版本与CUDA版本mismatch**的问题，CUDA 10.0需要`Cmake`版本为最新3.12，而eva10上的`Cmake`只有3.10（似乎和CUDA 9.x对应），所以先把原来的`Cmake`给删掉，再装新的：  
 
+```bash  
+sudo apt-get autoremove cmake
+```  
 
 
