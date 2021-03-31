@@ -4,7 +4,7 @@ Just A Private HomePage for Kaleido XD
 
 ## What's up?  
 ### 2021/3/30  
-* roughly read [Learning Channel-wise Interactions for Binary Convolutional Neural Networks]()
+* roughly read [Learning Channel-wise Interactions for Binary Convolutional Neural Networks](https://youcaijun98.github.io/articles/BNN/Learning%20Channel-wise%20Interactions%20for%20Binary%20Convolutional%20Neural%20Networks.html)  
 
 ### 2021/3/26
 * had a hard time building BMXNet, see [my docu](https://youcaijun98.github.io/techniques/EnviSetUp/LinuxRelated/BMXNet-v2_build_docu.html)  
