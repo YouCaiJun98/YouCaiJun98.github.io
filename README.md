@@ -4,6 +4,7 @@ Just A Private HomePage for Kaleido XD
 
 ## What's up?  
 ### 2021/3/31  
+* recall the [usage of git]()  
 * read [ReCU: Reviving the Dead Weights in Binary Neural Networks](https://youcaijun98.github.io/articles/BNN/ReCU.html)  
 
 ### 2021/3/30  
