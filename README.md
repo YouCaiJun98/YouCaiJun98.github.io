@@ -3,6 +3,9 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/3/31  
+* read [ReCU: Reviving the Dead Weights in Binary Neural Networks](https://youcaijun98.github.io/articles/BNN/ReCU.html)  
+
 ### 2021/3/30  
 * roughly read [Learning Channel-wise Interactions for Binary Convolutional Neural Networks](https://youcaijun98.github.io/articles/BNN/Learning%20Channel-wise%20Interactions%20for%20Binary%20Convolutional%20Neural%20Networks.html)  
 
