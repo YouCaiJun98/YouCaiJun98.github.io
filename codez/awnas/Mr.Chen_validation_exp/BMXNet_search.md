@@ -23,10 +23,18 @@ AWNAS中的Stem Conv是拆成两个3x3的小kernel，具体顺序是`Conv-BN-ReL
 
 ![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202104020003.jpg)  
 
-使用`ipdb`打断点看[net variable]()以及检查[model.log]()发现了一些**异常**，需要看代码确认一下：  
-* 
+使用`ipdb`打断点看[net variable](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/codez/awnas/Mr.Chen_validation_exp/BMXNet_net_variable.txt)以及检查[model.log](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/codez/awnas/Mr.Chen_validation_exp/model.log)发现了一些**异常**，需要看代码确认一下：  
+* 看不到preprocess的地方。按说我们这里每个cell前应该有1x1的preprocess，BMXNet每两层layer前应该也有？但是`net`中看不到，需要进一步确认。  
+* ~~Block/layer中的顺序和原文不对~~，不知道是`net`的问题还是写的代码就是如此，原文中是`BN-ReLU-Conv-Pool`，~~但是`net`中显示的是`BN-QActivation-Conv-BN`~~。问题解决了，原来串起来看是一样的，但是AWNAS和BMXNet都没有用`Pool`？而且AWNAS里Stem后面的`BN`能不能和第一个Block开始的`BN`合并到一起？最后一个layer的顺序就有问题了，AWNAS依然是`BN-ReLU-Conv`最后跟一个global pooling，BMXNet最后是`qact-qconv-BN-ReLU`最后接global pooling。  
+* AWNAS中的layer-wise `shortcut`感觉有点奇怪，需要再看看到底有没有起作用。  
+* 在BMXNet中都没有看到cell-wise shortcut的描述，需要看看（AWNAS中的skip connect应该是和op1/2并列的那个，也可以再确认下）。  
 
+### Reduction Cell  
+还是很有点奇怪。  
 
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202104020004.png)  
 
-### Reduction Cell
+* 首先依然是没有看到preprocess的影子，这个可能写在了basic block里了，需要注意一下继承里面。  
+* AWNAS中的`downsaple`不是一个(64,128)的`Conv`，是两个(64,64)的`Conv`并列？？之后又分别接了两个`AvePool`。这里连接64/128的skip op是FP的。BMXNet的情况就很有些奇怪，他已经有个`qconv`是64 -> 128的操作了，后面又来了个downsample layer？而且还是64 -> 128，同时使用`FP Conv`？这边暂时**猜测它是描述的cell-wise skip op**，但是出现的位置还是感觉很奇怪（在必经之路上？）。  
+
 

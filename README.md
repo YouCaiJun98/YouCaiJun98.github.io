@@ -4,7 +4,7 @@ Just A Private HomePage for Kaleido XD
 
 ## What's up?  
 ### 2021/4/2  
-* go through BMXNet and compare it with our implementation, see [docu]().  
+* go through BMXNet and compare it with our implementation, see [docu](https://youcaijun98.github.io/codez/awnas/Mr.Chen_validation_exp/BMXNet_search.html).  
 
 ### 2021/3/31  
 * recall the [usage of git](https://youcaijun98.github.io/techniques/ToolBox/git.html)  
