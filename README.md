@@ -3,8 +3,11 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/4/2  
+* go through BMXNet and compare it with our implementation, see [docu]().  
+
 ### 2021/3/31  
-* recall the [usage of git]()  
+* recall the [usage of git](https://youcaijun98.github.io/techniques/ToolBox/git.html)  
 * read [ReCU: Reviving the Dead Weights in Binary Neural Networks](https://youcaijun98.github.io/articles/BNN/ReCU.html)  
 
 ### 2021/3/30  

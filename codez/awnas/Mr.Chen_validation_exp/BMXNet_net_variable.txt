@@ -1,0 +1,214 @@
+ipdb> net
+ResNetE1(
+  (features): HybridSequential(
+    (0): BatchNorm(axis=1, eps=2e-05, momentum=0.9, fix_gamma=True, use_global_stats=False, in_channels=None)
+    (1): Conv2D(None -> 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+    (2): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=None)
+    (3): Activation(relu)
+    (4): MaxPool2D(size=(3, 3), stride=(2, 2), padding=(1, 1), ceil_mode=False, global_pool=False, pool_type=max, layout=NCHW)
+    (5): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=None)
+    (6): HybridSequential(
+      (0): BasicBlockE1(
+        (body): HybridSequential(
+          (0): BinaryConvolution(
+            (qact): QActivation(
+
+            )
+            (qconv): QConv2D(64 -> 64, kernel_size=(3, 3), stride=(1, 1), bias=False)
+          )
+          (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=None)
+        )
+      )
+      (1): BasicBlockE1(
+        (body): HybridSequential(
+          (0): BinaryConvolution(
+            (qact): QActivation(
+
+            )
+            (qconv): QConv2D(64 -> 64, kernel_size=(3, 3), stride=(1, 1), bias=False)
+          )
+          (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=None)
+        )
+      )
+      (2): BasicBlockE1(
+        (body): HybridSequential(
+          (0): BinaryConvolution(
+            (qact): QActivation(
+
+            )
+            (qconv): QConv2D(64 -> 64, kernel_size=(3, 3), stride=(1, 1), bias=False)
+          )
+          (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=None)
+        )
+      )
+      (3): BasicBlockE1(
+        (body): HybridSequential(
+          (0): BinaryConvolution(
+            (qact): QActivation(
+
+            )
+            (qconv): QConv2D(64 -> 64, kernel_size=(3, 3), stride=(1, 1), bias=False)
+          )
+          (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=None)
+        )
+      )
+    )
+    (7): HybridSequential(
+      (0): BasicBlockE1(
+        (body): HybridSequential(
+          (0): BinaryConvolution(
+            (qact): QActivation(
+
+            )
+            (qconv): QConv2D(64 -> 128, kernel_size=(3, 3), stride=(2, 2), bias=False)
+          )
+          (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=None)
+        )
+        (downsample): HybridSequential(
+          (0): AvgPool2D(size=(2, 2), stride=(2, 2), padding=(0, 0), ceil_mode=False, global_pool=False, pool_type=avg, layout=NCHW)
+          (1): Conv2D(64 -> 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (2): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=None)
+        )
+      )
+      (1): BasicBlockE1(
+        (body): HybridSequential(
+          (0): BinaryConvolution(
+            (qact): QActivation(
+
+            )
+            (qconv): QConv2D(128 -> 128, kernel_size=(3, 3), stride=(1, 1), bias=False)
+          )
+          (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=None)
+        )
+      )
+      (2): BasicBlockE1(
+        (body): HybridSequential(
+          (0): BinaryConvolution(
+            (qact): QActivation(
+
+            )
+            (qconv): QConv2D(128 -> 128, kernel_size=(3, 3), stride=(1, 1), bias=False)
+          )
+          (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=None)
+        )
+      )
+      (3): BasicBlockE1(
+        (body): HybridSequential(
+          (0): BinaryConvolution(
+            (qact): QActivation(
+
+            )
+            (qconv): QConv2D(128 -> 128, kernel_size=(3, 3), stride=(1, 1), bias=False)
+          )
+          (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=None)
+        )
+      )
+    )
+    (8): HybridSequential(
+      (0): BasicBlockE1(
+        (body): HybridSequential(
+          (0): BinaryConvolution(
+            (qact): QActivation(
+
+            )
+            (qconv): QConv2D(128 -> 256, kernel_size=(3, 3), stride=(2, 2), bias=False)
+          )
+          (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=None)
+        )
+        (downsample): HybridSequential(
+          (0): AvgPool2D(size=(2, 2), stride=(2, 2), padding=(0, 0), ceil_mode=False, global_pool=False, pool_type=avg, layout=NCHW)
+          (1): Conv2D(128 -> 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (2): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=None)
+        )
+      )
+      (1): BasicBlockE1(
+        (body): HybridSequential(
+          (0): BinaryConvolution(
+            (qact): QActivation(
+
+            )
+            (qconv): QConv2D(256 -> 256, kernel_size=(3, 3), stride=(1, 1), bias=False)
+          )
+          (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=None)
+        )
+      )
+      (2): BasicBlockE1(
+        (body): HybridSequential(
+          (0): BinaryConvolution(
+            (qact): QActivation(
+
+            )
+            (qconv): QConv2D(256 -> 256, kernel_size=(3, 3), stride=(1, 1), bias=False)
+          )
+          (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=None)
+        )
+      )
+      (3): BasicBlockE1(
+        (body): HybridSequential(
+          (0): BinaryConvolution(
+            (qact): QActivation(
+
+            )
+            (qconv): QConv2D(256 -> 256, kernel_size=(3, 3), stride=(1, 1), bias=False)
+          )
+          (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=None)
+        )
+      )
+    )
+    (9): HybridSequential(
+      (0): BasicBlockE1(
+        (body): HybridSequential(
+          (0): BinaryConvolution(
+            (qact): QActivation(
+
+            )
+            (qconv): QConv2D(256 -> 512, kernel_size=(3, 3), stride=(2, 2), bias=False)
+          )
+          (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=None)
+        )
+        (downsample): HybridSequential(
+          (0): AvgPool2D(size=(2, 2), stride=(2, 2), padding=(0, 0), ceil_mode=False, global_pool=False, pool_type=avg, layout=NCHW)
+          (1): Conv2D(256 -> 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (2): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=None)
+        )
+      )
+      (1): BasicBlockE1(
+        (body): HybridSequential(
+          (0): BinaryConvolution(
+            (qact): QActivation(
+
+            )
+            (qconv): QConv2D(512 -> 512, kernel_size=(3, 3), stride=(1, 1), bias=False)
+          )
+          (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=None)
+        )
+      )
+      (2): BasicBlockE1(
+        (body): HybridSequential(
+          (0): BinaryConvolution(
+            (qact): QActivation(
+
+            )
+            (qconv): QConv2D(512 -> 512, kernel_size=(3, 3), stride=(1, 1), bias=False)
+          )
+          (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=None)
+        )
+      )
+      (3): BasicBlockE1(
+        (body): HybridSequential(
+          (0): BinaryConvolution(
+            (qact): QActivation(
+
+            )
+            (qconv): QConv2D(512 -> 512, kernel_size=(3, 3), stride=(1, 1), bias=False)
+          )
+          (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=None)
+        )
+      )
+    )
+    (10): Activation(relu)
+    (11): GlobalAvgPool2D(size=(1, 1), stride=(1, 1), padding=(0, 0), ceil_mode=True, global_pool=True, pool_type=avg, layout=NCHW)
+    (12): Flatten
+  )
+  (output): Dense(512 -> 1000, linear)
+)

@@ -1,0 +1,260 @@
+BNNGenotypeModel(
+  (stem): Sequential(
+    (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+    (1): SyncBatchNorm(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+    (4): SyncBatchNorm(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (cells): ModuleList(
+    (0): CNNGenotypeCell(
+      (concat_op): ChannelConcat()
+      (preprocess_ops): ModuleList(
+        (0): Identity()
+      )
+      (edge_mod): Module(
+        (f_0_t_1-xnor_resnet_block-0): BinaryResNetBlock(
+          (op_1): BinaryConvBNReLU(
+            (bn): SyncBatchNorm(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU()
+            (conv): BinaryConv2d()
+            (shortcut): SkipConnectV2(
+              (op): Identity()
+            )
+          )
+          (op_2): BinaryConvBNReLU(
+            (bn): SyncBatchNorm(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU()
+            (conv): BinaryConv2d()
+            (shortcut): SkipConnectV2(
+              (op): Identity()
+            )
+          )
+          (skip_op): Identity()
+        )
+      )
+    )
+    (1): CNNGenotypeCell(
+      (concat_op): ChannelConcat()
+      (preprocess_ops): ModuleList(
+        (0): Identity()
+      )
+      (edge_mod): Module(
+        (f_0_t_1-xnor_resnet_block-0): BinaryResNetBlock(
+          (op_1): BinaryConvBNReLU(
+            (bn): SyncBatchNorm(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU()
+            (conv): BinaryConv2d()
+            (shortcut): SkipConnectV2(
+              (op): Identity()
+            )
+          )
+          (op_2): BinaryConvBNReLU(
+            (bn): SyncBatchNorm(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU()
+            (conv): BinaryConv2d()
+            (shortcut): SkipConnectV2(
+              (op): Identity()
+            )
+          )
+          (skip_op): Identity()
+        )
+      )
+    )
+    (2): CNNGenotypeCell(
+      (concat_op): ChannelConcat()
+      (preprocess_ops): ModuleList(
+        (0): Identity()
+      )
+      (edge_mod): Module(
+        (f_0_t_1-xnor_resnet_block-0): BinaryResNetBlock(
+          (op_1): BinaryConvBNReLU(
+            (bn): SyncBatchNorm(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU()
+            (convs): ModuleList(
+              (0): BinaryConv2d()
+              (1): BinaryConv2d()
+            )
+            (shortcut): SkipConnectV2(
+              (op1): AvgPool2d(kernel_size=2, stride=2, padding=0)
+              (op2): AvgPool2d(kernel_size=2, stride=2, padding=0)
+            )
+          )
+          (op_2): BinaryConvBNReLU(
+            (bn): SyncBatchNorm(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU()
+            (conv): BinaryConv2d()
+            (shortcut): SkipConnectV2(
+              (op): Identity()
+            )
+          )
+          (skip_op): ConvBNReLU(
+            (op): Sequential(
+              (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+              (1): SyncBatchNorm(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (2): ReLU()
+            )
+          )
+        )
+      )
+    )
+    (3): CNNGenotypeCell(
+      (concat_op): ChannelConcat()
+      (preprocess_ops): ModuleList(
+        (0): Identity()
+      )
+      (edge_mod): Module(
+        (f_0_t_1-xnor_resnet_block-0): BinaryResNetBlock(
+          (op_1): BinaryConvBNReLU(
+            (bn): SyncBatchNorm(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU()
+            (conv): BinaryConv2d()
+            (shortcut): SkipConnectV2(
+              (op): Identity()
+            )
+          )
+          (op_2): BinaryConvBNReLU(
+            (bn): SyncBatchNorm(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU()
+            (conv): BinaryConv2d()
+            (shortcut): SkipConnectV2(
+              (op): Identity()
+            )
+          )
+          (skip_op): Identity()
+        )
+      )
+    )
+    (4): CNNGenotypeCell(
+      (concat_op): ChannelConcat()
+      (preprocess_ops): ModuleList(
+        (0): Identity()
+      )
+      (edge_mod): Module(
+        (f_0_t_1-xnor_resnet_block-0): BinaryResNetBlock(
+          (op_1): BinaryConvBNReLU(
+            (bn): SyncBatchNorm(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU()
+            (convs): ModuleList(
+              (0): BinaryConv2d()
+              (1): BinaryConv2d()
+            )
+            (shortcut): SkipConnectV2(
+              (op1): AvgPool2d(kernel_size=2, stride=2, padding=0)
+              (op2): AvgPool2d(kernel_size=2, stride=2, padding=0)
+            )
+          )
+          (op_2): BinaryConvBNReLU(
+            (bn): SyncBatchNorm(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU()
+            (conv): BinaryConv2d()
+            (shortcut): SkipConnectV2(
+              (op): Identity()
+            )
+          )
+          (skip_op): ConvBNReLU(
+            (op): Sequential(
+              (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+              (1): SyncBatchNorm(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (2): ReLU()
+            )
+          )
+        )
+      )
+    )
+    (5): CNNGenotypeCell(
+      (concat_op): ChannelConcat()
+      (preprocess_ops): ModuleList(
+        (0): Identity()
+      )
+      (edge_mod): Module(
+        (f_0_t_1-xnor_resnet_block-0): BinaryResNetBlock(
+          (op_1): BinaryConvBNReLU(
+            (bn): SyncBatchNorm(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU()
+            (conv): BinaryConv2d()
+            (shortcut): SkipConnectV2(
+              (op): Identity()
+            )
+          )
+          (op_2): BinaryConvBNReLU(
+            (bn): SyncBatchNorm(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU()
+            (conv): BinaryConv2d()
+            (shortcut): SkipConnectV2(
+              (op): Identity()
+            )
+          )
+          (skip_op): Identity()
+        )
+      )
+    )
+    (6): CNNGenotypeCell(
+      (concat_op): ChannelConcat()
+      (preprocess_ops): ModuleList(
+        (0): Identity()
+      )
+      (edge_mod): Module(
+        (f_0_t_1-xnor_resnet_block-0): BinaryResNetBlock(
+          (op_1): BinaryConvBNReLU(
+            (bn): SyncBatchNorm(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU()
+            (convs): ModuleList(
+              (0): BinaryConv2d()
+              (1): BinaryConv2d()
+            )
+            (shortcut): SkipConnectV2(
+              (op1): AvgPool2d(kernel_size=2, stride=2, padding=0)
+              (op2): AvgPool2d(kernel_size=2, stride=2, padding=0)
+            )
+          )
+          (op_2): BinaryConvBNReLU(
+            (bn): SyncBatchNorm(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU()
+            (conv): BinaryConv2d()
+            (shortcut): SkipConnectV2(
+              (op): Identity()
+            )
+          )
+          (skip_op): ConvBNReLU(
+            (op): Sequential(
+              (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+              (1): SyncBatchNorm(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (2): ReLU()
+            )
+          )
+        )
+      )
+    )
+    (7): CNNGenotypeCell(
+      (concat_op): ChannelConcat()
+      (preprocess_ops): ModuleList(
+        (0): Identity()
+      )
+      (edge_mod): Module(
+        (f_0_t_1-xnor_resnet_block-0): BinaryResNetBlock(
+          (op_1): BinaryConvBNReLU(
+            (bn): SyncBatchNorm(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU()
+            (conv): BinaryConv2d()
+            (shortcut): SkipConnectV2(
+              (op): Identity()
+            )
+          )
+          (op_2): BinaryConvBNReLU(
+            (bn): SyncBatchNorm(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU()
+            (conv): BinaryConv2d()
+            (shortcut): SkipConnectV2(
+              (op): Identity()
+            )
+          )
+          (skip_op): Identity()
+        )
+      )
+    )
+  )
+  (global_pooling): AdaptiveAvgPool2d(output_size=1)
+  (dropout): Identity()
+  (classifier): Linear(in_features=512, out_features=1000, bias=True)
+)
