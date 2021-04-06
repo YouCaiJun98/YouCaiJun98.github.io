@@ -38,3 +38,5 @@ AWNAS中的Stem Conv是拆成两个3x3的小kernel，具体顺序是`Conv-BN-ReL
 * AWNAS中的`downsaple`不是一个(64,128)的`Conv`，是两个(64,64)的`Conv`并列？？之后又分别接了两个`AvePool`。这里连接64/128的skip op是FP的。BMXNet的情况就很有些奇怪，他已经有个`qconv`是64 -> 128的操作了，后面又来了个downsample layer？而且还是64 -> 128，同时使用`FP Conv`？这边暂时**猜测它是描述的cell-wise skip op**，但是出现的位置还是感觉很奇怪（在必经之路上？）。  
 
 
+
+

@@ -3,6 +3,10 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/4/6  
+Taking it by and large, m still touching fish today.  
+* explore the [training epoch]() of pytorch.  
+
 ### 2021/4/2  
 * go through BMXNet and compare it with our implementation, see [docu](https://youcaijun98.github.io/codez/awnas/Mr.Chen_validation_exp/BMXNet_search.html).  
 
