@@ -3,9 +3,16 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/4/7  
+Efficiency LOW.  
+* looking deeper into BMXNet and supplement the [2021_4_2doc](https://youcaijun98.github.io/codez/awnas/Mr.Chen_validation_exp/BMXNet_search.html).  
+* 
+
+
 ### 2021/4/6  
 Taking it by and large, m still touching fish today.  
-* explore the [training epoch]() of pytorch.  
+* explore the [training epoch](https://youcaijun98.github.io/Langs/Python/Packets/Torch/train_with_torch.html) of pytorch.  
+* read BMXNet Codez and supplement the [2021_4_2doc](https://youcaijun98.github.io/codez/awnas/Mr.Chen_validation_exp/BMXNet_search.html).  
 
 ### 2021/4/2  
 * go through BMXNet and compare it with our implementation, see [docu](https://youcaijun98.github.io/codez/awnas/Mr.Chen_validation_exp/BMXNet_search.html).  

@@ -37,6 +37,63 @@ AWNAS中的Stem Conv是拆成两个3x3的小kernel，具体顺序是`Conv-BN-ReL
 * 首先依然是没有看到preprocess的影子，这个可能写在了basic block里了，需要注意一下继承里面。  
 * AWNAS中的`downsaple`不是一个(64,128)的`Conv`，是两个(64,64)的`Conv`并列？？之后又分别接了两个`AvePool`。这里连接64/128的skip op是FP的。BMXNet的情况就很有些奇怪，他已经有个`qconv`是64 -> 128的操作了，后面又来了个downsample layer？而且还是64 -> 128，同时使用`FP Conv`？这边暂时**猜测它是描述的cell-wise skip op**，但是出现的位置还是感觉很奇怪（在必经之路上？）。  
 
+## Noticeable Codez Difference  
+
+## Notes for Codez  
+* 字典里定义的ResNet18是：  
+
+```python  
+resnet_spec = {18: ([2, 2, 2, 2], [64, 64, 128, 256, 512]),
+               34: ([3, 4, 6, 3], [64, 64, 128, 256, 512]),
+               50: ([3, 4, 6, 3], [64, 256, 512, 1024, 2048]),
+               101: ([3, 4, 23, 3], [64, 256, 512, 1024, 2048]),
+               152: ([3, 8, 36, 3], [64, 256, 512, 1024, 2048])}
+```  
+
+第一个list是"layers"，第二个list是"channels"，观察上面的大网图，layers（的每一个element）应该是里面不同颜色的块（对应AWNAS里的cell），channels指的大概是算上stem各个layer中的channel。  
+
+### Memoir for Model Construction  
+* Model Construction的入口是在`BMXNet-v2/example/bmxnet-examples/image_classification.py(86)get_model()`。原文是：  
+
+```python  
+    with gluon.nn.set_binary_layer_config(bits=opt.bits, bits_a=opt.bits_a,approximation=opt.approximation,
+                                          grad_cancel=opt.clip_threshold,activation=opt.activation_method,
+                                          weight_quantization=optweight_quantization):
+        net = binary_models.get_model(opt.model, **kwargs)
+```  
+
+`binary_models.get_model(opt.model, **kwargs)`的方法写在了`/BMXNet-v2/example/bmxnet-examples/binary_models/__init__.py`里，里面写了个dict，根据name索引对应的class，返回class的构造方法。用法和下一节中的 *New perspective of Python Class* 描述一致。（不是很一致，见下）  
+通过字典索引了方法`resnet18_e1`，方法里进一步套了一个方法`get_resnet_e`，在这个方法里才用到了下节说的字典存类名，即`net = resnet_class(block_class, layers, channels, **kwargs)`。  
+* `self.features`是在`ResNetE`类的`__init__()`方法里添加的。  
+* initial layer（也就是stem层）的添加是通过`add_initial_layers`方法完成的，它在`BMXNet-v2/example/bmxnet-examples/binary_models/common_layers.py`里。  
+
+
+
+## While Reading Codez
+### New perspective of Python Class  
+在单步看BMXNet的时候发现了奇怪的现象：  
+
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202104060001.png)  
+
+上面用`resnet_class`作为function，**但是上下文并没有这个方法或者类**。将断点打到这句的上面：  
+
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202104060002.png)  
+
+发现这个**变量是一个Class**，来源是这里：  
+
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202104060003.png)  
+
+这里写了一个装有两个元组的List作为索引，**元组中的第一个元素就是上文出现的类**，后面把这个类赋给了变量`resnet_class`（应该是作为func用了？用到了它的`__init__`），就在这里神不知鬼不觉地把model给建起来了。  
+
+**收获：原来类名可以当值传来传去啊，也合理，像个指针一样？**  
+
+2021/4/7补充：原来`binary_models/__init__.py`的字典也是这种用法！通过name索引~~类名~~，返回的时候是通过类名使用类的构造方法！  
+有点不一样，这里是用字典索引方法名！  
+
+
+
+
+
 
 
 
