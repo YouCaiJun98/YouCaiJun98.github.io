@@ -3,11 +3,15 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/4/10  
+
+### 2021/4/9  
+* had a meeting with Mr.Chen, see [meeting docu]().
+
+
 ### 2021/4/7  
 Efficiency LOW.  
 * looking deeper into BMXNet and supplement the [2021_4_2doc](https://youcaijun98.github.io/codez/awnas/Mr.Chen_validation_exp/BMXNet_search.html).  
-* 
-
 
 ### 2021/4/6  
 Taking it by and large, m still touching fish today.  
