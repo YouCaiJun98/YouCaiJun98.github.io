@@ -10,8 +10,7 @@ Just A Private HomePage for Kaleido XD
 
 ### 2021/4/9  
 * had a meeting with Mr.Chen, see [meeting docu](https://youcaijun98.github.io/codez/awnas/Mr.Chen_validation_exp/2021_4_9_meeting.html).  
-* briefly read [Understanding Straight-Through Estimator in Training Activation Quantized Neural Nets]()  
-
+* briefly read [Understanding Straight-Through Estimator in Training Activation Quantized Neural Nets](https://youcaijun98.github.io/articles/BNN/Understanding%20Straight-Through%20Estimator%20in%20Train.html)  
 
 ### 2021/4/7  
 Efficiency LOW.  
