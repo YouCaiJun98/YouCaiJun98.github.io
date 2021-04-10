@@ -4,13 +4,14 @@ Just A Private HomePage for Kaleido XD
 
 ## What's up?  
 ### 2021/4/10  
-* Move awnas_bnn from eva8 to eva7, see update in [this docu](https://youcaijun98.github.io/techniques/ToolBox/git.html) and [this docu]().  
+* Move awnas_bnn from eva8 to eva7, see update in [this docu](https://youcaijun98.github.io/techniques/ToolBox/git.html) and [this docu](https://youcaijun98.github.io/techniques/EnviSetUp/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html).  
 * 
 
 
 ### 2021/4/9  
 * had a meeting with Mr.Chen, see [meeting docu](https://youcaijun98.github.io/codez/awnas/Mr.Chen_validation_exp/2021_4_9_meeting.html).  
-* 
+* briefly read [Understanding Straight-Through Estimator in Training Activation Quantized Neural Nets]()  
+
 
 ### 2021/4/7  
 Efficiency LOW.  
