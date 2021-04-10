@@ -10,9 +10,11 @@
 
 ### 实例：从EVA8上将awnas项目迁移到EVA7上  
 2021/4/10 update  
+* 在操作之前确定`~/.gitconfig`文件中正确配置了邮箱和用户名  
 * 首先将logs等不必要的大文件搬出，删除原有的`.git`文件夹（以解除和原来项目的关联，没找其他方法）  
 * 在项目根目录下用`git init`重建git项目  
 * （因为把这个项目依附于我fork的awnas项目的一个分支，所以）建立本地分支bnn：`git branch bnn`并切换到这个本地分支：`git checkout bnn`  
+* 同步内容（将本地分支内容加到git缓冲区）：`git add .` & `git commit -m ".."`  
 * 将本地项目与远程项目建立联系：`git remote add 仓库名 仓库地址`，并将本地分支上传到远程分支：`git push --set-upstream bnn bnn`  
 * 将远程分支clone到EVA7上，注意我只要bnn这个分支，不要默认的master：`git clone -b bnn 仓库地址`  
 

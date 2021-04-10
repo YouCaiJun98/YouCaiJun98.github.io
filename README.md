@@ -4,6 +4,9 @@ Just A Private HomePage for Kaleido XD
 
 ## What's up?  
 ### 2021/4/10  
+* Move awnas_bnn from eva8 to eva7, see update in [this docu](https://youcaijun98.github.io/techniques/ToolBox/git.html) and [this docu]().  
+* 
+
 
 ### 2021/4/9  
 * had a meeting with Mr.Chen, see [meeting docu](https://youcaijun98.github.io/codez/awnas/Mr.Chen_validation_exp/2021_4_9_meeting.html).  
