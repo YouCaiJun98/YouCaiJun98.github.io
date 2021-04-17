@@ -31,7 +31,7 @@ Mr.Chen's 只言片语:
 * reference 4 code base:https://github.com/A-suozhang/meanteacher-pytorch/blob/master/utils.py  
 
 ## To-Do  
-- [ ] 1. 对齐配置跑一下BMXNet XNOR实现（早期epoch对齐，eva7）  
+- [x] 1. 对齐配置跑一下BMXNet XNOR实现（早期epoch对齐，eva7）  
 - [ ] 2. 搭toy model（类BinaryDuo，两三层CONV，FP weights & Binary activation, priority ++）  
 - [ ] 3. 搭code base  
 - [ ] 4. 扩大width看一下accuracy。  

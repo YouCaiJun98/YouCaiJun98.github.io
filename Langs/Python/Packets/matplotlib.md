@@ -1,0 +1,131 @@
+# MatPlotLib 画图集锦！  
+
+2021/4/17  
+
+简单总结一下用matplotlib画图的结果！  
+
+  - [MatPlot作图Preliminary](#matplot作图preliminary)
+    - [起手与作图基础](#起手与作图基础)
+    - [Color](#color)
+  - [朴素画图类型陈列](#朴素画图类型陈列)
+    - [折线](#折线)
+    - [柱状图](#柱状图)
+    - [箱图](#箱图)
+  - [Advanced Plot Trick](#advanced-plot-trick)
+    - [自定义横坐标数值](#自定义横坐标数值)
+    - [坐标轴对数表示](#坐标轴对数表示)
+    - [并列柱状图](#并列柱状图)
+
+## MatPlot作图Preliminary  
+### 起手与作图基础  
+肯定要从import起手啦：  
+
+```python  
+import matplotlib.pyplot as plt
+```  
+
+* 开一张画布需要：  
+
+```python  
+fig, ax = plt.subplots(figsize=[8., 6.])
+```  
+
+* 画完图之后需要添加图例，使用（记得在曲线中加上`label`）：  
+
+```python  
+ax.legend(loc="right")
+```  
+
+* 加入横纵坐标轴标签：  
+
+```python  
+plt.xlabel("Width  /  Initial Channels")
+plt.ylabel("Accuracy")
+```  
+
+### Color  
+支持的颜色有下面这些：  
+
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202104170001.png)  
+
+使用seaborn扩展似乎还有更多颜色，但是问题不大（这些颜色难道还不够吗？）    
+
+## 朴素画图类型陈列  
+### 折线  
+以2021/4/16汇报用折线图为例：  
+
+```python  
+fp_baseline = [0.9338, 0.9338, 0.9338, 0.9338, 0.9338, 0.9338]
+accuracy_width = [0.9022, 0.9037, 0.9048, 0.9257, 0.9026, 0.9019]
+width = [0, 64, 72, 80, 96, 128, 192]
+fig, ax = plt.subplots(figsize=[8., 6.])
+ax.plot(accuracy_width, marker='.', label="binary ResNet18",linestyle="--")
+ax.plot(fp_baseline, marker='.', label="FP ResNet18",linestyle="--", color='red')
+ax.set_xticklabels(width)
+ax.legend(loc="right")
+plt.xlabel("Width  /  Initial Channels")
+plt.ylabel("Accuracy")
+```  
+
+画图结果如下：  
+
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202104160001.png)  
+
+
+### 柱状图  
+同样使用2021/4/16汇报用到的柱状图，同时是比较高级的[并列柱状图](#并列柱状图)。  
+
+```python  
+s_full = [1.0000, 1.0000, 1.0000, 1.0000]
+s_bina = [0.8934, 0.8968, 0.9629, 0.9046]
+s_tern = [0.9653, 0.9874, 0.9933, 0.9747]
+s_2_b =  [0.9752, 0.9755, 0.9847, 0.9747]
+fig, ax = plt.subplots(figsize=[8., 6.])
+x = [-0.6, 2.4, 5.4, 8.4]
+bar_width = 0.35
+x_major_locator=MultipleLocator(3)
+ax.xaxis.set_major_locator(x_major_locator)
+plt.bar(x,s_full,0.35,color="darkblue",align="center",label="FP",alpha=0.5)
+plt.bar([i+3*(bar_width+0.05) for i in x],s_bina,0.35,color="lightskyblue",align="center",label="Binary",alpha=0.5)
+plt.bar([i+2*(bar_width+0.05) for i in x],s_tern,0.35,color="royalblue",align="center",label="Ternary",alpha=0.5)
+plt.bar([i+(bar_width+0.05) for i in x],s_2_b,0.35,color="blue",align="center",label="2-bit",alpha=0.5)
+x_labels = [" ", "fc1", "fc2", "fc3", "total"]
+ax.set_xticklabels(x_labels)
+plt.xlabel("Layers")
+plt.ylabel("Cosine Similarity")
+ax.legend(loc="upper right")
+```  
+
+画图效果：  
+
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202104160004.png)  
+
+这里的要点是使用`plt.bar`画柱状图，自定义柱子的宽度对齐坐标轴。  
+
+### 箱图  
+
+
+## Advanced Plot Trick  
+### 自定义横坐标数值  
+可参考[折线](#折线)部分。这个技巧需要仔细调整横坐标刻度（包括出现的刻度点和刻度间距），在调整完后时候一个`list`保存需要打上的标签（可以也一般是一堆字符串），example：  
+
+```python  
+width = [0, 64, 72, 80, 96, 128, 192]
+ax.set_xticklabels(width)
+```  
+
+### 坐标轴对数表示  
+如果希望体现曲线的指数特性，可以将坐标轴对数化，需要的操作是：  
+
+```python  
+ax.set_yscale('log') 
+```  
+
+画图效果如下：  
+
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202104170002.png)  
+
+### 并列柱状图  
+指一个刻度对应好几条柱子的柱状图，见[上一节中的示例](#柱状图)。  
+
+

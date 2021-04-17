@@ -3,9 +3,14 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
-### 2021/4/12  
-* Initialize a [ubuntu setup instruction]().
+### 2021/4/13  
+Start to build [my own BNN framework]().  
+* Learned some [new usage of python](https://youcaijun98.github.io/Langs/Python/%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0.html).  
 
+
+### 2021/4/12  
+* Initialize a [ubuntu setup instruction](https://youcaijun98.github.io/techniques/EnviSetUp/UbuntuSetup.html).  
+* Palsied, modified BMXNet just won't work...  
 
 ### 2021/4/10  
 * Move awnas_bnn from eva8 to eva7, see update in [this docu](https://youcaijun98.github.io/techniques/ToolBox/git.html) and [this docu](https://youcaijun98.github.io/techniques/EnviSetUp/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html).  

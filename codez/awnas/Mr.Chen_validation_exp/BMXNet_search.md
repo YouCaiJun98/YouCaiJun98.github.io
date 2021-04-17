@@ -62,6 +62,11 @@ resnet_spec = {18: ([2, 2, 2, 2], [64, 64, 128, 256, 512]),
 
 第一个list是"layers"，第二个list是"channels"，观察上面的大网图，layers（的每一个element）应该是里面不同颜色的块（对应AWNAS里的cell），channels指的大概是算上stem各个layer中的channel。  
 
+* `class ResNetE1(ResNetE)`和`class ResNetE(HybridBlock)`其实是一回事，只是有个分开定义的关系，`ResNetE`里定义了`make_layer`，和`forward`方法，`ResNetE1`里反复调用了四次`make_layer`。但是实际上input还是从`ResNetE1`中贯穿过去的，在block之间没有shortcut（起码没写在这里，即`x = self.features(x)`和`x = self.output(x)`，其中`self.output()`是
+`flatten`之后的FC层）。一个`make_layer`对应示意图中的一个颜色色块（两个layer，每个layer又是一层conv，因为[2, 2, 2, 2]）。`make_layer`具体实现的时候是把layer * 2 变成4，每个layer用一次`class BasicBlockE1`，所以一个`BasicBlockE1`表示一个layer。  
+
+
+
 ### Memoir for Model Construction  
 * Model Construction的入口是在`BMXNet-v2/example/bmxnet-examples/image_classification.py(86)get_model()`。原文是：  
 
@@ -130,10 +135,5 @@ activated_conv = ActivatedConvolutionFactory()
 ```  
 
 有点酷，把这个Factory类写成了可调用的形式，然后起了个别名`activated_conv`，在里面根据索引`binary_layer_config`（这个应该就是with关键字后面跟的，见`BMXNet-v2/example/bmxnet-examples/image_classification.py`）挑选对应的Conv。  
-
-
-
-
-
 
 
