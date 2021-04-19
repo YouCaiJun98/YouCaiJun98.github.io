@@ -3,6 +3,14 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/4/19  
+* read [WRPN: Wide Reduced-Precision Networks]()  
+* read []()
+
+### 2021/4/17  
+* make a document for my [matplot draw](https://youcaijun98.github.io/Langs/Python/Packets/matplotlib.html).  
+
+
 ### 2021/4/13  
 Start to build [my own BNN framework]().  
 * Learned some [new usage of python](https://youcaijun98.github.io/Langs/Python/%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0.html).  
