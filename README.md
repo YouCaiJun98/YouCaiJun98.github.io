@@ -3,9 +3,15 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/5/12  
+* Read []  
+
+### 2021/4/30  
+* Finish test and compose [report](https://youcaijun98.github.io/codez/awnas/Mr.Chen_validation_exp/2021_4_19_meeting.html).  
+
 ### 2021/4/19  
-* read [WRPN: Wide Reduced-Precision Networks]()  
-* read []()
+* read [WRPN: Wide Reduced-Precision Networks](https://youcaijun98.github.io/articles/BNN/WRPN.html)  
+
 
 ### 2021/4/17  
 * make a document for my [matplot draw](https://youcaijun98.github.io/Langs/Python/Packets/matplotlib.html).  
