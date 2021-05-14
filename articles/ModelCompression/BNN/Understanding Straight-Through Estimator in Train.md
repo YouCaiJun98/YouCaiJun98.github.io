@@ -3,7 +3,7 @@
 2021/4/9  
 
 来源：ICLR2019 / 陈老师安利    
-resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/BNN/Understanding%20Straight-Through%20Estimator%20in%20Train.pdf)的包括ipad标注的pdf版本。  
+resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/ModelCompression/BNN/Understanding%20Straight-Through%20Estimator%20in%20Train.pdf)的包括ipad标注的pdf版本。  
 作者是第一次见到的Penghang Yin, Jiancheng Lyu, Shuai Zhang, Stanley Osher, Yingyong Qi, Jack Xin，感觉有点硬核，全文10页附录的推导有20页orz。  
 
 **Summary**：讨论STE为什么能"正确"训练binary model的文章。提了一个非常关键，大家也非常关心的好问题，但是给的回答感觉非常草率且not general.文章给出了一些证明，证明对于一个两层的小网络（甚至还不算是Conv网络），ReLU STE、Clamp ReLU STE可以指向正确的梯度下降方向，identity STE则不能，会在local minima附近振荡，最后给了验证试验。虽然推导很多（但是看不懂也没看），但是他们就在toy model上做了实验，不知道能不能（大概率是不能）推广到更深/Conv的网络中，有种自娱自乐、自欺欺人的感觉。   

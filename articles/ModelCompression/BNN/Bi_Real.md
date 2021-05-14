@@ -3,7 +3,7 @@
 2021/2/28  
 
 来源：2018ECCV  
-resource：自己[收录](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/BNN/Bi-Real_Net_Enhancing_the_Performance_of_1-bit_CNN.pdf)了一下。  
+resource：自己[收录](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/ModelCompression/BNN/Bi-Real_Net_Enhancing_the_Performance_of_1-bit_CNN.pdf)了一下。  
 作者是Hong Kong University of Science and Technology的Zechun Liu，ReActNet也是她的作品，太强了。  
 
 Insight：作者观察到在inference阶段，binary conv层产生整数输出，如果后面紧跟着BN层，这个输出会进一步变成real values。但是这些real values会被sigh函数二值化为−1 / +1，导致信息损失。因此想到通过一个shortcut保留这些信息，也就是文中提出的Bi-Real结构：  

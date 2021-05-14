@@ -14,7 +14,7 @@ Just A Private HomePage for Kaleido XD
 * Finish test and compose [report](https://youcaijun98.github.io/codez/awnas/Mr.Chen_validation_exp/2021_4_19_meeting.html).  
 
 ### 2021/4/19  
-* read [WRPN: Wide Reduced-Precision Networks](https://youcaijun98.github.io/articles/BNN/WRPN.html)  
+* read [WRPN: Wide Reduced-Precision Networks](https://youcaijun98.github.io/articles/ModelCompression/BNN/WRPN.html)  
 * read Natural Evolutionary Strategies yet no documention.  
 
 
@@ -36,7 +36,7 @@ Start to build [my own BNN framework]().
 
 ### 2021/4/9  
 * had a meeting with Mr.Chen, see [meeting docu](https://youcaijun98.github.io/codez/awnas/Mr.Chen_validation_exp/2021_4_9_meeting.html).  
-* briefly read [Understanding Straight-Through Estimator in Training Activation Quantized Neural Nets](https://youcaijun98.github.io/articles/BNN/Understanding%20Straight-Through%20Estimator%20in%20Train.html)  
+* briefly read [Understanding Straight-Through Estimator in Training Activation Quantized Neural Nets](https://youcaijun98.github.io/articles/ModelCompression/BNN/Understanding%20Straight-Through%20Estimator%20in%20Train.html)  
 
 ### 2021/4/7  
 Efficiency LOW.  
@@ -52,29 +52,29 @@ Taking it by and large, m still touching fish today.
 
 ### 2021/3/31  
 * recall the [usage of git](https://youcaijun98.github.io/techniques/ToolBox/git.html)  
-* read [ReCU: Reviving the Dead Weights in Binary Neural Networks](https://youcaijun98.github.io/articles/BNN/ReCU.html)  
+* read [ReCU: Reviving the Dead Weights in Binary Neural Networks](https://youcaijun98.github.io/articles/ModelCompression/BNN/ReCU.html)  
 
 ### 2021/3/30  
-* roughly read [Learning Channel-wise Interactions for Binary Convolutional Neural Networks](https://youcaijun98.github.io/articles/BNN/Learning%20Channel-wise%20Interactions%20for%20Binary%20Convolutional%20Neural%20Networks.html)  
+* roughly read [Learning Channel-wise Interactions for Binary Convolutional Neural Networks](https://youcaijun98.github.io/articles/ModelCompression/BNN/Learning%20Channel-wise%20Interactions%20for%20Binary%20Convolutional%20Neural%20Networks.html)  
 
 ### 2021/3/26
 * had a hard time building BMXNet, see [my docu](https://youcaijun98.github.io/techniques/EnviSetUp/LinuxRelated/BMXNet-v2_build_docu.html)  
 
 
 ### 2021/3/20  
-* re-read [An Empirical study of Binary Neural Networks' Optimisation](https://youcaijun98.github.io/articles/BNN/empirical_study.html)  
+* re-read [An Empirical study of Binary Neural Networks' Optimisation](https://youcaijun98.github.io/articles/ModelCompression/BNN/empirical_study.html)  
 
 
 ### 2021/3/19  
-* read [Training Binary Neural Networks with Real-to-Binary Convlutions](https://youcaijun98.github.io/articles/BNN/Real_to_Bi.html)  
+* read [Training Binary Neural Networks with Real-to-Binary Convlutions](https://youcaijun98.github.io/articles/ModelCompression/BNN/Real_to_Bi.html)  
 
 
 ### 2021/3/18  
-* read [BinaryDuo: Reducing Gradient Mismatch in Binary Activation Network by Coupling Binary Activations](https://youcaijun98.github.io/articles/BNN/binaryduo.html)  
+* read [BinaryDuo: Reducing Gradient Mismatch in Binary Activation Network by Coupling Binary Activations](https://youcaijun98.github.io/articles/ModelCompression/BNN/binaryduo.html)  
 
 
 ### 2021/3/17  
-* read [High-Capacity Expert Binary Networks](https://youcaijun98.github.io/articles/BNN/High-Capacity%20Expert%20Binary%20Networks.html)  
+* read [High-Capacity Expert Binary Networks](https://youcaijun98.github.io/articles/ModelCompression/BNN/High-Capacity%20Expert%20Binary%20Networks.html)  
 
 
 ### 2021/3/16
@@ -83,7 +83,7 @@ Taking it by and large, m still touching fish today.
 
 
 ### 2021/3/11  
-* document [BATS: Binary ArchitecTure Search](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/BNN/BATS%20Binary%20ArchitecTure%20Search.pdf)  
+* document [BATS: Binary ArchitecTure Search](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/ModelCompression/BNN/BATS%20Binary%20ArchitecTure%20Search.pdf)  
 
 
 ### 2021/3/3  
@@ -97,7 +97,7 @@ Taking it by and large, m still touching fish today.
 * read [layer2/bi_final_model.py](https://youcaijun98.github.io/codez/awnas/aw_nas/btcs/layer2/bi_final_model.html)  
 
 ### 2021/2/28  
-* read [Bi-Real Net: Enhancing the Performance of 1-bit CNNs With Improved Representational Capability and Advanced Training Algorithm](https://youcaijun98.github.io/articles/BNN/Bi_Real.html)  
+* read [Bi-Real Net: Enhancing the Performance of 1-bit CNNs With Improved Representational Capability and Advanced Training Algorithm](https://youcaijun98.github.io/articles/ModelCompression/BNN/Bi_Real.html)  
 * start learning [layer2/final_model.py](https://youcaijun98.github.io/codez/awnas/aw_nas/btcs/layer2/final_model.html)  
 
 ### 2021/2/25  

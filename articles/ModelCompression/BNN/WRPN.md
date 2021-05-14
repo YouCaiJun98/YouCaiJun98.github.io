@@ -3,7 +3,7 @@
 2021/4/19  
 
 来源：ICLR2018  
-resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/BNN/Training%20Binary%20Neural%20Networks%20with%20Real-to-Bina.pdf)的包括ipad标注的pdf版本。  
+resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/ModelCompression/BNN/Training%20Binary%20Neural%20Networks%20with%20Real-to-Bina.pdf)的包括ipad标注的pdf版本。  
 作者是Intel Accelerator Architecture Lab的Asit Mishra、Eriko Nurvitadhi、Jeffrey J Cook和Debbie Marr（看起来像是印度作者）。  
 
 **Summary**：文章还可以，用非常朴素的方法打点，应该是读明白了（第一次comprehension打5.0，有丶激动）。文章创作的背景是当时大多数量化方法都关注weights（后简称为W）的量化，很少有（推测）对activation（后简称为ACT）做量化的研究，作者的出发点是在训练阶段，ACT占比很高，消耗了大部分内存，所以需要对ACT进行量化（但是我觉得这个出发点很站不住脚，因为在实际应用中推断是对一张图进行的（当然也不排除类mini-batch的应用场景，但是我目前还没有这种发现），所以这种内存消耗的分析非常无所谓，与其讲这个故事，不如说Binary W和FP ACT作用实际上还是FP OP，对加速而言没有多大帮助，倒还显得顺理成章）。作者提出的方案是**扩大通道数量**，给的例子是4 x A, 2 x B, 2 x Ch可以达到和FP model一样的精度。后面还有在GPU/FPGA/ASIC上的测试（不知道是仿真还是真做了），有一点启发（GPU上加速效果非常受限，ASIC因其非常实在的DIY支持所以加速效果最明显，甚至超过了理论值），还有些聊胜于无的quantization scheme的改进。  

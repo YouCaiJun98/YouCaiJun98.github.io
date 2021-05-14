@@ -3,7 +3,7 @@
 2021/3/20  
 
 来源：ICLR2019  
-resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/BNN/An%20Empirical%20study%20of%20Binary%20Neural%20Networks'%20Opt.pdf)的包括ipad标注的pdf版本。  
+resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/ModelCompression/BNN/An%20Empirical%20study%20of%20Binary%20Neural%20Networks'%20Opt.pdf)的包括ipad标注的pdf版本。  
 文章的作者是Oxford的Milad Alizadeh, Javier Fernandez-Marqu ´ es, Nicholas D. Lane & Yarin Gal，做这种empirical study是想进军BNN？但是为什么后面没声音了？~~讲道理我要是能发一篇ICLR就算成功，可以跑路了~~。  
 
 **Summary**：文章还不错，挺有insight的，而且有一些比较想要的结果？~~可我为什么还是觉得做empirical study的工作很水~~。 **rating 3.5/5** 吧。文章挺散的，讲了很多点。大概说在end-to-end训练中Adam优化器挺好使的，gradient&weight clipping在训练早期太慢，可以先放一放（改用vanilla STE）然后在训练后期再用standard binary STE，或者将训练拆成2-stage，对pretrained model finetune。因为accuracy在训练中出现plateau的地方和最高的accuracy都一定距离，所以不要用早停。  

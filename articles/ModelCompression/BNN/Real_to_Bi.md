@@ -3,7 +3,7 @@
 2021/3/19  
 
 来源：ICLR2020  
-resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/BNN/Training%20Binary%20Neural%20Networks%20with%20Real-to-Bina.pdf)的包括ipad标注的pdf版本。  
+resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/ModelCompression/BNN/Training%20Binary%20Neural%20Networks%20with%20Real-to-Bina.pdf)的包括ipad标注的pdf版本。  
 又是Brais Martinez&Adrian Bulat！总是Brais Martinez&Adrian Bulat！~~Brais Martinez&Adrian Bulat发文的神！~~  
 
 **Summary**：文章比较一般，最突出的贡献是提了2-stage的training scheme（之前应该有人提过，但是这个是第一个中的？~~有人也是这仨~~）。感觉 **rating 3.7/5** 的样子（还是要比BinaryDuo更有Insight一点的）。文章先~~通过堆料~~搭出了个SOTA的模型，接着提出用multi-stage的方法通过match FP model和binary model各个block输出的feature map来训，还提了个用输入数据计算activation scaling factor~~的添头，懂的都懂~~。  

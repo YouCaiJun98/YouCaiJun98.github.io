@@ -3,7 +3,7 @@
 2021/3/30  
 
 来源：CVPR2019  
-resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/BNN/Wang_Learning_Channel-Wise_Interactions_for_Binar.pdf)的包括ipad标注的pdf版本。  
+resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/ModelCompression/BNN/Wang_Learning_Channel-Wise_Interactions_for_Binar.pdf)的包括ipad标注的pdf版本。  
 
 **Summary**：  
 * **Rating：1.0/5.0**

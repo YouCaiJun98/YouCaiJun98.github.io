@@ -3,7 +3,7 @@
 2021/3/18  
 
 来源：ICLR2020  
-resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/BNN/binaryduo_reducing_gradient_mismatch_in_binary_ac.pdf)的包括ipad标注的pdf版本。  
+resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/ModelCompression/BNN/binaryduo_reducing_gradient_mismatch_in_binary_ac.pdf)的包括ipad标注的pdf版本。  
 作者是Korea的Kim ** Kim ** Kim ** Kim **~~好家伙有四个金某某~~。来自于POSTECH, Department of Creative IT Engineering，看这名字有点像个国家机构。  
 
 **Summary**：文章一般？感觉 **rating 3.5/5** 的样子。这里面把BNN性能不好的锅主要甩给了梯度的mismatch（这确实是个问题，但是远远不是本质原因吧？不是很清楚）然后文章给了一种梯度估计的方法CDG以取代cumulative difference，以此想说明的问题是，不同的sophisticated STE其实在梯度方面都不太行，主要的问题来自于activations的量化精度。后面作者给了一种training scheme（main contribution），第一步是训一个ternary activation的model，后面把activation function替换成两个binary activation function，把连接的weights拆成两个（base model有处理，会变得更小一点），作为初始化，再finetune，这应该就是文章的主要贡献了。2020年的文章，**结果还挺惨的**，60.x，被BATS（河外方法）暴打。  

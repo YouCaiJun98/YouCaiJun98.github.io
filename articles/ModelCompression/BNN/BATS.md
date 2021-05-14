@@ -6,7 +6,7 @@
 
 来源：ECCV2020  
 
-resource：自己[收录](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/BNN/BATS%20Binary%20ArchitecTure%20Search.pdf)了一下。  
+resource：自己[收录](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/ModelCompression/BNN/BATS%20Binary%20ArchitecTure%20Search.pdf)了一下。  
 
 作者是Adrian Bulat、Brais Martinez和Georgios Tzimiropoulos，~~第二个人的名字和XNOR-Net的作者（Rastegari）好像~~。  
 

@@ -3,7 +3,7 @@
 2021/3/31  
 
 来源：arxiv2021.3  
-resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/BNN/ReCU%EF%BC%9A%20Reviving%20the%20Dead%20Weights%20in%20Binary%20Neural.pdf)的包括ipad标注的pdf版本。  
+resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/ModelCompression/BNN/ReCU%EF%BC%9A%20Reviving%20the%20Dead%20Weights%20in%20Binary%20Neural.pdf)的包括ipad标注的pdf版本。  
 作者是厦大那个做Rotation BNN的组？看到文章中两次promote那个工作233，不过引的文章都是21年前的？而且这个月刚挂上arxiv？是在投ICCV还是放弃了呢（也挺正常，21年的工作只有ICLR，CVPR又没有放列表，合理）。  
 
 **Summary**：对latent weights下手的文章，觉得切入点很对劲:+1:  

@@ -3,7 +3,7 @@
 2021/3/17  
 
 来源：ICLR2021  
-resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/BNN/BATS%20Binary%20ArchitecTure%20Search.pdf)的包括ipad标注的pdf版本。  
+resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/ModelCompression/BNN/BATS%20Binary%20ArchitecTure%20Search.pdf)的包括ipad标注的pdf版本。  
 
 作者又是Adrian Bulat、Brais Martinez和Georgios Tzimiropoulos，这仨哥们还真能水文章啊（呜呜，还能中顶会，数据还好看~~就是不知道数据保不保真~~）。  
 
