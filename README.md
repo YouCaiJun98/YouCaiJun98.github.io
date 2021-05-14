@@ -3,8 +3,12 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/5/14  
+* Read [Bayesian Optimized 1-Bit CNNs]()  
+* Continue NES experiments.  
+
 ### 2021/5/12  
-* Read []()  
+* Read [深度神经网络压缩与加速综述](https://youcaijun98.github.io/articles/ModelCompression/%E6%B7%B1%E5%BA%A6%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%8E%8B%E7%BC%A9%E4%B8%8E%E5%8A%A0%E9%80%9F%E7%BB%BC%E8%BF%B0.html)  
 
 ### 2021/4/30  
 * Finish test and compose [report](https://youcaijun98.github.io/codez/awnas/Mr.Chen_validation_exp/2021_4_19_meeting.html).  
