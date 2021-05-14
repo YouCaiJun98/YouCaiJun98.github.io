@@ -3,96 +3,72 @@
 2021/5/14  
 
 来源：ICCV2019  
-resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/BNN/Training%20Binary%20Neural%20Networks%20with%20Real-to-Bina.pdf)的包括ipad标注的pdf版本。  
-作者是Intel Accelerator Architecture Lab的Asit Mishra、Eriko Nurvitadhi、Jeffrey J Cook和Debbie Marr（看起来像是印度作者）。  
+resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/ModelCompression/BNN/Bayesian%20Optimized%201-Bit%20CNNs.pdf)的包括ipad标注的pdf版本。  
+作者是厦大纪荣嵘组的（但是感觉写得不太...不太行？反正不喜欢）。  
 
-**Summary**：文章还可以，用非常朴素的方法打点，应该是读明白了（第一次comprehension打5.0，有丶激动）。文章创作的背景是当时大多数量化方法都关注weights（后简称为W）的量化，很少有（推测）对activation（后简称为ACT）做量化的研究，作者的出发点是在训练阶段，ACT占比很高，消耗了大部分内存，所以需要对ACT进行量化（但是我觉得这个出发点很站不住脚，因为在实际应用中推断是对一张图进行的（当然也不排除类mini-batch的应用场景，但是我目前还没有这种发现），所以这种内存消耗的分析非常无所谓，与其讲这个故事，不如说Binary W和FP ACT作用实际上还是FP OP，对加速而言没有多大帮助，倒还显得顺理成章）。作者提出的方案是**扩大通道数量**，给的例子是4 x A, 2 x B, 2 x Ch可以达到和FP model一样的精度。后面还有在GPU/FPGA/ASIC上的测试（不知道是仿真还是真做了），有一点启发（GPU上加速效果非常受限，ASIC因其非常实在的DIY支持所以加速效果最明显，甚至超过了理论值），还有些聊胜于无的quantization scheme的改进。  
+**Summary**：文章挺一般的，完全看不出来启发点。不是，你凭什么觉得分布应该是在以正负两个量化值为mode的GMM分布？而且残差为什么服从均值为0的正态分布？而且你实际做出来的量化值/mode值也小得离谱啊？~0.01所以数据还是想分布在0附近不是吗？所以感觉你加的这个限制就是强行把weight掰到两边了呗？最后的结果也没多好啊？感觉就是在调点调上去的？  
+还是回到文章干了什么上来：作者在常规的cross entropy loss外加了两个bayesian loss，就构成了所谓的bayesian optimization，最后是把latent weights的分布拉成了在±binarized value两边的分布，最后ImgNet上的点只有59.4，很可疑。  
+这张图可以很清楚地显示本文做了什么：  
+
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202105140001.jpg)  
 
 **Rating: 1.5/5.0**  
 **Comprehension: 2.5/5.0**  
 
 文章的贡献有：  
-* （应该是首先）提出扩展若干倍通道数目提量化神经网络（包括BNN）在内的点数；  
-* 在GPU/FPGA/ASIC上做了（或者仿真了）加速效果的实验；  
-* 提了一种简化的quantization scheme（似乎是没有用量化映射而是直接hard-clip，然后用了些cheap的方法实现量化）。  
+* 提出了两种bayesian loss（Bayesian kernel loss 和 Bayesian feature loss），对latent weights的分布进行了限制（诱导？），在loss项中结合上面两种loss引入新的正则项。  
  
 
 ## 1 Introdution  
-提了个奇怪的说法，先前只binarize weights的方法一般只在batch size比较小的时候才能增益inference step：  
+**本文的核心论点**：理想上当FP kernel服从以量化值为峰值的高斯混合模型时量化误差最小，所以对于BNN用两个峰分别在量化值的高斯混合模型来建模FP weight分布。  
+（所以从头到尾除了FC部分就没有关注过feature map的分布似乎->**直接binarize activation**）  
 
 ```  
-Further, most prior works target reducing the precision of the model parameters (network weights). 
-This primarily benefits the inference step only when batch sizes are small.
+Ideally, the quantization error is minimized when the full-precision kernels follow a Gaussian mixture model with each Gaussian 
+centered at each quantization value. Given two centers for 1-bit CNNs, two Gaussians forming the mixture model are employed to 
+model the full-precision kernels.
 ```  
+一些关于其他文章的“导读”：  
+* DoReFa-Net似乎既低比特了weights也低比特了gradient  
+* ABC-Net似乎是用多个binary的weights和activations  
 
-## 2 Motivation for reduced-precision activation maps  
-讲的是本文的故事，讲ACT内存优化确实不是个好的切入点。  
+## 2 Proposed Method  
+### Bayesian kernel loss  
+这里量化的核心思路还是让量化前后的值尽可能地接近，因此也用了一个vector对量化后的x_hat作hadamard积：  
 
-![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202104190001.png)  
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202105140002.png)  
 
-这张图还有点用，说训练时内存占用是ACT、W和input gradient maps (δZ)与back-propagated gradients (δX)的最大者，最大还好理解（传一次就把上一步骤的梯度删了，但是不需要存一份更新参数吗？），前面δZ和δX的区别是啥？关于ACT和W的梯度？推断的时候需要的空间就是IFM和OFM各最大的内存块，可以理解。  
+后面的描述就很奇怪了：对于一个y，我们找一个x_hat使得：  
 
-原文：  
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202105140003.jpg)  
 
-```  
-The total memory requirements for training phase is the sum of memory required for the activation maps, weights 
-and the maximum of input gradient maps (δZ) and maximum of back-propagated gradients (δX). During inference, 
-memory is allocated for input (IFM) and output feature maps (OFM) required by a single layer, and these memory 
-allocations are reused for other layers. The total memory allocation during inference is then the maximum of IFM 
-and maximum of OFM required across all the layers plus the sum of all W-tensors.
-```  
+这表示在最可能的y下（对应y=0即x=w^(-1)○ x_hat，即上式移项，也就是最小重建错误）x的潜变量的分布是一个双峰高斯分布，峰值在量化值处。后面就是数学推导Bayesian kernel loss的形式。  
 
-## 3 WRPN scheme and studies on AlexNet  
-ACT量化/加宽CH的另一个优点我没看懂：  
-
-```  
-Apart from other benefits of reduced precision activations as mentioned earlier, widening filter maps also 
-improves the efficiency of underlying GEMM calls for convolution operations since compute accelerators are 
-typically more efficient on a single kernel consisting of parallel computation on large data-structures as 
-opposed to many small sized kernels.
-```  
-## 4 Studies on deeper networks  
-* ResNet34的设置，没有reorder layer，使用了一样的超参和lr。  
-    * 但是使用scaling factor了吗？似乎用了第五节的量化方法？
-    * 是这样没错  
-
-## 5 Hardware friendly quantization scheme  
-* 用的量化方案中，W的量化区间是[-1, +1]，A的量化区间是[0, 1]，推测使用了ReLU，具体方案:  
-
-![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202104190002.png)  
-
-* 在量化后使用scaling factor，具体到binary的情形中，scaling factor用的是BWN的方案。  
-
-* TTQ和DoReFa用了复杂的range arrange方法，本篇文章就用了简单的clip：  
+### Bayesian feature loss  
+这个loss的引入目的也很奇怪：“这种loss引入是为了减轻极端量化（binarize）引入的干扰，考虑到intra-class compactness（不懂），第m类的特征fm应该服从高斯分布，其均值cm revealed in the center loss”。  
 
 ```  
-TTQ and DoRefa schemes involve division operation and computing a maximum value in the input tensor.
-...  
-We avoid each of these costly operations and propose a simpler quantization scheme (clipping followed by rounding)
+This loss is designed to alleviate the disturbance caused by the extreme quantization process in 1-bit CNNs. Considering the 
+intra-class compactness, the features fm of the mth class supposedly follow a Gaussian distribution with the mean cm as revealed in 
+the center loss.
 ```  
 
-* 一个显而易见的结论:实际应用中的加速效果取决于使用的硬件平台能多有效地利用这些低精度操作。    
+后面把这两种loss结合到一块，可以看出来X和φ都是逐层逐kernel的，特别的，w_l是每层来的，和X_l中元素一一对应，训练的时候里面的元素也是分开训，但是前传的时候w_l退化成了一个scalar，值取w_l_i的均值。 φ_l_i也被简化成了值相同的对角矩阵。    
 
-```  
-in practice the efficiency gains from reducing precision depend on whether the underlying hardware can take 
-advantage of such low-precisions
-```  
-* 这大概解释了在FPGA上性能提升明显的现象，以及为什么ASIC上出现了2-3个数量级的提升：  
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202105140004.jpg)  
 
-```  
-Reducing the precision simplifies the design of compute units and lower buffering requirements on FPGA board. 
-Compute-precision reduction leads to significant improvement in throughput due to smaller hardware designs 
-(allowing more parallelism) and shorter circuit delay (allowing higher frequency).
-...
-ASIC allows for a truly customized hardware implementation.
-```  
+### Backward Propagation  
+最后算法如下，可以看出来其实也就是引入了个新的正则项，加了点可训练的项目：  
 
-* 搬自Conclusion的结论：降低精度可以让自己设计的计算单元和buffer性能更好。  
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202105140005.jpg)  
 
-```  
-reducing the precision allows custom-designed compute units and lower buffering requirements to provide 
-significant improvement in throughput.
-```  
+## 3 Experiments  
+持续减分：  
+* 第一层stem没有binarize（大家都这样，勉强吧）  
+* skip op / 1*1 conv没有binarize（你就是这样马马虎虎到海军学校的吗？）  
+* FC layer没有binarize  
+* 甚至没说downsample层有没有binarize  
 
-## Remained Questions
-- [ ] 读一下看看affine transformation是怎么回事。    
+其中的一个结果，还是减分（值根本没跑多远好吧）：  
+
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202105140006.png)  

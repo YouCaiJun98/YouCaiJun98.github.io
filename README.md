@@ -4,7 +4,7 @@ Just A Private HomePage for Kaleido XD
 
 ## What's up?  
 ### 2021/5/14  
-* Read [Bayesian Optimized 1-Bit CNNs]()  
+* Read [Bayesian Optimized 1-Bit CNNs](https://youcaijun98.github.io/articles/ModelCompression/BNN/BayesianBNN.html)  
 * Continue NES experiments.  
 
 ### 2021/5/12  
