@@ -15,7 +15,8 @@ resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.i
 * 提出了一种Fine-tune的方法，在预训练的模型上再同时端到端训quantizer和latent weights，用训练的CNN将FP W作为输入产生binarized weight。  
 同样用一张图来说明本文的工作：  
 
-<center> ![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202105170001.png)  </center>  
- 
+<div style="align: center">
+<img src="https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202105170001.png"/>
+</div>
 
 ## 1 Introdution  
