@@ -15,6 +15,7 @@
     - [自定义横坐标数值](#自定义横坐标数值)
     - [坐标轴对数表示](#坐标轴对数表示)
     - [并列柱状图](#并列柱状图)
+    - [标注点](#标注点)
 
 ## MatPlot作图Preliminary  
 ### 起手与作图基础  
@@ -128,4 +129,37 @@ ax.set_yscale('log')
 ### 并列柱状图  
 指一个刻度对应好几条柱子的柱状图，见[上一节中的示例](#柱状图)。  
 
+### 标注点  
 
+使用`plt.annotate`在需要的地方进行标注，其中第一个input是需要标注的文本，第二个元组`xy`表示标注的点的位置，第三个元组`xytext`表示标注文本的坐标，实例代码如下：  
+
+```python  
+import matplotlib.pyplot as plt
+from matplotlib.pyplot import MultipleLocator
+
+fig, ax = plt.subplots(figsize=[8., 6.])
+x_major_locator=MultipleLocator(1)
+ax.xaxis.set_major_locator(x_major_locator)
+
+txt_STE = ['lr={}'.format(round(lr,2)) for lr in Best_lr_STE]
+txt_CDG = ['lr={},\nε={}'.format(round(Best_lr_CDG[i],2), Best_epsilon[i]) for i in range(len(Best_lr_CDG))]
+
+plt.xlabel("Different Batch")
+plt.ylabel("Loss Decrease")
+width = [ ' ', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+ax.plot(delta_loss_STE, marker='.', label="STE grad",linestyle="--", color='blue')
+ax.plot(delta_loss_CDG, marker='.', label="CDG grad",linestyle="--", color='red')
+for i in range(len(txt_STE)):
+    plt.annotate(txt_STE[i], xy = (int(width[i+1])-1, delta_loss_STE[i]), xytext = (int(width[i+1])-1.35, delta_loss_STE[i]-0.015))
+    plt.annotate(txt_CDG[i], xy = (int(width[i+1])-1, delta_loss_CDG[i]), xytext = (int(width[i+1])-1.35, delta_loss_CDG[i]-0.015))
+
+ax.set_xticklabels(width)
+ax.xaxis.set_major_locator(x_major_locator)
+ax.legend(loc="lower right")
+```  
+
+画图效果如下：  
+
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202105161000.png)  
+
+上面的效果其实挺差，因为没有调好`xytext`。  

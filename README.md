@@ -3,6 +3,13 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/5/17  
+* Continue NES-related experiments and am very desperate.  
+* Read []()
+
+### 2021/5/15  
+* Continue NES experiments and write [report]()  
+
 ### 2021/5/14  
 * Read [Bayesian Optimized 1-Bit CNNs](https://youcaijun98.github.io/articles/ModelCompression/BNN/BayesianBNN.html)  
 * Continue NES experiments.  
