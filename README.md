@@ -3,12 +3,18 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/6/1  
+* Prepare for [next meeting](https://youcaijun98.github.io/codez/awnas/Mr.Chen_validation_exp/2021_6_3_meeting.html) with Mr.Chen.  
+
+### 2021/5/27  
+* Did a [group meeting report]().  
+
 ### 2021/5/17  
 * Continue NES-related experiments and am very desperate.  
 * Read [Training Binary Neural Networks through Learning with Noisy Supervision](https://youcaijun98.github.io/articles/ModelCompression/BNN/Training%20Binary%20Neural%20Networks%20through%20Learning.html)
 
 ### 2021/5/15  
-* Continue NES experiments and write [report]()  
+* Continue NES experiments and write [report](https://youcaijun98.github.io/codez/awnas/Mr.Chen_validation_exp/2021_5_17_meeting.html)  
 
 ### 2021/5/14  
 * Read [Bayesian Optimized 1-Bit CNNs](https://youcaijun98.github.io/articles/ModelCompression/BNN/BayesianBNN.html)  
