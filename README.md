@@ -5,7 +5,7 @@ Just A Private HomePage for Kaleido XD
 ## What's up?  
 ### 2021/5/17  
 * Continue NES-related experiments and am very desperate.  
-* Read []()
+* Read [Training Binary Neural Networks through Learning with Noisy Supervision](https://youcaijun98.github.io/articles/ModelCompression/BNN/Training%20Binary%20Neural%20Networks%20through%20Learning.html)
 
 ### 2021/5/15  
 * Continue NES experiments and write [report]()  

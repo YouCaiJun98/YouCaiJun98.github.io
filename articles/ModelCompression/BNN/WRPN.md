@@ -25,6 +25,8 @@ Further, most prior works target reducing the precision of the model parameters 
 This primarily benefits the inference step only when batch sizes are small.
 ```  
 
+(2021/5/25 update)想了下其实挺好理解的，因为BS大的时候基本上都是ACT，那么只Binarize Weight带来的增益其实挺小。  
+
 ## 2 Motivation for reduced-precision activation maps  
 讲的是本文的故事，讲ACT内存优化确实不是个好的切入点。  
 

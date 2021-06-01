@@ -1,0 +1,110 @@
+[STE]Original loss is 0.7144012451171875, and when lr is 0.2647, the best STE-loss is 0.39787277579307556.
+[stochastic STE]Original loss is 0.7144012451171875, and when samples is 1 and lr is 0.3002, the best STE-loss is 0.355437308549881.
+[stochastic STE]Original loss is 0.7144012451171875, and when samples is 2 and lr is 0.2661, the best STE-loss is 0.37757623195648193.
+[stochastic STE]Original loss is 0.7144012451171875, and when samples is 3 and lr is 0.2886, the best STE-loss is 0.3877098560333252.
+[stochastic STE]Original loss is 0.7144012451171875, and when samples is 4 and lr is 0.2683, the best STE-loss is 0.39003872871398926.
+[stochastic STE]Original loss is 0.7144012451171875, and when samples is 5 and lr is 0.2688, the best STE-loss is 0.3921881914138794.
+[stochastic STE]Original loss is 0.7144012451171875, and when samples is 6 and lr is 0.2665, the best STE-loss is 0.39316263794898987.
+[stochastic STE]Original loss is 0.7144012451171875, and when samples is 7 and lr is 0.2669, the best STE-loss is 0.3931864798069.
+[stochastic STE]Original loss is 0.7144012451171875, and when samples is 8 and lr is 0.2672, the best STE-loss is 0.39399608969688416.
+[stochastic STE]Original loss is 0.7144012451171875, and when samples is 9 and lr is 0.2673, the best STE-loss is 0.39508146047592163.
+[stochastic STE]Original loss is 0.7144012451171875, and when samples is 10 and lr is 0.267, the best STE-loss is 0.39546671509742737.
+[STE]Original loss is 0.7240352630615234, and when lr is 0.2682, the best STE-loss is 0.394919216632843.
+[stochastic STE]Original loss is 0.7240352630615234, and when samples is 1 and lr is 0.26990000000000003, the best STE-loss is 0.39438432455062866.
+[stochastic STE]Original loss is 0.7240352630615234, and when samples is 2 and lr is 0.2589, the best STE-loss is 0.39351320266723633.
+[stochastic STE]Original loss is 0.7240352630615234, and when samples is 3 and lr is 0.2545, the best STE-loss is 0.39166098833084106.
+[stochastic STE]Original loss is 0.7240352630615234, and when samples is 4 and lr is 0.25680000000000003, the best STE-loss is 0.3924413025379181.
+[stochastic STE]Original loss is 0.7240352630615234, and when samples is 5 and lr is 0.2603, the best STE-loss is 0.39248788356781006.
+[stochastic STE]Original loss is 0.7240352630615234, and when samples is 6 and lr is 0.29560000000000003, the best STE-loss is 0.3924931287765503.
+[stochastic STE]Original loss is 0.7240352630615234, and when samples is 7 and lr is 0.2759, the best STE-loss is 0.39394164085388184.
+[stochastic STE]Original loss is 0.7240352630615234, and when samples is 8 and lr is 0.2932, the best STE-loss is 0.39374446868896484.
+[stochastic STE]Original loss is 0.7240352630615234, and when samples is 9 and lr is 0.2873, the best STE-loss is 0.3903558552265167.
+[stochastic STE]Original loss is 0.7240352630615234, and when samples is 10 and lr is 0.2775, the best STE-loss is 0.39208704233169556.
+[STE]Original loss is 0.6867175698280334, and when lr is 0.159, the best STE-loss is 0.43332886695861816.
+[stochastic STE]Original loss is 0.6867175698280334, and when samples is 1 and lr is 0.1644, the best STE-loss is 0.43285438418388367.
+[stochastic STE]Original loss is 0.6867175698280334, and when samples is 2 and lr is 0.1626, the best STE-loss is 0.43176472187042236.
+[stochastic STE]Original loss is 0.6867175698280334, and when samples is 3 and lr is 0.16269999999999998, the best STE-loss is 0.4314552843570709.
+[stochastic STE]Original loss is 0.6867175698280334, and when samples is 4 and lr is 0.1605, the best STE-loss is 0.4296343922615051.
+[stochastic STE]Original loss is 0.6867175698280334, and when samples is 5 and lr is 0.16269999999999998, the best STE-loss is 0.4312131106853485.
+[stochastic STE]Original loss is 0.6867175698280334, and when samples is 6 and lr is 0.1965, the best STE-loss is 0.4292137324810028.
+[stochastic STE]Original loss is 0.6867175698280334, and when samples is 7 and lr is 0.1795, the best STE-loss is 0.4269371032714844.
+[stochastic STE]Original loss is 0.6867175698280334, and when samples is 8 and lr is 0.2133, the best STE-loss is 0.42540067434310913.
+[stochastic STE]Original loss is 0.6867175698280334, and when samples is 9 and lr is 0.1849, the best STE-loss is 0.42324352264404297.
+[stochastic STE]Original loss is 0.6867175698280334, and when samples is 10 and lr is 0.192, the best STE-loss is 0.4206315875053406.
+[STE]Original loss is 0.6400235891342163, and when lr is 0.1784, the best STE-loss is 0.3716888427734375.
+[stochastic STE]Original loss is 0.6400235891342163, and when samples is 1 and lr is 0.1807, the best STE-loss is 0.371104896068573.
+[stochastic STE]Original loss is 0.6400235891342163, and when samples is 2 and lr is 0.1799, the best STE-loss is 0.3713119328022003.
+[stochastic STE]Original loss is 0.6400235891342163, and when samples is 3 and lr is 0.1801, the best STE-loss is 0.37134647369384766.
+[stochastic STE]Original loss is 0.6400235891342163, and when samples is 4 and lr is 0.1791, the best STE-loss is 0.37131983041763306.
+[stochastic STE]Original loss is 0.6400235891342163, and when samples is 5 and lr is 0.1784, the best STE-loss is 0.3714933693408966.
+[stochastic STE]Original loss is 0.6400235891342163, and when samples is 6 and lr is 0.1803, the best STE-loss is 0.37115001678466797.
+[stochastic STE]Original loss is 0.6400235891342163, and when samples is 7 and lr is 0.1812, the best STE-loss is 0.3711148202419281.
+[stochastic STE]Original loss is 0.6400235891342163, and when samples is 8 and lr is 0.1808, the best STE-loss is 0.3711622357368469.
+[stochastic STE]Original loss is 0.6400235891342163, and when samples is 9 and lr is 0.1804, the best STE-loss is 0.37148723006248474.
+[stochastic STE]Original loss is 0.6400235891342163, and when samples is 10 and lr is 0.1802, the best STE-loss is 0.37128350138664246.
+[STE]Original loss is 0.7237310409545898, and when lr is 0.234, the best STE-loss is 0.38685303926467896.
+[stochastic STE]Original loss is 0.7237310409545898, and when samples is 1 and lr is 0.234, the best STE-loss is 0.3863601088523865.
+[stochastic STE]Original loss is 0.7237310409545898, and when samples is 2 and lr is 0.2349, the best STE-loss is 0.38670337200164795.
+[stochastic STE]Original loss is 0.7237310409545898, and when samples is 3 and lr is 0.2388, the best STE-loss is 0.3866513967514038.
+[stochastic STE]Original loss is 0.7237310409545898, and when samples is 4 and lr is 0.2418, the best STE-loss is 0.38707441091537476.
+[stochastic STE]Original loss is 0.7237310409545898, and when samples is 5 and lr is 0.241, the best STE-loss is 0.38664090633392334.
+[stochastic STE]Original loss is 0.7237310409545898, and when samples is 6 and lr is 0.2404, the best STE-loss is 0.38670605421066284.
+[stochastic STE]Original loss is 0.7237310409545898, and when samples is 7 and lr is 0.2895, the best STE-loss is 0.3864567279815674.
+[stochastic STE]Original loss is 0.7237310409545898, and when samples is 8 and lr is 0.2889, the best STE-loss is 0.38733071088790894.
+[stochastic STE]Original loss is 0.7237310409545898, and when samples is 9 and lr is 0.2945, the best STE-loss is 0.3870202898979187.
+[stochastic STE]Original loss is 0.7237310409545898, and when samples is 10 and lr is 0.2933, the best STE-loss is 0.3883419334888458.
+[STE]Original loss is 0.6768275499343872, and when lr is 0.33390000000000003, the best STE-loss is 0.3741911053657532.
+[stochastic STE]Original loss is 0.6768275499343872, and when samples is 1 and lr is 0.3341, the best STE-loss is 0.3737093210220337.
+[stochastic STE]Original loss is 0.6768275499343872, and when samples is 2 and lr is 0.3332, the best STE-loss is 0.37411123514175415.
+[stochastic STE]Original loss is 0.6768275499343872, and when samples is 3 and lr is 0.3192, the best STE-loss is 0.3739992082118988.
+[stochastic STE]Original loss is 0.6768275499343872, and when samples is 4 and lr is 0.3379, the best STE-loss is 0.3734413981437683.
+[stochastic STE]Original loss is 0.6768275499343872, and when samples is 5 and lr is 0.1788, the best STE-loss is 0.3719552159309387.
+[stochastic STE]Original loss is 0.6768275499343872, and when samples is 6 and lr is 0.1789, the best STE-loss is 0.3725442588329315.
+[stochastic STE]Original loss is 0.6768275499343872, and when samples is 7 and lr is 0.1789, the best STE-loss is 0.37253788113594055.
+[stochastic STE]Original loss is 0.6768275499343872, and when samples is 8 and lr is 0.2893, the best STE-loss is 0.37390634417533875.
+[stochastic STE]Original loss is 0.6768275499343872, and when samples is 9 and lr is 0.2944, the best STE-loss is 0.37383103370666504.
+[stochastic STE]Original loss is 0.6768275499343872, and when samples is 10 and lr is 0.2895, the best STE-loss is 0.3733551502227783.
+[STE]Original loss is 0.7162514925003052, and when lr is 0.2485, the best STE-loss is 0.38417452573776245.
+[stochastic STE]Original loss is 0.7162514925003052, and when samples is 1 and lr is 0.2518, the best STE-loss is 0.38415518403053284.
+[stochastic STE]Original loss is 0.7162514925003052, and when samples is 2 and lr is 0.2489, the best STE-loss is 0.38392847776412964.
+[stochastic STE]Original loss is 0.7162514925003052, and when samples is 3 and lr is 0.2512, the best STE-loss is 0.38360273838043213.
+[stochastic STE]Original loss is 0.7162514925003052, and when samples is 4 and lr is 0.2514, the best STE-loss is 0.38416698575019836.
+[stochastic STE]Original loss is 0.7162514925003052, and when samples is 5 and lr is 0.2535, the best STE-loss is 0.38413214683532715.
+[stochastic STE]Original loss is 0.7162514925003052, and when samples is 6 and lr is 0.2551, the best STE-loss is 0.38468343019485474.
+[stochastic STE]Original loss is 0.7162514925003052, and when samples is 7 and lr is 0.2529, the best STE-loss is 0.3847370445728302.
+[stochastic STE]Original loss is 0.7162514925003052, and when samples is 8 and lr is 0.2547, the best STE-loss is 0.3842378258705139.
+[stochastic STE]Original loss is 0.7162514925003052, and when samples is 9 and lr is 0.2712, the best STE-loss is 0.38379716873168945.
+[stochastic STE]Original loss is 0.7162514925003052, and when samples is 10 and lr is 0.2703, the best STE-loss is 0.3842596411705017.
+[STE]Original loss is 0.7053998708724976, and when lr is 0.2765, the best STE-loss is 0.38731229305267334.
+[stochastic STE]Original loss is 0.7053998708724976, and when samples is 1 and lr is 0.2898, the best STE-loss is 0.3871905207633972.
+[stochastic STE]Original loss is 0.7053998708724976, and when samples is 2 and lr is 0.2765, the best STE-loss is 0.38639694452285767.
+[stochastic STE]Original loss is 0.7053998708724976, and when samples is 3 and lr is 0.276, the best STE-loss is 0.3864331543445587.
+[stochastic STE]Original loss is 0.7053998708724976, and when samples is 4 and lr is 0.3009, the best STE-loss is 0.38638776540756226.
+[stochastic STE]Original loss is 0.7053998708724976, and when samples is 5 and lr is 0.2866, the best STE-loss is 0.3850153386592865.
+[stochastic STE]Original loss is 0.7053998708724976, and when samples is 6 and lr is 0.2883, the best STE-loss is 0.3858947157859802.
+[stochastic STE]Original loss is 0.7053998708724976, and when samples is 7 and lr is 0.2942, the best STE-loss is 0.38488006591796875.
+[stochastic STE]Original loss is 0.7053998708724976, and when samples is 8 and lr is 0.2949, the best STE-loss is 0.38392019271850586.
+[stochastic STE]Original loss is 0.7053998708724976, and when samples is 9 and lr is 0.2944, the best STE-loss is 0.38364264369010925.
+[stochastic STE]Original loss is 0.7053998708724976, and when samples is 10 and lr is 0.2947, the best STE-loss is 0.3836633563041687.
+[STE]Original loss is 0.7083372473716736, and when lr is 0.2626, the best STE-loss is 0.3536894917488098.
+[stochastic STE]Original loss is 0.7083372473716736, and when samples is 1 and lr is 0.2625, the best STE-loss is 0.3532184362411499.
+[stochastic STE]Original loss is 0.7083372473716736, and when samples is 2 and lr is 0.2623, the best STE-loss is 0.35329997539520264.
+[stochastic STE]Original loss is 0.7083372473716736, and when samples is 3 and lr is 0.2622, the best STE-loss is 0.3524989187717438.
+[stochastic STE]Original loss is 0.7083372473716736, and when samples is 4 and lr is 0.2619, the best STE-loss is 0.3527464270591736.
+[stochastic STE]Original loss is 0.7083372473716736, and when samples is 5 and lr is 0.33340000000000003, the best STE-loss is 0.3521936237812042.
+[stochastic STE]Original loss is 0.7083372473716736, and when samples is 6 and lr is 0.33490000000000003, the best STE-loss is 0.352122962474823.
+[stochastic STE]Original loss is 0.7083372473716736, and when samples is 7 and lr is 0.3296, the best STE-loss is 0.35193580389022827.
+[stochastic STE]Original loss is 0.7083372473716736, and when samples is 8 and lr is 0.2679, the best STE-loss is 0.3516695201396942.
+[stochastic STE]Original loss is 0.7083372473716736, and when samples is 9 and lr is 0.2665, the best STE-loss is 0.3500378131866455.
+[stochastic STE]Original loss is 0.7083372473716736, and when samples is 10 and lr is 0.2654, the best STE-loss is 0.350021630525589.
+[STE]Original loss is 0.7567940950393677, and when lr is 0.2788, the best STE-loss is 0.3925541043281555.
+[stochastic STE]Original loss is 0.7567940950393677, and when samples is 1 and lr is 0.2792, the best STE-loss is 0.3920685052871704.
+[stochastic STE]Original loss is 0.7567940950393677, and when samples is 2 and lr is 0.278, the best STE-loss is 0.39188146591186523.
+[stochastic STE]Original loss is 0.7567940950393677, and when samples is 3 and lr is 0.2789, the best STE-loss is 0.39148205518722534.
+[stochastic STE]Original loss is 0.7567940950393677, and when samples is 4 and lr is 0.2798, the best STE-loss is 0.39128512144088745.
+[stochastic STE]Original loss is 0.7567940950393677, and when samples is 5 and lr is 0.2794, the best STE-loss is 0.3912223279476166.
+[stochastic STE]Original loss is 0.7567940950393677, and when samples is 6 and lr is 0.2804, the best STE-loss is 0.39033353328704834.
+[stochastic STE]Original loss is 0.7567940950393677, and when samples is 7 and lr is 0.2816, the best STE-loss is 0.3892887830734253.
+[stochastic STE]Original loss is 0.7567940950393677, and when samples is 8 and lr is 0.2799, the best STE-loss is 0.38828909397125244.
+[stochastic STE]Original loss is 0.7567940950393677, and when samples is 9 and lr is 0.28, the best STE-loss is 0.3893554210662842.
+[stochastic STE]Original loss is 0.7567940950393677, and when samples is 10 and lr is 0.2796, the best STE-loss is 0.3904232680797577.
