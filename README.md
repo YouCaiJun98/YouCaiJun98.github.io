@@ -7,7 +7,7 @@ Just A Private HomePage for Kaleido XD
 * Prepare for [next meeting](https://youcaijun98.github.io/codez/awnas/Mr.Chen_validation_exp/2021_6_3_meeting.html) with Mr.Chen.  
 
 ### 2021/5/27  
-* Did a [group meeting report]().  
+* Did a [group meeting report](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/Meetings/BNN/BNN_group_meeting.pptx).  
 
 ### 2021/5/17  
 * Continue NES-related experiments and am very desperate.  
