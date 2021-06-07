@@ -12,7 +12,7 @@ Just A Private HomePage for Kaleido XD
 * Did a [group meeting report](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/Meetings/BNN/BNN_group_meeting.pptx).  
 
 ### 2021/5/25  
-* Read[A Survey of Quantization Methods for Efficient Neural Network Inference]()  
+* Read [A Survey of Quantization Methods for Efficient Neural Network Inference](https://youcaijun98.github.io/articles/ModelCompression/Quantization/A%20Survey%20of%20Quantization%20Methods%20for%20Efficient%20Neural%20Network%20Inference.html)  
 
 ### 2021/5/17  
 * Continue NES-related experiments and am very desperate.  
