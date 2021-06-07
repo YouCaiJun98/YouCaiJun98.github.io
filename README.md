@@ -3,11 +3,16 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 
+
 ### 2021/6/1  
 * Prepare for [next meeting](https://youcaijun98.github.io/codez/awnas/Mr.Chen_validation_exp/2021_6_3_meeting.html) with Mr.Chen.  
 
 ### 2021/5/27  
 * Did a [group meeting report](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/Meetings/BNN/BNN_group_meeting.pptx).  
+
+### 2021/5/25  
+* Read[A Survey of Quantization Methods for Efficient Neural Network Inference]()  
 
 ### 2021/5/17  
 * Continue NES-related experiments and am very desperate.  
