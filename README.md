@@ -4,7 +4,7 @@ Just A Private HomePage for Kaleido XD
 
 ## What's up?  
 ### 2021/6/11  
-* Read []().  
+* Read [Training Binary Neural Network without Batch Normalization for Image Super-Resolution](https://youcaijun98.github.io/articles/ModelCompression/Quantization/Training%20Binary%20Neural%20Network%20without%20Batch%20Norm.html).  
 * Carry out vSTE&mSTE exp.  
 
 ### 2021/6/9  
