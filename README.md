@@ -3,6 +3,10 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/6/11  
+* Read []().  
+* Carry out vSTE&mSTE exp.  
+
 ### 2021/6/9  
 * Read [Binarized Neural Network for Single Image Super Resolution](https://youcaijun98.github.io/articles/ModelCompression/Quantization/Binarized%20Neural%20Network%20for%20Single%20Image%20Super%20Resolution.html) and step into the new pit.  
 * Continue DG tests.  
