@@ -46,7 +46,7 @@ BAM算法，画得是**相当抽象**：
 
 ![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202106110004.png)  
 
-作者argue超分模型对图像的处理对中间activation的依赖很强，所以这里不用单一scale（对应weight的$$E(|W_n|)$$），而是用一种（可学习）*two-dimensional array*来scale activation：  
+作者argue超分模型对图像的处理对中间activation的依赖很强，所以这里不用单一scale（对应weight的 $$E(\|W_n\|)$$ ），而是用一种（可学习）*two-dimensional array*来scale activation：  
 
 ![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202106110005.png)  
 
