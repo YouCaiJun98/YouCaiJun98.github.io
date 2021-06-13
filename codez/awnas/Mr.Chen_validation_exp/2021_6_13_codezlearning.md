@@ -16,6 +16,9 @@
     - [Tensor.split()](#tensorsplit)
     - [Tensor.unbind()](#tensorunbind)
     - [Tensor.repeat() & Tensor.expand()](#tensorrepeat-tensorexpand)
+    - [厉害的index传播以及传新检索方式](#厉害的index传播以及传新检索方式)
+    - [Tensor.transpose()](#tensortranspose)
+    - [最后有关MLP的一些细节](#最后有关mlp的一些细节)
 
 <!-- /code_chunk_output -->
 
@@ -288,19 +291,156 @@ torch.Tensor有两个实例方法可以用来扩展某维的数据的尺寸，�
 
     ```  
     More than one element of an expanded tensor may refer to a single memory location. As a result, in-place 
-    operations (especially ones that are vectorized) may result in incorrect behavior. If you need to write to the 
-    tensors, please clone them first.
+    operations (especially ones that are vectorized) may result in incorrect behavior. If you need to write 
+    to the tensors, please clone them first.
     ```  
 
-    大意是
+    大意是扩张后的tensor可能指向同一块内存地址，in-place（就地）操作，尤其是矢量化的操作，可能会导致错误的结果，如果需要对这个tensor修改，还是先clone罢。  
 
+    实现出来大概是这个意思：  
 
+    ```python  
+    >>> x = torch.randint(-10,10,(1, 2))
+    >>> print(x)
+    >>> x = x.expand(2, 2)
+    >>> print(x)
+    >>> x[0, 0] = 10
+    >>> print(x)
+    tensor([[-4, -1]])
+    tensor([[-4, -1],
+            [-4, -1]])
+    tensor([[10, -1],
+            [10, -1]])
+    ```  
 
+    确实只改了[0, 0]位置的这个tensor，但是后面[1, 0]也跟着变了。  
 
+`repeat()`则是另一种更安全的复制方法，它沿着特定的维度重复这个张量，和`expand()`不同的是，这个函数**拷贝**张量的数据。  
+* repeat(*sizes) → Tensor  
+* 我直接接着偷例子：  
 
+    ```python  
+    >>> x = torch.tensor([1, 2, 3])
+    >>> x.repeat(4, 2)
+    tensor([[ 1,  2,  3,  1,  2,  3],
+            [ 1,  2,  3,  1,  2,  3],
+            [ 1,  2,  3,  1,  2,  3],
+            [ 1,  2,  3,  1,  2,  3]])
+    >>> x.repeat(4, 2, 1).size()
+    torch.Size([4, 2, 3])
+    ```  
 
+是不是感觉`expand()`没啥用？但是下面的例子就有点厉害：  
 
+```python  
+L_a = F.mse_loss(y_test, y_target_ex, reduction="none").mean(dim=(1, 2))
+```  
 
+看来`expand()`还是有用的，误会解除！  
 
+### 厉害的index传播以及传新检索方式  
+动机是看到代码的这里：  
 
+```python  
+new_weight[k, j, i] += epsilon
+```  
 
+这里`new_weight`是在batch维度传播了的weight(size = [512, 32, 32])，后面的k/j/i分别是size=[512, 1]的index vector。有两个发现：  
+* 索引直接用","分隔就行，也就是说`new_weight[i][j][k]`和`new_weight[i, j, k]`是等价的！  
+* 然后比较震惊的是index可以用tensor vector来索引...一是tensor可以索引，二是vector可以索引！(虽然之前在awnas也看到过吧)，做了个测试，目标是第一个5->10，第二个13->18，看样子是这么回事：  
+
+    ```python  
+    >>> w = torch.tensor(range(16)).view(4, 4)
+    >>> w = w.repeat(2, 1, 1)
+    >>> epsilon = 5
+    >>> k = torch.tensor([0, 1])
+    >>> i = torch.tensor([1, 3])
+    >>> j = torch.tensor([1, 1])
+    >>> w[k, i, j] += epsilon
+    >>> w
+    tensor([[[ 0,  1,  2,  3],
+         [ 4, 10,  6,  7],
+         [ 8,  9, 10, 11],
+         [12, 13, 14, 15]],
+
+        [[ 0,  1,  2,  3],
+         [ 4,  5,  6,  7],
+         [ 8,  9, 10, 11],
+         [12, 18, 14, 15]]])
+    ```  
+
+### Tensor.transpose()  
+作用是转置输入tensor的某两维。转置前后的tensor共享同一块内存，所以修改其中一个，另一个也会跟着改变。  
+* torch.transpose(input, dim0, dim1) → Tensor  
+* 相关参数：  
+    * input (Tensor) – the input tensor.  
+    * dim0 (int) – the first dimension to be transposed  
+    * dim1 (int) – the second dimension to be transposed  
+* 偷来的实验：  
+
+```python  
+>>> x = torch.randn(2, 3)
+>>> x
+tensor([[ 1.0028, -0.9893,  0.5809],
+        [-0.1669,  0.7299,  0.4942]])
+>>> torch.transpose(x, 0, 1)
+tensor([[ 1.0028, -0.1669],
+        [-0.9893,  0.7299],
+        [ 0.5809,  0.4942]])
+```  
+
+但是高维的转置太难想了，超越极限...比如：  
+
+```python  
+>>> x = torch.tensor(range(12)).view(2, 2, 3)
+>>> print(x)
+>>> print(x.transpose(0, 1))
+tensor([[[ 0,  1,  2],
+         [ 3,  4,  5]],
+
+        [[ 6,  7,  8],
+         [ 9, 10, 11]]])
+tensor([[[ 0,  1,  2],
+         [ 6,  7,  8]],
+
+        [[ 3,  4,  5],
+         [ 9, 10, 11]]])
+```  
+
+只能猜个大概[捂脸]  
+
+### 最后有关MLP的一些细节  
+看到这里的一些转置我彻底麻了：  
+
+```python  
+def parallel_linear(weight, x):
+    return torch.matmul(weight, x.t()).transpose(1, 2)
+```  
+
+这里实际上对weight进行转置应该也没问题，但是是不是因为`.t()`比`.transpose()`快所以没这么转呢？没有求证。  
+此外，这里尤其需要注意的是**哪里该转置而哪里又不该**！比如以下的例子（和上面是一致的）就是对的：  
+
+```python  
+test_model = MLP(32).to(device)
+current_layer = test_model.layers[2]
+prelayer = test_model.layers[:2]
+prelayer_ = test_model.layers[:3]
+latter_layer = test_model.layers[3:]
+input = torch.randn((32,32),device=device)
+x = prelayer(input)
+x_o = prelayer_(input)
+output = test_model(input)
+output_ = latter_layer(torch.matmul(current_layer.weight, prelayer(input).t()).transpose(0,1))
+print(output)
+print(output_)
+```  
+
+而这个例子也是对的：  
+
+```python  
+output_ = latter_layer(torch.matmul(prelayer(input), current_layer.weight.t()))
+```  
+
+这应该能说明起码两件事：  
+1. `torch.matmul()`的两个输入是**有顺序的**（当然也很好想）！  
+2. MLP的矩阵运算有点奇怪，需要额外注意。  
