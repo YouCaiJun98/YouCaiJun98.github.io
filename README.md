@@ -4,7 +4,7 @@ Just A Private HomePage for Kaleido XD
 
 ## What's up?  
 ### 2021/6/15  
-* Read [BoolNet: Minimizing the Energy Consumption of Binary Neural Networks]() and was very shocked.  
+* Read [BoolNet: Minimizing the Energy Consumption of Binary Neural Networks](https://youcaijun98.github.io/articles/ModelCompression/BNN/boolnet.html) and was very shocked.  
 
 
 ### 2021/6/14[:dragon: :boat: Festival!]  
