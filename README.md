@@ -3,9 +3,16 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/6/15  
+* Read [BoolNet: Minimizing the Energy Consumption of Binary Neural Networks]() and was very shocked.  
+
+
+### 2021/6/14[:dragon: :boat: Festival!]  
+* Still reading codes of [nics_fix_pytorch]().  
+
 ### 2021/6/13  
 * Read [codes by songyi](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/codez/awnas/Mr.Chen_validation_exp/parallel_linear.py) and get [many insights](https://youcaijun98.github.io/codez/awnas/Mr.Chen_validation_exp/2021_6_13_codezlearning.html).  
-* Read codes of
+* Read codes of [nics_fix_pytorch]().  
 
 ### 2021/6/11  
 * Read [Training Binary Neural Network without Batch Normalization for Image Super-Resolution](https://youcaijun98.github.io/articles/ModelCompression/Quantization/Training%20Binary%20Neural%20Network%20without%20Batch%20Norm.html).  
