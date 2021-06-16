@@ -3,9 +3,13 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/6/16  
+* Sort out [experiments]() carried out recently.  
+* Read .  
+* Read .  
+
 ### 2021/6/15  
 * Read [BoolNet: Minimizing the Energy Consumption of Binary Neural Networks](https://youcaijun98.github.io/articles/ModelCompression/BNN/boolnet.html) and was very shocked.  
-
 
 ### 2021/6/14[:dragon: :boat: Festival!]  
 * Still reading codes of [nics_fix_pytorch]().  
