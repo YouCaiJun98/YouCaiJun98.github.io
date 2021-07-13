@@ -35,7 +35,7 @@ resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.i
 ## 2 Foundation frameworks of deep learning methods for image denoising  
 问题也不给个好好的数学定义，实在太拉了：  
 
-<center> $$y = x + \mu$$ <\center> 
+ $$y = x + \mu$$  
 
 一大堆nonsense，但是GAN的入门介绍稍微还可以看一下：  
 
@@ -62,7 +62,11 @@ face recognition and complex noisy image denoising.
 
 改变网络结构有以下的思路：  
 *   * fusing features from multiple inputs of a CNN  
+        * different parts of one sample as multiple inputs from different networks  
+        * Different perspectives for the one sample as input, such as multiple scales  
+        * Different channels of a CNN as input  
     * Changing the loss function  
+        * characteristic of nature images to extract more robust features, e.g. jointed Euclidean and perceptual loss functions  
     * Increasing depth or width of the CNN  
     * Adding some auxiliary plug-ins into CNNs  
     * Using skip connections or cascade operations into CNNs  
