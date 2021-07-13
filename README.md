@@ -5,7 +5,7 @@ Just A Private HomePage for Kaleido XD
 ## What's up?  
 ### 2021/7/13  
 * Make up articles read 2 weeks ago, including:  
-    * [Deep Learning for Image Denoising: A Survey]()  
+    * [Deep Learning for Image Denoising: A Survey](https://youcaijun98.github.io/articles/CV/Denoising/Deep%20Learning%20for%20Image%20Denoising:A%20Survey.html)  
     * []()  
     * []()  
     
