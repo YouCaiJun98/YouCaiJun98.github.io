@@ -3,8 +3,8 @@
 2021/7/13  
 
 来源：arxiv16(最后是不投了吗，1.2k被引感觉好强！不愧是BNN经典作！)  
-resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/ModelCompression/BNN/ABC-net.pdf)的包括ipad标注的pdf版本。  
-作者是DJI的Xiaofan Lin、Cong Zhao和Wei Pan，这篇文章也算是BNN领域的开创性&代表性作品了。  
+resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/ModelCompression/BNN/DoReFa-net.pdf)的包括ipad标注的pdf版本。  
+作者是旷视的Shuchang Zhou, Yuxin Wu, Zekun Ni, Xinyu Zhou, He Wen和Yuheng Zou，这篇文章也是BNN领域的开创性&代表性作品，但是很奇怪，这个组后面是金盆洗手了吗，怎么不见发其他BNN相关的文章了？  
 
 **Summary**：BNN领域非常具有代表性的作品，提出使用线性组合的weights&activations来近似FP counterpart，在早期就取得了非常高的成绩（~65），但是代价是比较显著地增加了运算数和存储空间消耗。值得注意的是，这里对activation的量化就已经出现了zero point shifting的思想。此外，这篇文章中还出现了BN merge的思想，将训练后的BN和sign函数组合在一起（所以昨天读的boolnet不是第一篇提出这种设计思想的工作啊0 0）      
 
