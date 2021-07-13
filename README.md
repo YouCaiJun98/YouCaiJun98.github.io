@@ -3,9 +3,16 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/7/9  
+* Watch a CVPRW and grab some [insights]().
+
+
+### 2021/6/18  
+* Update some [experiments]().  
+
 ### 2021/6/16  
 * Sort out [experiments](https://youcaijun98.github.io/codez/awnas/Mr.Chen_validation_exp/2021_6_16_meeting.html) carried out recently.  
-* Read [ABC-Net] [Towards Accurate Binary Convolutional Neural Network](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/ModelCompression/BNN/ABC-net.pdf).  
+* Read [ABC-Net] [Towards Accurate Binary Convolutional Neural Network](https://youcaijun98.github.io/articles/ModelCompression/BNN/ABC-Net.html).  
 
 ### 2021/6/15  
 * Read [BoolNet: Minimizing the Energy Consumption of Binary Neural Networks](https://youcaijun98.github.io/articles/ModelCompression/BNN/boolnet.html) and was very shocked.  

@@ -2,9 +2,9 @@
 sort: 5
 ---
 
-# Meeting Backup  
+# Backups  
 
-This is for backing up meeting PPTs and so on.  
+This is for backing up meeting PPTs, talks and so on.  
 
 {% include list.liquid all=true %}  
 
