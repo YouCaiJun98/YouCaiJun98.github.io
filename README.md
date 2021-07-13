@@ -5,12 +5,12 @@ Just A Private HomePage for Kaleido XD
 ## What's up?  
 ### 2021/7/13  
 * Make up articles read 2 weeks ago, including:  
-    * []()  
+    * [Deep Learning for Image Denoising: A Survey]()  
     * []()  
     * []()  
     
 ### 2021/7/9  
-* Watch a CVPRW and grab some [insights](https://youcaijun98.github.io/Meetings/Talks_and_Lectures/Talks/BNN_CVPRW_0.html).  
+* Watch a CVPRW and grab some [insights](https://youcaijun98.github.io/Backups/Talks_and_Lectures/Talks/BNN_CVPRW_0.html).  
 
 ### 2021/6/18  
 * Update some [experiments]().  
