@@ -12,7 +12,7 @@ resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.i
 **comprehension：4.0/5.0**  
 
 文章的贡献有：  
-* 一些进阶的background knowledge，但是参考价值很低。  
+* 一些进阶的background knowledge，但是参考价值很低（不过部分表格看起来还可以）。  
 
 ## 1 Introduction  
 传统方法报菜名：  
@@ -69,10 +69,60 @@ face recognition and complex noisy image denoising.
         * characteristic of nature images to extract more robust features, e.g. jointed Euclidean and perceptual loss functions  
     * Increasing depth or width of the CNN  
     * Adding some auxiliary plug-ins into CNNs  
+        * activation function, dilated convolution, fully connected layer, pooling operations, etc.  
     * Using skip connections or cascade operations into CNNs  
 
+* CNN/NN and common feature extraction methods for AWNI denoising(和特征提取结合的NN方法)  
+
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202107130009.png)   
+
+*    * weak edge-information noisy images  
+        * CNN with transformation domain method  
+     * non-linear noisy images  
+        * CNN with kernel method(分为三步，第一步用CNN提特征，第二步用核方法把非线性特征转换成线性特征，第三步重建图像)  
+     * high dimensional noisy images  
+        * CNN + dimensional reduction method(也是三步，第一步用CNN提特征，第二步用PCA等方法降维，第三步重建图像)  
+     * non-salient noisy images  
+        * CNN + signal processing idea(e.g. skip connection)  
+     * high computational cost tasks  
+        * CNN + nature of image  
+
+* The combination of optimization method and CNN/NN for AWNI denoising  
+
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202107130010.png)  
+
+optimization methods（不清楚到底指什么，可能是传统方法？）在low-level vision方面表现不错，但是需要手工调参非常费时；discriminative learning methods（同样指代不明，麻了，就不能不介绍模型多讲讲这两个的定义吗啊）速度快，但是不够灵活，这两者结合在一起可以trade-off。  
+*   * improving denoising speed：CNN + optimization method(e.g. MAP)
+    * improving the denoising performance  
+
 ### 3.2 Deep learning techniques for real noisy image denoising  
+* single end-to-end CNN  
+* combination of prior knowledge and CNN  
+
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202107130011.png)  
 
 ### 3.3 Deep learning techniques for blind denoising  
 
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202107130012.png)  
+
 ### 3.4 Deep learning techniques for hybrid noisy image denoising  
+
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202107130013.png)  
+
+## 4 Experimental results  
+一些dataset上的测试结果：  
+* DND上benchmark  
+ 
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202107130014.png)  
+
+* SIDD上benchmark  
+
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202107130015.png)  
+
+* Nam上benchmark  
+
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202107130016.png)  
+
+* cc上benchmark  
+
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202107130017.png)  
