@@ -6,7 +6,7 @@ Just A Private HomePage for Kaleido XD
 ### 2021/7/13  
 * Make up articles read 2 weeks ago, including:  
     * [Deep Learning for Image Denoising: A Survey](https://youcaijun98.github.io/articles/CV/Denoising/Deep%20Learning%20for%20Image%20Denoising:A%20Survey.html)  
-    * []()  
+    * [DoReFa-Net][DoReFa-Net: Training Low Bitwidth Convolutional Neural Networks with Low Bitwidth Gradients]()  
     * []()  
     
 ### 2021/7/9  

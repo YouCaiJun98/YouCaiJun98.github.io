@@ -1,4 +1,4 @@
-# Deep Learning for Image Denoising： A Survey  
+# Deep Learning for Image Denoising A Survey  
 
 2021/7/13  
 
