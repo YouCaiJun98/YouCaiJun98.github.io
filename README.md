@@ -9,7 +9,7 @@ Just A Private HomePage for Kaleido XD
     * [DoReFa-Net][DoReFa-Net: Training Low Bitwidth Convolutional Neural Networks with Low Bitwidth Gradients](https://youcaijun98.github.io/articles/ModelCompression/BNN/DoReFa-Net.html)  
     * [Deep Learning on Image Denoising An overview](https://youcaijun98.github.io/articles/CV/Denoising/Deep%20Learning%20on%20Image%20Denoising%20An%20overview.html)  
     * [U-Net][U-Net: Convolutional Networks for Biomedical Image Segmentation](https://youcaijun98.github.io/articles/CV/Denoising/U-Net.html)  
-    * [Learning Raw Image Denoising with Bayer Pattern Unification and Bayer Preserving Augmentation]()  
+    * [Learning Raw Image Denoising with Bayer Pattern Unification and Bayer Preserving Augmentation](https://youcaijun98.github.io/articles/CV/Denoising/Learning%20Raw%20Image%20Denoising%20with%20Bayer%20Pattern%20Unification%20and%20Bayer%20Preserving%20Augmentation.html)  
     * [Learning to See in the Dark]()  
     * [HINet: Half Instance Normalization Network for Image Restoration]()  
     
