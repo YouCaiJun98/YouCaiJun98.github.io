@@ -46,7 +46,7 @@ It is known that binary activation can use spiking response for event-based comp
 
 ![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202106160007.png)  
 
-但是和weights不一样的是，尽管activations的组合也可以用线性回归，但是输入的统计特性在不断变化（因此不能构建之前那种依赖statistics的base），解决的方法是在sign之前先过BN，这样将feature map normalize（有问题诶，训练之后不就不能改变statistics了吗）：  
+但是和weights不一样的是，尽管activations的组合也可以用线性回归，但是输入的统计特性在不断变化（因此不能构建之前那种依赖statistics的base），解决的方法是在sign之前先过BN，这样将feature map normalize（有问题诶，训练之后不就不能改变statistics了吗）。而且这里采用可训练的加权系数也是为了“静态”适应变化的输入：  
 
 ![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202106160008.png)  
 

@@ -18,4 +18,7 @@
 * 将本地项目与远程项目建立联系：`git remote add 仓库名 仓库地址`，并将本地分支上传到远程分支：`git push --set-upstream bnn bnn`  
 * 将远程分支clone到EVA7上，注意我只要bnn这个分支，不要默认的master：`git clone -b bnn 仓库地址`  
 
+### 分支冲突解决  
+https://www.cnblogs.com/shuimuzhushui/p/9022549.html  
+
 鸽了。  

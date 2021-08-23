@@ -3,7 +3,12 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/8/23  
+
+
 ### 2021/7/14  
+* Still waste time sorting documents  
+* Restart AprilFool  
 
 ### 2021/7/13  
 * Make up articles read 2 weeks ago, including:  
@@ -13,7 +18,7 @@ Just A Private HomePage for Kaleido XD
     * [U-Net][U-Net: Convolutional Networks for Biomedical Image Segmentation](https://youcaijun98.github.io/articles/CV/Denoising/U-Net.html)  
     * [Learning Raw Image Denoising with Bayer Pattern Unification and Bayer Preserving Augmentation](https://youcaijun98.github.io/articles/CV/Denoising/Learning%20Raw%20Image%20Denoising%20with%20Bayer%20Pattern%20Unification%20and%20Bayer%20Preserving%20Augmentation.html)  
     * [Learning to See in the Dark](https://youcaijun98.github.io/articles/CV/Denoising/SID.html)  
-    * [HINet: Half Instance Normalization Network for Image Restoration]()  
+    * [HINet: Half Instance Normalization Network for Image Restoration](https://youcaijun98.github.io/articles/CV/Denoising/HINet%20Half%20Instance%20Normalization%20Network%20for%20Image%20Restoration.html)  
     
 ### 2021/7/9  
 * Watch a CVPRW and grab some [insights](https://youcaijun98.github.io/Backups/Talks_and_Lectures/Talks/BNN_CVPRW_0.html).  
