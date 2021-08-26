@@ -3,8 +3,13 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
-### 2021/8/23  
+### 2021/8/26  
+* [Today's study record]()  
 
+
+### 2021/8/23  
+* Listened a [talk on PTQ](https://youcaijun98.github.io/Backups/Talks_and_Lectures/Talks/21_8_23_sensetime_ptq.html).  
+* Finish(finally!!!) revising sample chapter, hopefully the editor won't bother me anyway.  
 
 ### 2021/7/14  
 * Still waste time sorting documents  
