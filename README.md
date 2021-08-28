@@ -3,9 +3,15 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
-### 2021/8/26  
-* [Today's study record]()  
+### 2021/8/28  
+* Read [Automated Log-Scale Quantization for Low-Cost Deep Neural Networks]()  
 
+### 2021/8/27  
+* Wandering in MQBench x(  
+* Finish SID Dataset survey.  
+
+### 2021/8/26  
+* [Today's study record](https://youcaijun98.github.io/Backups/Study_Record/21_8_26.html)  
 
 ### 2021/8/23  
 * Listened a [talk on PTQ](https://youcaijun98.github.io/Backups/Talks_and_Lectures/Talks/21_8_23_sensetime_ptq.html).  
