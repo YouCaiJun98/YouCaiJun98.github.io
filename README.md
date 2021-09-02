@@ -3,6 +3,9 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/9/1  
+* Read [MQBench]()  
+
 ### 2021/8/28  
 * Read [Automated Log-Scale Quantization for Low-Cost Deep Neural Networks](https://youcaijun98.github.io/articles/ModelCompression/Quantization/Automated%20Log-Scale%20Quantization%20for%20Low-Cost%20Deep%20Neural%20Networks.html)  
 
