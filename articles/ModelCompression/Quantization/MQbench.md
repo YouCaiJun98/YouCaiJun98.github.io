@@ -51,13 +51,52 @@ resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.i
 ![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202109020006.png)  
 * 有五种常见的BN folding策略(式中$$\gamma$$和$$\beta$$分别表示仿射变换的参数和偏移，$$\mu$$,$$\sigma^2$$分别表示running mean和variance，$$\epsilon$$是数值稳定引入的工具变量，$$\tilde{\mu}$$, $$\tilde{\sigma}^2$$表示当前batch上的均值与方差)：  
 ![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202109020007.png)  
+    * Strategy 0：直接把参数融进去，但是取消BN有梯度爆炸现象，不能用大LR训；  
+    * Strategy 1：merge的时候不改统计参数，但是affine transform的参数可以通过SGD更新，这个策略可以平滑loss landscape并产生差不多的accuracy，在分布式训练的时候因为不用同步统计数据而减少训练时间；    
+    * Strategy 2：引入了额外的Conv层，第一次计算当前batch的均值与方差，并用它merge到参数中作第二次Conv，inference的时候就用running mean与variance做（**好怪哦，为什么？而且里面的参数怎么取得的？所以还是有个专门计算当前batch统计数据的BN层在里面？**）；  
+    * Strategy 3：哈人，更难了。同样是计算两次，且第一次计算当前batch的统计数据。但是merge的时候还会用running statistics避免波动，batch variance用来rescale第二次的输出结果；    
+    * Strategy 4：不需要计算两次Conv但是显式地增加了一层BN，好处之一是batch statistics是用量化后的参数计算出来的。`During inference, the re-scaling of output $$\frac{\sigma}{\gamma}$$can be neutralized by BN, therefore the graph can be transformed to Fig. 3(a)`(**不懂**)  
 
 ### 3.3 Block Graph  
+这块主要讲element-wise add与concate的处理。下图以ResNet Block为例讲了不同的building block：    
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202109020008.png)  
+* 左图是academic implementation，块的输入（**所以这会有啥问题？占用内存吗？**）和elementwise-add都是在FP精度下操作的，这样会占用网络的throughput并影响latency(**好的，问题解决**)，在某些结构中，受到I/O限制加速效果非常有限，另外downsample分支的activation需要单独量化，也会造成额外开销。  
+* 中图是TensorRT的实现方案。输入和输出被量化（实际上就是同一个地方吧，只是在两个块中），但是在elementwise-add中因为` the fusion with one of the former convolutional layer’s bias addition`所以以32-bit的形式进行；  
+* 在FBGEMM这种其他的HW lib中要求element-wise add的所有输入都被量化，对于4-bit对称量化而言这会**极大地损害性能**。  
 
 ## 4 MQBench Implementation  
+pytorch.fx的[文档](https://pytorch.org/docs/stable/fx.html)可能会有用。  
 
 ## 5 MQBench Evaluation  
+评价的标准还挺合理的：  
+1. test accuracy: academic setting下accuracy  
+2. hardware gap：academic accuracy和deployment accuracy的区别  
+3. hardware robustness:在5种架构下的accuracy平均值  
+4. architecture robustness:不同架构下的accuracy(这个用平均排名不是更好？)  
+### 5.1 Evaluation with Academic Setting  
+所谓academic setting是指per-tensor、symmetric quantization、without BN folding的设置。  
 
-## 6 Discussion  
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202109020009.png)  
 
-## Attachment  
+结论：  
+* 不同算法的差距没那么大（笑死，还diss了DSQ：相较DoReFa，80%的性能提升来自于训练技巧，只有两成来自算法）；  
+* 没有哪个算法绝对最好/算法在结构间的鲁棒性挺差；  
+* rule-based algo能取得和learning-based algo相近的性能。  
+
+### 5.2 Evaluation with BN Folding  
+结论：  
+* BN folding对量化算法敏感，strategy 4总体上性能最好；  
+* strategy 4相比2/3加速也不明显；  
+* 更新batch statistics对BN fold的影响不大；  
+* data-parallel中BN statistics同步可以改善性能（但是花时间）；  
+* lr warm-up可以解决BN folding导致初始阶段的不稳定性。  
+
+### 5.3 Evaluation with Graph Implementation  
+BN fold对量化算法敏感， 而图实现对网络结构敏感。  
+
+### 5.4 4-bit QAT
+* test accuracy:还是不能分高下；不同hw与不同arch有不同的test accuracy方差，`depthwise conv-net(MobileNetV2 and EfficientNet-Lite) and per-tensor quantization (TVM and SNPE)`的方差大；  
+* Hardware Gaps:算法在academic setting与hardware setting间的差距都很大，没有哪个更好；  
+* Hardware & Architecture Robustness:网络结构对不同的量化算法敏感；hw robustness metric matters(比如LSQ在per-tensor情况下乱鲨，但是per-channel就拉了)。   
+
+## Appendix有很多重要的细节  
