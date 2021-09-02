@@ -57,7 +57,7 @@ Logquant : q =
 \end{cases}
 $$  
 
-式中的clip函数定义为$$clip(x,a,b) = min(max(x,a),b)$$，$$\lfloor \rceil$$表示round函数，U是个scaling factor（比如$$|x|$$的最大值）。下式表示从x到$$\tilde{x}$$的变换：  
+式中的clip函数定义为$$clip(x,a,b) = min(max(x,a),b)$$，$$\lfloor \rceil$$表示round函数，U是个scaling factor（比如$$\begin{vmatrix}x\end{vmatrix}$$的最大值）。下式表示从x到$$\tilde{x}$$的变换：  
 
 $$  
 LogQ : x → \tilde{x} = LogDequant \circ LogQuant
@@ -80,7 +80,7 @@ $$
 \tilde{x_2} = LogQ(r_1), \quad \quad r_2 = r_1 - \tilde{x_2}
 $$  
 
-选择1-w或者2-w的粒度叫做quantization cardinality granularity，如果这个粒度是filter的话，那么整个filter中的平均量化误差$$ ||\mathbf{r_1}||_2 $$将会拿去和threshold比。  
+选择1-w或者2-w的粒度叫做quantization cardinality granularity，如果这个粒度是filter的话，那么整个filter中的平均量化误差$$ \begin{Vmatrix}\mathbf{r_1}\end{Vmatrix}_2 $$将会拿去和threshold比。  
 
 ## 4 Our Proposed Training Method  
 ### 4.1 Our Proposed Training Method  
