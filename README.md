@@ -3,6 +3,9 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/9/3  
+* Read a low-quality survey on image denoising: []()  
+
 ### 2021/9/2  
 * Read [PACT][PACT: Parameterized Clipping Activation for Quantized Neural Networks](https://youcaijun98.github.io/articles/ModelCompression/Quantization/pact.html)  
 
