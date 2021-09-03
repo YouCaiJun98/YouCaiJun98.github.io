@@ -4,7 +4,7 @@ Just A Private HomePage for Kaleido XD
 
 ## What's up?  
 ### 2021/9/2  
-* Read [Pact]()  
+* Read [PACT][PACT: Parameterized Clipping Activation for Quantized Neural Networks](https://youcaijun98.github.io/articles/ModelCompression/Quantization/pact.html)  
 
 ### 2021/9/1  
 * Read [MQBench](https://youcaijun98.github.io/articles/ModelCompression/Quantization/MQbench.html)  
