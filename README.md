@@ -4,7 +4,7 @@ Just A Private HomePage for Kaleido XD
 
 ## What's up?  
 ### 2021/9/5  
-* Read a quantization related paper [DSQ][Differentiable Soft Quantization: Bridging Full-Precision and Low-Bit Neural Networks]()  
+* Read a quantization related paper [DSQ][Differentiable Soft Quantization: Bridging Full-Precision and Low-Bit Neural Networks](https://youcaijun98.github.io/articles/ModelCompression/Quantization/DSQ.html)  
 
 ### 2021/9/3  
 * Read a low-quality survey on image denoising: [Brief review of image denoising techniques](https://youcaijun98.github.io/articles/CV/Denoising/Brief%20review%20of%20image%20denoising%20techniques.html)  
