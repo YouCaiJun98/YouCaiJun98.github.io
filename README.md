@@ -3,6 +3,9 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/9/6  
+* Still wasting time reading articles - a survey on SR published on TPAMI [Deep Learning for Image Super-resolution: A Survey]()  
+
 ### 2021/9/5  
 * Read a quantization related paper [DSQ][Differentiable Soft Quantization: Bridging Full-Precision and Low-Bit Neural Networks](https://youcaijun98.github.io/articles/ModelCompression/Quantization/DSQ.html)  
 
