@@ -5,7 +5,7 @@ Just A Private HomePage for Kaleido XD
 ## What's up?  
 ### 2021/9/8  
 * Finish searching for [denoise papers](https://shimo.im/sheets/hrDR8HppHggHVpXH/f4yjH/)   
-* Read a classic deep denoising paper [DnCNN][Beyond a Gaussian Denoiser: Residual Learning of Deep CNN for Image Denoising]()  
+* Read a classic deep denoising paper [DnCNN][Beyond a Gaussian Denoiser: Residual Learning of Deep CNN for Image Denoising](https://youcaijun98.github.io/articles/CV/Denoising/DnCNN.html)  
 
 ### 2021/9/6  
 * Still wasting time reading articles - a survey on SR published on TPAMI [Deep Learning for Image Super-resolution: A Survey]()  
