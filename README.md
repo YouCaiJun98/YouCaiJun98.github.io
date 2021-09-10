@@ -3,6 +3,10 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/9/9  
+* Listened [QAT talk]() from SenseTime. Waste of time.  
+* Read a classic deep denoising paper [FFDNet][FFDNet: Toward a Fast and Flexible Solution for CNN based Image Denoising]()  
+
 ### 2021/9/8  
 * Finish searching for [denoise papers](https://shimo.im/sheets/hrDR8HppHggHVpXH/f4yjH/)   
 * Read a classic deep denoising paper [DnCNN][Beyond a Gaussian Denoiser: Residual Learning of Deep CNN for Image Denoising](https://youcaijun98.github.io/articles/CV/Denoising/DnCNN.html)  
