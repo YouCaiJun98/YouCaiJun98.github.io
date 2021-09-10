@@ -4,18 +4,18 @@ Just A Private HomePage for Kaleido XD
 
 ## What's up?  
 ### 2021/9/9  
-* Listened [QAT talk]() from SenseTime. Waste of time.  
-* Read a classic deep denoising paper [FFDNet][FFDNet: Toward a Fast and Flexible Solution for CNN based Image Denoising]()  
+* Listened [QAT talk](https://youcaijun98.github.io/Backups/Talks_and_Lectures/Talks/21_9_9_sensetime_qat.html) from SenseTime. Waste of time.  
+* [FFDNet] Read a classic deep denoising paper [FFDNet: Toward a Fast and Flexible Solution for CNN based Image Denoising](https://youcaijun98.github.io/articles/CV/Denoising/FFDNet.html)  
 
 ### 2021/9/8  
 * Finish searching for [denoise papers](https://shimo.im/sheets/hrDR8HppHggHVpXH/f4yjH/)   
-* Read a classic deep denoising paper [DnCNN][Beyond a Gaussian Denoiser: Residual Learning of Deep CNN for Image Denoising](https://youcaijun98.github.io/articles/CV/Denoising/DnCNN.html)  
+* [DnCNN] Read a classic deep denoising paper [Beyond a Gaussian Denoiser: Residual Learning of Deep CNN for Image Denoising](https://youcaijun98.github.io/articles/CV/Denoising/DnCNN.html)  
 
 ### 2021/9/6  
 * Still wasting time reading articles - a survey on SR published on TPAMI [Deep Learning for Image Super-resolution: A Survey]()  
 
 ### 2021/9/5  
-* Read a quantization related paper [DSQ][Differentiable Soft Quantization: Bridging Full-Precision and Low-Bit Neural Networks](https://youcaijun98.github.io/articles/ModelCompression/Quantization/DSQ.html)  
+* [DSQ] Read a quantization related paper [Differentiable Soft Quantization: Bridging Full-Precision and Low-Bit Neural Networks](https://youcaijun98.github.io/articles/ModelCompression/Quantization/DSQ.html)  
 
 ### 2021/9/3  
 * Read a low-quality survey on image denoising: [Brief review of image denoising techniques](https://youcaijun98.github.io/articles/CV/Denoising/Brief%20review%20of%20image%20denoising%20techniques.html)  
@@ -62,7 +62,7 @@ Just A Private HomePage for Kaleido XD
 
 ### 2021/6/16  
 * Sort out [experiments](https://youcaijun98.github.io/codez/awnas/Mr.Chen_validation_exp/2021_6_16_meeting.html) carried out recently.  
-* Read [ABC-Net] [Towards Accurate Binary Convolutional Neural Network](https://youcaijun98.github.io/articles/ModelCompression/BNN/ABC-Net.html).  
+* [ABC-Net] Read  [Towards Accurate Binary Convolutional Neural Network](https://youcaijun98.github.io/articles/ModelCompression/BNN/ABC-Net.html).  
 
 ### 2021/6/15  
 * Read [BoolNet: Minimizing the Energy Consumption of Binary Neural Networks](https://youcaijun98.github.io/articles/ModelCompression/BNN/boolnet.html) and was very shocked.  
