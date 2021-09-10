@@ -3,6 +3,10 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/9/10  
+* Waste time manipulating questions for talk speakers.  
+* [RBDN]Read a deep denoising article [Generalized Deep Image to Image Regression](https://youcaijun98.github.io/articles/CV/Denoising/RBDN.html)  
+
 ### 2021/9/9  
 * Listened [QAT talk](https://youcaijun98.github.io/Backups/Talks_and_Lectures/Talks/21_9_9_sensetime_qat.html) from SenseTime. Waste of time.  
 * [FFDNet] Read a classic deep denoising paper [FFDNet: Toward a Fast and Flexible Solution for CNN based Image Denoising](https://youcaijun98.github.io/articles/CV/Denoising/FFDNet.html)  
