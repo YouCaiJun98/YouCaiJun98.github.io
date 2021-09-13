@@ -5,8 +5,8 @@ Just A Private HomePage for Kaleido XD
 ## What's up?  
 ### 2021/9/13  
 * Debug sewed codes.  
-* [CBDNet]Read a fine denoising article []()  
-* [RIDNet] and another fine denoising article []()  
+* [CBDNet]Read a fine denoising article [Toward Convolutional Blind Denoising of Real Photographs](https://youcaijun98.github.io/articles/CV/Denoising/CBDNet.html)  
+* [RIDNet] and another fine denoising article [Real Image Denoising with Feature Attention](https://youcaijun98.github.io/articles/CV/Denoising/RIDNet.html)  
 
 ### 2021/9/11-12  
 * Sewed LSID into MQBench  
