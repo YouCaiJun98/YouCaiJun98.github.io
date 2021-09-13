@@ -40,7 +40,7 @@ resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.i
 * 大多数去噪方法是针对非盲高斯去噪的。  
 
 ### 2.3 Blind Denoising of Real Images  
-* 真实噪声的盲去噪可以分为两个阶段：**噪声估计**和**非盲去噪**。  
+* 真实噪声的去除可以分为两个阶段：**噪声估计**和**非盲去噪**。  
 剩下的部分主要是传统的真实图像盲去噪，不太关心。  
 
 ## 3. Proposed Method  
