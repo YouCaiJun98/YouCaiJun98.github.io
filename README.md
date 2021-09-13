@@ -3,6 +3,14 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/9/13  
+* Debug sewed codes.  
+* [CBDNet]Read a fine denoising article []()  
+* [RIDNet] and another fine denoising article []()  
+
+### 2021/9/11-12  
+* Sewed LSID into MQBench  
+
 ### 2021/9/10  
 * Waste time manipulating questions for talk speakers.  
 * [RBDN]Read a deep denoising article [Generalized Deep Image to Image Regression](https://youcaijun98.github.io/articles/CV/Denoising/RBDN.html)  
