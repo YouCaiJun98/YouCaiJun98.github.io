@@ -65,7 +65,7 @@ gain of the sensor（ISO）与exposure time都不准确（多少有点误差，�
 
 ![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202109160001.png)  
 
-x_n是拍出来的含噪图片，\epsilon_n是近似为heteroscedastic Gaussian分布的噪声，clip是account for the saturation of pixels on the sensor（给我的感觉不是clip成整数，而是不超出maximum？这可能和raw数据的实际取值有关）。\sigma_n(y_n)称为`noise level function`。\beta主要取决于camera sensor和ISO值。由于clip，简单地noise level function平均噪声观测会产生误差，即$$\mathbb{E}[x_n|y_n]\neq y_n$$，似乎可以根据y_n和\sigma_n(y_n)来表示$$\mathbb{E}[x_n|y_n]$$（给了个参考文献），将这种表示记为：  
+x_n是拍出来的含噪图片，\epsilon_n是近似为heteroscedastic Gaussian分布的噪声，clip是account for the saturation of pixels on the sensor（给我的感觉不是clip成整数，而是不超出maximum？这可能和raw数据的实际取值有关）。\sigma_n(y_n)称为`noise level function`。\beta主要取决于camera sensor和ISO值。由于clip，简单地noise level function平均噪声观测会产生误差，即$$\mathbb{E}[x_n \mid y_n]\neq y_n$$，似乎可以根据y_n和\sigma_n(y_n)来表示$$\mathbb{E}[x_n \mid y_n]$$（给了个参考文献），将这种表示记为：  
 
 ![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202109160002.png)  
 
