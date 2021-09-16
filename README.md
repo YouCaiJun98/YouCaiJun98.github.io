@@ -3,6 +3,14 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/9/16  
+* Figured how to set 4-bit QAT and running the program.  
+* [SIDD-dataset]Read another classic dataset article []().  
+
+### 2021/9/15  
+* Run the sewed codes and achieved 28.66dB on SID-Sony.  
+* [DND-dataset]Read a classic dataset article [Benchmarking Denoising Algorithms with Real Photographs]().   
+
 ### 2021/9/13  
 * Debug sewed codes.  
 * [CBDNet]Read a fine denoising article [Toward Convolutional Blind Denoising of Real Photographs](https://youcaijun98.github.io/articles/CV/Denoising/CBDNet.html)  
