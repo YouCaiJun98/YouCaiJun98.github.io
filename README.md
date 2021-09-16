@@ -8,8 +8,9 @@ Just A Private HomePage for Kaleido XD
 * [SIDD-dataset]Read another classic dataset article []().  
 
 ### 2021/9/15  
+* Profile the sewed codes, substitute PSNR calculation with my own implementation.  
 * Run the sewed codes and achieved 28.66dB on SID-Sony.  
-* [DND-dataset]Read a classic dataset article [Benchmarking Denoising Algorithms with Real Photographs]().   
+* [DND-dataset]Read a classic dataset article [Benchmarking Denoising Algorithms with Real Photographs](https://youcaijun98.github.io/articles/CV/Denoising/DND_dataset.html).   
 
 ### 2021/9/13  
 * Debug sewed codes.  
