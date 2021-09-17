@@ -5,7 +5,7 @@ Just A Private HomePage for Kaleido XD
 ## What's up?  
 ### 2021/9/16  
 * Figured how to set 4-bit QAT and running the program.  
-* [SIDD-dataset]Read another classic dataset article []().  
+* [SIDD-dataset]Read another classic dataset article [A High-Quality Denoising Dataset for Smartphone Cameras](https://youcaijun98.github.io/articles/CV/Denoising/SIDD_dataset.html).  
 
 ### 2021/9/15  
 * Profile the sewed codes, substitute PSNR calculation with my own implementation.  
