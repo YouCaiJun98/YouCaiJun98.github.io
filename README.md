@@ -3,6 +3,10 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/9/17  
+* skating through all day  
+* [IRCNN]Read a classic and difficult yet close to traditional method article [](https://youcaijun98.github.io/articles/CV/Denoising/SIDD_dataset.html)   
+
 ### 2021/9/16  
 * Figured how to set 4-bit QAT and running the program.  
 * [SIDD-dataset]Read another classic dataset article [A High-Quality Denoising Dataset for Smartphone Cameras](https://youcaijun98.github.io/articles/CV/Denoising/SIDD_dataset.html).  
