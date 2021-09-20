@@ -3,9 +3,17 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/9/20  
+* skating  
+* [AINDNet]Read a not-very-new paper [Transfer Learning from Synthetic to Real-Noise Denoising with Adaptive Instance Normalization](https://youcaijun98.github.io/articles/CV/Denoising/AINDNet.html)  
+
+### 2021/9/19  
+* skating  
+* [MemNet]Read a classic(?) but boring paper [MemNet: A Persistent Memory Network for Image Restoration](https://youcaijun98.github.io/articles/CV/Denoising/MemNet.html)  
+
 ### 2021/9/17  
 * skating through all day  
-* [IRCNN]Read a classic and difficult yet close to traditional method article [](https://youcaijun98.github.io/articles/CV/Denoising/SIDD_dataset.html)   
+* [IRCNN]Read a classic and difficult yet close to traditional method article [Learning Deep CNN Denoiser Prior for Image Restoration](https://youcaijun98.github.io/articles/CV/Denoising/SIDD_dataset.html)   
 
 ### 2021/9/16  
 * Figured how to set 4-bit QAT and running the program.  

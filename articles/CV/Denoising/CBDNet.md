@@ -15,7 +15,7 @@ resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.i
 **Key words**：
 * 辅助信息（可学习的噪声地图）
 * 2-stage network（标准的噪声预测-噪声去除真实图像盲去噪流程）
-* 数据增强（混用真实图像和合成图像）
+* 数据增强（混用真实图像和合成图像）/训练方案  
 * Loss改进（三个term，其中有意思的asymmetric loss）     
 * 结构（U-Net, residual-learning）
 
