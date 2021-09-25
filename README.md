@@ -3,6 +3,15 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/9/25  
+* skating, damn CK2!  
+ 
+### 2021/9/24  
+* [noise2noise]Finish reading [Noise2Noise: Learning Image Restoration without Clean Data](https://youcaijun98.github.io/articles/CV/Denoising/noise2noise.html)  
+
+### 2021/9/23  
+* social death (1/1) - group meeting and delivered survey on Image denoising.  
+
 ### 2021/9/20  
 * skating  
 * [AINDNet]Read a not-very-new paper [Transfer Learning from Synthetic to Real-Noise Denoising with Adaptive Instance Normalization](https://youcaijun98.github.io/articles/CV/Denoising/AINDNet.html)  

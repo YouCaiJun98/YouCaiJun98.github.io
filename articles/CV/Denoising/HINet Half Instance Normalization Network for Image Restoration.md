@@ -38,7 +38,7 @@ Resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.i
     * [Lightweight pyramid networks for image deraining, TNNLS19] introduce the mature Gaussian-Laplacian image pyramid decomposition technology to the neural network, and uses a relatively shallow network to handle the learning problem at each pyramid level  
     * [Progressive image deraining networks: A better and simpler baseline, CVPR19] proposes a progressive recurrent network by repeatedly unfolding a shallow ResNet and introduces a recurrent layer to exploit the dependencies of deep features across stages;  
     * [Deep stacked hierarchical multi-patch network for image deblurring, CVPR19] proposes a deep stacked hierarchical multi-patch network. Each level focus on different scales of the blur and the finer level contributes its residual image to the coarser level;  
-    * [Multi-stage progressive image restoration, arxiv21] proposes a multi-stage progressive image restoration architecture, where there are two encoder-decoder subnetworks and one original resolution subnetwork, and proposes a supervised attention module (SAM) and a cross-stage feature fusion (CSFF) module between every two stages to enrich the features of the next stage;  
+    * [Multi-stage progressive image restoration, arxiv21] proposes a multi-stage progressive image restoration architecture, where there are two encoder-decoder subnetworks and one original resolution subnetwork, and proposes a supervised attention module (SAM) and a cross-stage feature fusion (CSFF) module between every two stages to enrich the features of the next stage;  
 
 ## 3 Approach  
 ### 3.1 HINet  
