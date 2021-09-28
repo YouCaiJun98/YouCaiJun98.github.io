@@ -3,6 +3,13 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/9/28  
+* [GCBD]Read a GAN based article [Image Blind Denoising With Generative Adversarial Network Based Noise Modeling](https://youcaijun98.github.io/articles/CV/Denoising/GCBD.html)  
+* Got mocked by engineers from OPPO.  
+
+### 2021/9/27  
+* [SADNet]Read a SOTA(out ot date) article [Spatial-Adaptive Network for Single Image Denoising](https://youcaijun98.github.io/articles/CV/Denoising/SADNet.html)  
+
 ### 2021/9/25  
 * skating, damn CK2!  
  

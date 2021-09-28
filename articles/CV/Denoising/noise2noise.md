@@ -34,7 +34,7 @@ remains unchanged if we replace the targets with random numbers whose expectatio
 
 ![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202109250003.png)  
 
-而对于有限的数据，方差是目标targets中corruptions的平均方差除以训练sample的数量，但是这些和corruption的似然模型或者潜在纯净图片的密度模型（prior）都没有关系。因此，**我们不需要显式的p(noisy|clean)或者p(clean)，只需要我们有根据它们分布的数据。**  
+而对于有限的数据，方差是目标targets中corruptions的平均方差除以训练sample的数量，但是这些和corruption的似然模型或者潜在纯净图片的密度模型（prior）都没有关系。因此，**我们不需要显式的p(noisy \mid clean)或者p(clean)，只需要我们有根据它们分布的数据。**  
 
 ## 3. Practical Experiments  
 ### 3.1. Additive Gaussian Noise  
