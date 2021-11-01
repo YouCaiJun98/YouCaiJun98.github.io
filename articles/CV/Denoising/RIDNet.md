@@ -6,7 +6,7 @@
 resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/CV/Denoising/RIDNet.pdf)的包括ipad标注的pdf版本。  
 作者是The Australian National University的Saeed Anwar和Nick Barnes，写作水平只能说是灾难级，瞎起什么破名——但是人家ICCV Oral。  
 
-**Summary**：一篇还可以的图像去噪文章。指出现在的基于CNN的图像去噪器对真实噪声表现不行，且需要多个阶段（噪声估计-噪声去除），所以提出了一个**单阶段**|**真实图像**|**盲去噪**|模型，感觉主要贡献还是**modular design**(很一般)和首次引入**feature attention**（这个用处还很多，后面很多工作都整个这种channel-scale module）。        
+**Summary**：一篇还可以的图像去噪文章。指出现在的基于CNN的图像去噪器对真实噪声表现不行，且需要多个阶段（噪声估计-噪声去除），所以提出了一个**单阶段**、**真实图像**、**盲去噪**模型，感觉主要贡献还是**modular design**(很一般)和首次引入**feature attention**（这个用处还很多，后面很多工作都整个这种channel-scale module）。        
 
 **Key words**：   
 * module design：EAM（一般）  

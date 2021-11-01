@@ -3,9 +3,34 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/10/27  
+* Read the article by wangguan [Practical Deep Raw Image Denoising on Mobile Devices]().  
+
+### 2021/10/24  
+* Read a heart broken article [Dynamic Residual Dense Network for Image Denoising]().  
+* Read another heart broken article [Residual Convolutional Neural Networks Model For Image Denoising On Real Time]().  
+
+### 2021/10/23  
+* Finish reading [Stacking Networks Dynamically for Image Restoration Based on the Plug-and-Play Framework]().  
+
+### 2021/10/20  
+* Finish reading [Convolutional Networks with Adaptive Inference Graphs]().
+
+### 2021/10/19
+* Finish reading [Dynamic Neural Networks: A Survey]().  
+
+### 2021/10/13  
+* [MPRNet]Read a CVPR21 article [Multi-Stage Progressive Image Restoration]().  
+
+### 2021/10/12  
+* [DRNet]Read a NIPS21 article [Dynamic Resolution Network]().  
+
+### 2021/10/4-7  
+* Developing Trace_On.  
+
 ### 2021/10/2  
 * Had a hard time [studying]().  
-* [LSQ]Finish reading [Learned Step Size Quantization]().  
+* [LSQ]Finish reading [Learned Step Size Quantization](https://youcaijun98.github.io/articles/CV/Denoising/LSQ.html).  
 
 ### 2021/9/28  
 * [GCBD]Read a GAN based article [Image Blind Denoising With Generative Adversarial Network Based Noise Modeling](https://youcaijun98.github.io/articles/CV/Denoising/GCBD.html)  
