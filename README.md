@@ -3,6 +3,33 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/11/12  
+* [DIP]Read a classic Image Restoration article [Deep Image Prior]().  
+
+### 2021/11/8  
+* Read a classic PTQ article [Improving Neural Network Quantization without Retraining using Outlier Channel Splitting]().  
+* [LAPQ]And another classic PTQ article [Loss Aware Post-training Quantization]().  
+
+### 2021/11/7  
+* [ACIQ]Read a classic PTQ article [Post training 4-bit quantization of convolutional networks for rapid-deployment]().  
+
+### 2021/11/5  
+* [N3Net]Finish reading a classic article [Neural Nearest Neighbors Network]().  
+
+### 2021/11/2  
+* [TANet]Read an ICME article [Robust Image Denoising with Texture-Aware Neural Network](), very upset.
+
+### 2021/11/1  
+* [MIRNet]Read an article by UAE [Learning Enriched Features for Real Image Restoration and Enhancement]().  
+
+### 2021/10/31  
+* [CycleISP]Read an article by UAE [CycleISP: Real Image Restoration via Improved Data Synthesis]().  
+
+### 2021/10/30  
+* Roll Car again, why mqbench just don't apply to SIDD?  
+* [MCUNet]Forced to read an article by Song Han Group[MCUNet: Tiny Deep Learning on IoT Devices]().    
+* [TinyTL]And another article [TinyTL: Reduce Activations, Not Trainable Parameters for Efficient On-Device Learning]().  
+
 ### 2021/10/27  
 * Read the article by wangguan [Practical Deep Raw Image Denoising on Mobile Devices]().  
 
