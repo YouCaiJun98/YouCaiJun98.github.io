@@ -3,11 +3,20 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/11/22  
+* [BRECQ]Finish reading a sota PTQ article [BRECQ: Pushing the Limit of Post-Training Quantization by Block Reconstruction]().   
+
+### 2021/11/21  
+* [AdaQuant]Finish reading a sota PTQ article [Improving Post Training Neural Quantization: Layer-wise Calibration and Integer Programming]().  
+
+### 2021/11/20  
+* [AdaRound]Finish reading a sota PTQ article [Up or Down? Adaptive Rounding for Post-Training Quantization]().  
+
 ### 2021/11/12  
 * [DIP]Read a classic Image Restoration article [Deep Image Prior]().  
 
 ### 2021/11/8  
-* Read a classic PTQ article [Improving Neural Network Quantization without Retraining using Outlier Channel Splitting]().  
+* [OCS]Read a classic PTQ article [Improving Neural Network Quantization without Retraining using Outlier Channel Splitting]().  
 * [LAPQ]And another classic PTQ article [Loss Aware Post-training Quantization]().  
 
 ### 2021/11/7  
