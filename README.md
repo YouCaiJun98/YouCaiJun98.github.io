@@ -4,7 +4,7 @@ Just A Private HomePage for Kaleido XD
 
 ## What's up?  
 ### 2021/12/12  
-* [CLEARER]Read a NAS + LLCV article [CLEARER: Multi-Scale Neural Architecture Search for Image Restoration]().  
+* [CLEARER]Read a NAS + LLCV article [CLEARER: Multi-Scale Neural Architecture Search for Image Restoration](https://youcaijun98.github.io/articles/CV/Restoration/CLEARER.html).  
 
 ### 2021/11/22  
 * [BRECQ]Finish reading a sota PTQ article [BRECQ: Pushing the Limit of Post-Training Quantization by Block Reconstruction]().   
