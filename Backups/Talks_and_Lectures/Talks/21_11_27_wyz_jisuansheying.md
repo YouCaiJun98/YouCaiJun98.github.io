@@ -3,4 +3,6 @@
 2021/11/27  
 
 
-BilaterFilter有锯齿
+BilaterFilter有锯齿，不适用于视频
+分区域拉曲线
+不同应用有不同算法
