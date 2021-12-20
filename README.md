@@ -3,6 +3,21 @@
 Just A Private HomePage for Kaleido XD
 
 ## What's up?  
+### 2021/12/20  
+* [FDA-BNN]Read a NIPS21 BNN article by Yunhe, Noah [Learning Frequency Domain Approximation for Binary Neural Networks]().  
+
+### 2021/12/16  
+* Reset SID dataset.  
+* Setup a [to-do list]().  
+
+### 2021/12/15  
+* Intialize raw2raw training.  
+* 
+
+### 2021/12/14  
+* [ASSL]Read an A+B article (Pruning + SR) [Aligned Structured Sparsity Learning for Efficient Image Super-Resolution]().  
+* [ELD]Read a noise model article [A Physics-based Noise Formation Model for Extreme Low-light Raw Denoising]().   
+
 ### 2021/12/13  
 * Read a not-bad paper with regard to ISP, [Unprocessing Images for Learned Raw Denoising](https://youcaijun98.github.io/articles/CV/Denoising/Unprocessing%20Images%20for%20Learned%20Raw%20Denoising.html).  
 
