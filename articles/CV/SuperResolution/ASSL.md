@@ -2,10 +2,10 @@
 
 2021/12/14  
 
-来源：NIPS2021  
+来源：NIPS2021 - spotlight  
 resource：[github上备份](https://github.com/YouCaiJun98/YouCaiJun98.github.io/blob/master/articles/ModelCompression/Quantization/Training%20Binary%20Neural%20Network%20without%20Batch%20Norm.pdf)的包括ipad标注的pdf版本。  
 
-作者还是ECCV2020上做BSR的西电的组，有Xinrui Jiang, Nannan Wang, Jingwei Xin, Keyu Li, Xi Yang, Xinbo Gao（或许可以去看下他们的主页）。  
+作者是张宇伦他们，Yulun Zhang, Huan Wang, Can Qin, Yun Fu。  
 
 **Summary**：感觉文章**挺虚的**，~~这就是做应用的吗~~。文章的出发点还挺好的，觉得除了前后两个FP Conv之外中间的BN层也会引入大量的FP OP，所以想解决掉这个BN层（但是解决的方式有点南辕北辙了，你加个PReLU和BN其实区别不大吧，都是zero point/distribution shifting，而且这还是引入FP op啊）。文章提出了一种Binary Training Scheme（但是对BNN的训练没有启发，这里说是“训练方案”实际上只是一些BNN里常见设置的堆砌，没有什么参考价值），利用BNN里的一些fancy方法构建了个强baseline（同样没什么参考价值），最后提了一种BSR architecture(一种building block，里面的一种dilated conv concate的操作好像还有点参考价值)。此外这篇文章中BSR的训练还用了multi-step KD，同样是直接挪用了现在BNN工作的一些思路。 
 
