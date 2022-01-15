@@ -4,6 +4,16 @@ Just A Private HomePage for Kaleido XD
 Happy New Year :partying_face:   
 
 ## What's up?  
+### 2022/1/14  
+* Read an A+B article [A Layer-Wise Extreme Network Compression for Super Resolution]().  
+
+### 2022/1/11  
+* [DAQ]Read a bad mood article [DAQ: Channel-Wise Distribution-Aware Quantization for Deep Image Super-Resolution Networks]().  
+
+### 2022/1/9  
+* [PMAS]Read a bad A+B article [PAMS: Quantized Super-Resolution via Parameterized Max Scale]().  
+* Delivered a proposal about Efficient LLCV.  
+
 ### 2022/1/6  
 * [LQ-Net]Read a classic QAT-quantization article [LQ-Nets: Learned Quantization for Highly Accurate and Compact Deep Neural Networks]().  
 
