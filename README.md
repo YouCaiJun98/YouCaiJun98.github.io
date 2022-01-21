@@ -1,9 +1,17 @@
 # Kaleido's Personal Page 2022!  
 
 Just A Private HomePage for Kaleido XD  
-Happy New Year :partying_face:   
+Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+### 2022/1/21  
+* [ZeroQ] Read a PTQ article []().  
+
+### 2022/1/15  
+* Another social death while meeting. Accustomed.  
+* Set Eva-1.  
+* [FQSR]Read a good paper []().  
+
 ### 2022/1/14  
 * Read an A+B article [A Layer-Wise Extreme Network Compression for Super Resolution]().  
 
