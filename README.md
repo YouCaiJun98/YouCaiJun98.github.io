@@ -4,8 +4,14 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+### 2022/3/4  
+* [TQT]Finished reading a useful QAT article[Trained quantization thresholds for accurate and efficient fixed-point inference of deep neural networks]().  
+
+### 2022/2/16  
+* [GhostNet]Read a effciency design article [GhostNet: More Features from Cheap Operations]().  
+
 ### 2022/1/21  
-* [ZeroQ] Read a PTQ article []().  
+* [ZeroQ] Read a PTQ article [ZeroQ: A Novel Zero Shot Quantization Framework]().  
 
 ### 2022/1/15  
 * Another social death while meeting. Accustomed.  
