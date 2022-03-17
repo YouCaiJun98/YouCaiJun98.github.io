@@ -4,8 +4,15 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+### 2022/3/15 
+* Read an ICIP19 SID pruning article [Architecture-Aware Network Pruning for Vision Quality Applications]().  
+
+### 2022/3/14  
+* Read a CVPRW20 NN deployment article [Deploying Image Deblurring across Mobile Devices: A Perspective of Quality and Latency]().  
+
 ### 2022/3/4  
 * [TQT]Finished reading a useful QAT article[Trained quantization thresholds for accurate and efficient fixed-point inference of deep neural networks]().  
+* [BAR]Read a differential pruning method [Structured Pruning of Neural Networks with Budget-Aware Regularization]().  
 
 ### 2022/2/16  
 * [GhostNet]Read a effciency design article [GhostNet: More Features from Cheap Operations]().  
