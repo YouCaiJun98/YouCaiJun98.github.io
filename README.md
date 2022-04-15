@@ -4,6 +4,21 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+### 2022/4/10  
+* [SGN]Read a normal Denoise paper [Self-Guided Network for Fast Image Denoising]().  
+
+### 2022/4/6  
+* Read a normal paper [Restoring Extremely Dark Images in Real Time]().  
+
+### 2022/4/2  
+* [ECC]Read a good pruning paper [ECC: Platform-Independent Energy-Constrained Deep Neural Network Compression via a Bilinear Regression Model]().  
+
+### 2022/3/30  
+* [NMI21]Read a burden paper [Automatic heterogeneous quantization of deep neural networks for low-latency inference on the edge for particle detectors]().  
+
+### 2022/3/18  
+* [LCQ]Finshed reading a SOTA quantization article [Learnable Companding Quantization for Accurate Low-bit Neural Networks]().  
+
 ### 2022/3/15 
 * Read an ICIP19 SID pruning article [Architecture-Aware Network Pruning for Vision Quality Applications]().  
 
