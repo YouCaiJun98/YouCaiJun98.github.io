@@ -4,6 +4,18 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+### 2022/4/18  
+* Read an article about feature distillation []().  
+
+### 2022/4/17  
+* Read an article about weight diversity [Regularizing cnns with locally constrained decorrelations]().  
+
+### 2022/4/16  
+* Read an article about feature diversity [Reducing overfitting in deep networks by decorrelating representations]().  
+
+### 2022/4/15  
+* Read an article promoted by Bro.Fei [Neural Architecture Search for Dense Prediction Tasks in Computer Vision]().  
+
 ### 2022/4/10  
 * [SGN]Read a normal Denoise paper [Self-Guided Network for Fast Image Denoising]().  
 
