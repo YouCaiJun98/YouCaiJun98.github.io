@@ -103,6 +103,25 @@ ax.legend(loc="upper right")
 
 这里的要点是使用`plt.bar`画柱状图，自定义柱子的宽度对齐坐标轴。  
 
+### 堆积柱状图
+
+```python
+ax.bar(layer_name, base_mem, width, label='Current Layer Mem Overhead', color='#1f77b4')
+ax.bar(layer_name, long_sc1, width, label='compactor1_2 Overhead', bottom=base_mem, color='#ff7f03')
+bottom = [base_mem[i] + long_sc1[i] for i in range(len(long_sc3))]
+ax.bar(layer_name, long_sc2, width, label='compactor3_2 Overhead', bottom=bottom, color='#2ca02c')
+bottom = [long_sc2[i] + bottom[i] for i in range(len(long_sc3))]
+ax.bar(layer_name, long_sc3, width, label='compactor3_2 Overhead', bottom=bottom, color='#d62728')
+bottom = [long_sc3[i] + bottom[i] for i in range(len(long_sc3))]
+ax.bar(layer_name, long_sc4, width, label='compactor4_2 Overhead', bottom=bottom, color='#9467bd')
+```
+
+最重要的要点是，bottom不能直接列成它的上一层，而是要在数值上累积起来。  
+
+画图效果：  
+
+![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202205010001.jpg)  
+
 ### 箱图  
 
 
@@ -163,3 +182,11 @@ ax.legend(loc="lower right")
 ![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/202105161000.png)  
 
 上面的效果其实挺差，因为没有调好`xytext`。  
+
+### 完整显示底层标注   
+有可能因为把标注竖过来写，导致底部显示不全，此时需要把下面的空白扩大一些，用这行代码就好：  
+
+```python  
+plt.gcf().subplots_adjust(bottom=0.15)  
+```  
+

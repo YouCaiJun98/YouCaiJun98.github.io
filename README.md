@@ -4,8 +4,21 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+## 2022/4/29  
+* Read a SOTA article [Simple Baselines for Image Restoration]().  
+
+## 2022/4/22  
+* Build upon ashes.  
+
+## 2022/4/21  
+* Read a harmful article, filled with faults, [Learning Efficient Image Super-Resolution Networks via Structure-Regularized Pruning]().  
+
+### 2022/4/20  
+* Read a just-so-so article [Enhanced Image Restoration Via Supervised Target Feature Transfer]().  
+* Read a new yet just-so-so KD article [Improve object detection with feature-based knowledge distillation: Towards accurate and efficient detectors]().  
+
 ### 2022/4/18  
-* Read an article about feature distillation []().  
+* Read an article about feature distillation [A Comprehensive Overhaul of Feature Distillation]().  
 
 ### 2022/4/17  
 * Read an article about weight diversity [Regularizing cnns with locally constrained decorrelations]().  
