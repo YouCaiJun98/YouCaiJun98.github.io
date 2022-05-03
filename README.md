@@ -4,6 +4,10 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+## 2022/5/3  
+* set up submission notes.  
+* Current thoughts about [this submission]().  
+
 ## 2022/4/29  
 * Read a SOTA article [Simple Baselines for Image Restoration]().  
 
