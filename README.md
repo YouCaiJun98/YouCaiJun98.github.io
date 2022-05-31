@@ -4,9 +4,17 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+## 2022/5/8  
+
+## 2022/5/7  
+* Browsed a photo retouching article [ABPN: Adaptive Blend Pyramid Network for Real-Time Local Retouching of Ultra High-Resolution Photo]().  
+
+## 2022/5/6  
+* Open up a [note]() for good writtings.
+
 ## 2022/5/3  
 * set up submission notes.  
-* Current thoughts about [this submission]().  
+* Current thoughts about [this submission](https://youcaijun98.github.io/Backups/Submission/%5BNIPS22%5DHardware-Aware%20Efficient%20LLCV.html).  
 
 ## 2022/4/29  
 * Read a SOTA article [Simple Baselines for Image Restoration]().  
@@ -38,6 +46,7 @@ Happy New Year 🥳🥳🥳
 
 ### 2022/4/6  
 * Read a normal paper [Restoring Extremely Dark Images in Real Time]().  
+
 
 ### 2022/4/2  
 * [ECC]Read a good pruning paper [ECC: Platform-Independent Energy-Constrained Deep Neural Network Compression via a Bilinear Regression Model]().  
