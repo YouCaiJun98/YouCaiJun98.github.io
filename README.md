@@ -4,7 +4,17 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
-## 2022/5/8  
+## 2022/5/31  
+* Read a CVPR22 article [Lite Pose: Efficient Architecture Design for 2D Human Pose Estimation](), which is normal.  
+
+## 2022/5/29  
+* Read a NTIRE22 article [Fast and Memory-Efficient Network Towards Efficient Image Super-Resolution]() and got inspired. 
+
+## 2022/5/23  
+* Read a CVPR22 pruning + LLCV article [Attentive Fine-Grained Structured Sparsity for Image Restoration]().  
+
+## 2022/5/22  
+* [ARM-Net]Read an ECCV22 submission []().  
 
 ## 2022/5/7  
 * Browsed a photo retouching article [ABPN: Adaptive Blend Pyramid Network for Real-Time Local Retouching of Ultra High-Resolution Photo]().  
