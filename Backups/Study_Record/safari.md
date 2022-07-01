@@ -30,6 +30,8 @@ to this end 为此
 on the downside 不利地
 of late 最近
 irrespective of 和...无关
+powered by 受益于
+Without bells and whistles 不用花哨的技巧
 
 ## 同义词/词组  
 suffer <--> abide, bear, endure, stand, and tolerate
