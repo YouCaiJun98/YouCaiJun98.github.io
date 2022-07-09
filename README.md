@@ -4,6 +4,15 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+## 2022/7/5  
+* [MCUNetV2]Read an article by Song Han [MCUNetV2: Memory-Efficient Patch-based Inference for Tiny Deep Learning]().  
+
+## 2022/7/3  
+* [ELF]Read an article by yunxin liu [Elf: Accelerate High-resolution Mobile Deep Vision with Content-aware Parallel Offloading]().  
+* [AsyMo]Read an article by yunxin liu [AsyMo: Scalable and Efficient Deep-Learning Inference on Asymmetric Mobile CPUs]().  
+* [Remix]Read an article by yunxin liu [Flexible High-resolution Object Detection on Edge Devices with Tunable Latency]().  
+* [CoDL]Read an article by yunxin liu [CoDL: Efficient CPU-GPU Co-execution for Deep Learning Inference on Mobile Devices]().  
+* [Melon]Read an article by yunxin liu [Melon: Breaking the Memory Wall for Resource-Efficient On-Device Machine Learning]().  
 
 ## 2022/6/24  
 * [Uformer]Read an A+B CVPR22 article [Uformer: A General U-Shaped Transformer for Image Restoration]().  
