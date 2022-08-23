@@ -4,6 +4,12 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+## 2022/8/23  
+* [HiNAS] Read an early NAS+LLCV work [Memory-Efficient Hierarchical Neural Architecture Search for Image Denoising]().  
+
+## 2022/8/20  
+* Finally submit MOSP to AAAI!!! (with little hope though)
+
 ## 2022/7/5  
 * [MCUNetV2]Read an article by Song Han [MCUNetV2: Memory-Efficient Patch-based Inference for Tiny Deep Learning]().  
 
