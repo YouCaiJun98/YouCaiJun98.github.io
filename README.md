@@ -4,6 +4,9 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+## 2022/8/29  
+* [PokeBNN] Read a BNN SOTA [PokeBNN: A Binary Pursuit of Lightweight Accuracy]().  
+
 ## 2022/8/23  
 * [HiNAS] Read an early NAS+LLCV work [Memory-Efficient Hierarchical Neural Architecture Search for Image Denoising]().  
 
