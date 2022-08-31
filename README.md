@@ -4,6 +4,9 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+## 2022/8/31  
+* [VSR_Survey] Read a VSR survey [Video super‑resolution based on deep learning: a comprehensive survey]().  
+
 ## 2022/8/29  
 * [PokeBNN] Read a BNN SOTA [PokeBNN: A Binary Pursuit of Lightweight Accuracy]().  
 
