@@ -4,6 +4,9 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+## 2022/9/1  
+* [ReActNet] Re-Read the popular BNN article [ReActNet: Towards Precise Binary Neural Network with Generalized Activation Functions]().  
+
 ## 2022/8/31  
 * [VSR_Survey] Read a VSR survey [Video super‑resolution based on deep learning: a comprehensive survey]().  
 
