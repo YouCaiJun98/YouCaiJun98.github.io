@@ -4,6 +4,9 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+## 2022/9/14  
+* [Restormer] Read one of the SOTA LLCV works [Restormer: Efficient Transformer for High-Resolution Image Restoration]().  
+
 ## 2022/9/1  
 * [ReActNet] Re-Read the popular BNN article [ReActNet: Towards Precise Binary Neural Network with Generalized Activation Functions]().  
 
