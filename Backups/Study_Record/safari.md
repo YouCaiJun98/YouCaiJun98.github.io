@@ -18,6 +18,7 @@ faithfully adv. 忠实地
 render v. 高级的make
 prohibitive adj. 禁止的,不可能的
 innate adj. 与生俱来的
+succinct adj. 简易的
 thereby adv. 因此
 therein adv. 其中
 
