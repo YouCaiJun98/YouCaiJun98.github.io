@@ -4,12 +4,16 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+
 ## 2022/10/5  
 * [TASNet] Read a NAS+LLCV article [Searching for Controllable Image Restoration Networks]().  
 * 
 
 ## 2022/9/26  
 * [DDTB] Read a SR+quantization article [Dynamic Dual Trainable Bounds for Ultra-low Precision Super-Resolution Networks]().  
+
+## 2022/9/17  
+* [BasicVSR] Read a classic Video Super-Resolution article [BasicVSR: The Search for Essential Components in Video Super-Resolution and Beyond]().  
 
 ## 2022/9/14  
 * [Restormer] Read one of the SOTA LLCV works [Restormer: Efficient Transformer for High-Resolution Image Restoration]().  
