@@ -7,7 +7,6 @@ Happy New Year 🥳🥳🥳
 
 ## 2022/10/5  
 * [TASNet] Read a NAS+LLCV article [Searching for Controllable Image Restoration Networks]().  
-* 
 
 ## 2022/9/26  
 * [DDTB] Read a SR+quantization article [Dynamic Dual Trainable Bounds for Ultra-low Precision Super-Resolution Networks]().  
