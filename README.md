@@ -5,6 +5,13 @@ Happy New Year 🥳🥳🥳
 
 ## What's up?  
 
+## 2022/10/21  
+* [S-Net] Read a self-ensemble width-variant work [SLIMMABLE NEURAL NETWORKS]().  
+* [US-Net] Read a following-up of the S-Net [Universally Slimmable Networks and Improved Training Techniques]().   
+
+## 2022/10/20  
+* [SpyNet] Read a classic Optical Flow Estimation article [Optical Flow Estimation using a Spatial Pyramid Network]().  
+
 ## 2022/10/5  
 * [TASNet] Read a NAS+LLCV article [Searching for Controllable Image Restoration Networks]().  
 
