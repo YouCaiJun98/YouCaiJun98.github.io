@@ -4,6 +4,9 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+## 2022/10/22  
+* [AutoSlim] Read a good channel searching article [AutoSlim: Towards One-Shot Architecture Search for Channel Numbers]().
+* []
 
 ## 2022/10/21  
 * [S-Net] Read a self-ensemble width-variant work [SLIMMABLE NEURAL NETWORKS]().  
