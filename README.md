@@ -4,6 +4,9 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+## 2022/10/25  
+* [FGNAS] Read a NAS article for SR [Fine-grained neural architecture search for image super-resolution](), don't understand.
+
 ## 2022/10/24  
 * Read a good thinking article [Revisiting Random Channel Pruning for Neural Network Compression]().
 
