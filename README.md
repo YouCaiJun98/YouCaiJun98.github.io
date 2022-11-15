@@ -4,6 +4,15 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+## 2022/11/15  
+* Finished reading an OK SR article [Compiler-Aware Neural Architecture Search for On-Mobile Real-time Super-Resolution]().  
+
+## 2022/11/9  
+* Read a BNN article [BMXNet: An Open-Source Binary Neural Network  Implementation Based on MXNet]().  
+
+## 2022/11/4  
+* Read an early BNN article [Bitwise Neural Networks]().  
+
 ## 2022/10/25  
 * [FGNAS] Read a NAS article for SR [Fine-grained neural architecture search for image super-resolution](), don't understand.
 
