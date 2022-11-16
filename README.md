@@ -4,6 +4,9 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+## 2022/11/16  
+* [RepLKNet] Read a good paper [Scaling Up Your Kernels to 31x31: Revisiting Large Kernel Design in CNNs]().  
+
 ## 2022/11/15  
 * Finished reading an OK SR article [Compiler-Aware Neural Architecture Search for On-Mobile Real-time Super-Resolution]().  
 
