@@ -4,6 +4,10 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+## 2022/11/18  
+* [EDSR] Read a simple yet classic SR article [Enhanced Deep Residual Networks for Single Image Super-Resolution]().  
+* [WDSR] Read a simple yet classic SR article [Wide Activation for Efficient and Accurate Image Super-Resolution]().  
+
 ## 2022/11/16  
 * [RepLKNet] Read a good paper [Scaling Up Your Kernels to 31x31: Revisiting Large Kernel Design in CNNs]().  
 
