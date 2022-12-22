@@ -4,6 +4,9 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+## 2022/11/26  
+* [DHP] Read a pruning article [DHP: Differentiable Meta Pruning via HyperNetworks]().  
+
 ## 2022/11/18  
 * [EDSR] Read a simple yet classic SR article [Enhanced Deep Residual Networks for Single Image Super-Resolution]().  
 * [WDSR] Read a simple yet classic SR article [Wide Activation for Efficient and Accurate Image Super-Resolution]().  
