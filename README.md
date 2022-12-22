@@ -4,6 +4,9 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+## 2022/12/22  
+* [APE] Read a simple and non-novel article [Adaptive Patch Exiting for Scalable Single Image Super-Resolution]().   
+
 ## 2022/11/26  
 * [DHP] Read a pruning article [DHP: Differentiable Meta Pruning via HyperNetworks]().  
 
