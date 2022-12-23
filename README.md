@@ -4,6 +4,9 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+## 2022/12/23  
+* Read a good mobile SR article [Achieving on-Mobile Real-Time Super-Resolution with Neural Architecture and Pruning Search]().  
+
 ## 2022/12/22  
 * [APE] Read a simple and non-novel article [Adaptive Patch Exiting for Scalable Single Image Super-Resolution]().   
 
