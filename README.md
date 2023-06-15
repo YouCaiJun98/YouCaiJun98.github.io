@@ -4,6 +4,18 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+### 2023/6/25  
+* Finished my Graduate Career!! 🥳🥳🥳
+
+### 2023/6/1   
+* Read a classic BNN-Transformer article [BiT: Robustly Binarized Multi-distilled Transformer]().  
+
+### 2023/5/21
+* Continue to work on Proj Nine.  
+
+### 2023/5/18
+* Finished Graduation Reply! Half Way Master of Engineering!! 🥳🥳🥳
+
 ### 2023/4/16
 * [CADyQ] Read a garbage SR quantization article [CADyQ: Content-Aware Dynamic Quantization for Image Super-Resolution]().  
 * [XLSR] Read a classic light SR article [Extremely Lightweight Quantization Robust Real-Time Single-Image Super Resolution for Mobile Devices]().  
