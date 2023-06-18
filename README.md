@@ -7,6 +7,9 @@ Happy New Year 🥳🥳🥳
 ### 2023/6/25  
 * Finished my Graduate Career!! 🥳🥳🥳
 
+### 2023/6/18  
+* [NeurIPS23 submission][Q-DM] Read a diffusion quantization article [Q-DM: An Efficient Low-bit Quantized Diffusion Model]().  
+
 ### 2023/6/1   
 * Read a classic BNN-Transformer article [BiT: Robustly Binarized Multi-distilled Transformer]().  
 
