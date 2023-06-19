@@ -7,6 +7,9 @@ Happy New Year 🥳🥳🥳
 ### 2023/6/25  
 * Finished my Graduate Career!! 🥳🥳🥳
 
+### 2023/6/19  
+* [CVPR23][PTQ4DM] Read a PTQ diffusion article [Post-training Quantization on Diffusion Models]().  
+
 ### 2023/6/18  
 * [NeurIPS23 submission][Q-DM] Read a diffusion quantization article [Q-DM: An Efficient Low-bit Quantized Diffusion Model]().  
 
