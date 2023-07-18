@@ -12,6 +12,7 @@ adverse adj. 不利的
 aggravate  v. 使恶化  
 critical adj. 极重要的
 concise adj. 精确的
+circumvent vt. 设法回避，绕开
 exacerbate v. 加剧，使恶化
 excessive adj. （负面）极度的，极多的
 faithfully adv. 忠实地
