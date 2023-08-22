@@ -4,6 +4,9 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+### 2023/8/22  
+* [ACCESS19] Finished reading a survey scoped on hardware simulators. [A Survey of Computer Architecture Simulation Techniques and Tools]()
+
 ### 2023/6/25  
 * Finished my Graduate Career!! 🥳🥳🥳
 
