@@ -4,6 +4,12 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+### 2023/9/5  
+* [IISWC21][STONNE] Finished reading a paper on AI accelerator simulator [STONNE: Enabling Cycle-Level Microarchitectural Simulation for DNN Inference Accelerators]().  
+
+### 2023/8/24  
+* [Algorithms23] Finished reading a suvery on AI accelerators [Recent Developments in Low-Power AI accelerators: A survey]().  
+
 ### 2023/8/22  
 * [ACCESS19] Finished reading a survey scoped on hardware simulators. [A Survey of Computer Architecture Simulation Techniques and Tools]()
 
