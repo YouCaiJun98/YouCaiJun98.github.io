@@ -5,7 +5,7 @@ Happy New Year 🥳🥳🥳
 
 ## What's up?  
 ### 2023/9/18  
-* [CVPR19][PointPillars] Read a classic 3D Detection paper [PointPillars: Fast Encoders for Object Detection from Point Clouds]().  
+* [CVPR19][PointPillars] Read a classic 3D Detection paper [PointPillars: Fast Encoders for Object Detection from Point Clouds](https://youcaijun98.github.io/articles/CV/3D/Detection/%5BCVPR19%5DPointPillars.html).  
 
 ### 2023/9/12  
 * [TC23][EcoFlow] Read half way an architecture papaer [EcoFlow: Efficient Convolutional Dataflows on Low-Power Neural Network Accelerators](). Barely understand this.  
