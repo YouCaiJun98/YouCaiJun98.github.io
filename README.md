@@ -11,7 +11,7 @@ Happy New Year 🥳🥳🥳
 * [TC23][EcoFlow] Read half way an architecture papaer [EcoFlow: Efficient Convolutional Dataflows on Low-Power Neural Network Accelerators](). Barely understand this.  
 
 ### 2023/9/5  
-* [IISWC21][STONNE] Finished reading a paper on AI accelerator simulator [STONNE: Enabling Cycle-Level Microarchitectural Simulation for DNN Inference Accelerators](https://youcaijun98.github.io/articles/Computer%20Architecture/%5BIISWC21%5DSTONNE.html).  
+* [IISWC21][STONNE] Finished reading a paper on AI accelerator simulator [STONNE: Enabling Cycle-Level Microarchitectural Simulation for DNN Inference Accelerators](https://youcaijun98.github.io/articles/ComputerArchitecture/%5BIISWC21%5DSTONNE.html).  
 
 ### 2023/8/24  
 * [Algorithms23] Finished reading a suvery on AI accelerators [Recent Developments in Low-Power AI accelerators: A survey]().  
