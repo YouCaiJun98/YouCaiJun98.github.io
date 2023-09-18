@@ -1,4 +1,4 @@
-# 、Bitwise Neural Networks  
+# Bitwise Neural Networks  
 
 2022/11/4  
 
