@@ -88,9 +88,66 @@ PointPillar接受点云作为输入，输出**oriented 3D boxes**作为汽车、
 连这里也有很多的细节！  
 
 ### 4.1. Dataset  
+* Kitti数据集  
+    * 数据集中的数据包括Lidar点云和图片；（PointPillar只在点云数据上训练，而有的方法是multi-modal的方式做融合）  
+    * Kitti数据集原本分成7481张训练数据与7518张测试数据，PointPillar的实验包括两种自定义的划分方式（*这个是practice吗？以及大表格中的划分方式是哪种？*）：  
+        * 把官方训练集的数据进一步分成3712张训练数据 + 3769张验证数据；  
+        * 在提交测试结果时，把官方训练集中的6733张训练数据作为训练集，在剩下的784张上做验证；  
+    * 只有在图像中出现的物体才会被标注（*我理解是点云中有部分数据没有被标注*），因此作者采用了`only using lidar points that project
+      into the image`的practice；  
 
 ### 4.2. Settings  
+* 一些实验设置的细节；*关于Anchor的描述有诸多不理解之处*：  
+    * 关于PointPillar的超参数，选择x-y的间隔为0.16m, 最大Pillar数$\mathcal{P}=12000$, Pillar中的最大点数为$\mathcal{N}=100$。  
+    * （**anchor**）采用了和VoxelNet中一样的Anchor（*我现在还是不太理解中的检测中的Anchor的含义*）设置，每个**class anchor**都有长、宽、高、z中心和{0, 90}两个角度（*anchor是可能有物体的proposal吗，那按这个描述anchor是per-pillar的？*），anchor和gt用2D IoU做匹配，一个**正匹配**是当前anchor和gt box的IoU最高，或者高于一个正匹配bar（positive match threshold）；一个负匹配是低于负（negative）匹配bar的，其他的anchor不计入loss；  
+    * 在推理时采用**axis aligned non maximum suppression（NMS）**（*和普通NMS有啥区别吗？*），overlap threshold取为0.5 IoU；这么做和**rotational NMS**（*这个又是什么？*）效果相当但速度更快；
+    * 另有一些box的选择metric，*让人有点好奇这个是咋选的，box size还好说，可能是dataset提供的，但是threshold咋来的，手试出来的吗？*：  
+    ![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/20230919103720.png)  
 
 ### 4.3. Data Augmentation  
+* PointPillar的数据增强方法似乎也很有效，采用了一种**背景与物体分离并随机放置**的方法：    
+    * 先按照SECOND的方式建了一张LUT，包括各个类的gt 3D box以及其中的点云点，对于每个sample，随机选（15, *0*(*不是打错了？0？*), 8）个gt car, pedestrians, and cyclists并放到当前的点云中（*这里有点好奇，意思是从当前sample中采样出这么多box，还是把其他sample里的box随机加到当前的sample中？*）；  
+    * 对于每个gt box做单独的增强，每个box随机旋转$[-\pi/20, \pi/20]$个角度，并在x, y, z三个轴上“translate” ~ $\mathcal{N}(0, 0.25)$ 个单位； 
+    * 最后，对点云和box做个全局augmentation，随机沿着x轴做镜像翻转，全局旋转和scaling；并做个全局translation with x, y, z drawn from $\mathcal{N}(0, 0.2)$ to simulate localization noise.  
+
+## 5. Results & Realtime Inference & Ablation Studies  
+哪怕连实验部分也有很多可以学的东西！  
+
+* 所有的检测结果都是按照Kitti官方的检测指标来的，包括**BEV, 3D, 2D和average orientation similarity(AOS)**，其中，  
+    * 2D检测是在图像平面中（image plane）的；  
+    * AOS评价的是2D检测的平均方向（BEV视角下）相似度 - average orientation similarity assesses the average orientation (measured in BEV) similarity for 2D detections.  
+        * 后文中指出，BEV和3D指标下都没有考虑方向，方向的检测是AOS，具体的做法是把3D box映射到图像中，做2D检测匹配，再评估这些匹配的方向；  
+
+* 来张结果大表：  
+
+    ![](https://raw.githubusercontent.com/YouCaiJun98/MyPicBed/main/imgs/20230919105348.png)  
+
+    * 看起来BEV视角下的分数总体要比3D的高（*可能和IoU的计算方式有关？*）  
+    * 三个类的难度差异比较显著，pedestrian > cyclist > car;  
+    * 定性分析中给了个错误模式分析，有点意思；  
+
+* Inference部分给了各部分延时的分解，体现出了整个处理的pipeline，很不错：  
+    * 加载点云，根据范围和visibility过滤（1.4ms）；  
+    * 将点云组织成pillar并decorate（2.7ms）；  
+    * 将PointPillar tensor加载到GPU上（2.9ms），做encode（1.3ms），再散列成pseudo image（0.1ms）；  
+    * 用backbone和检测头处理（7.7ms）；  
+    * 在CPU上做NMS（0.1ms）；  
+
+* 后面还详细分析了encoding方案、模型slimming、TRT部署，分析很详实；  
+
+* Ablation部分，  
+    * spatial resolution可以影响性能-效率 trade-off；  
+    * 作者发现在有gt采样的前提下，minimal box aug就已经很好用了（extensive aug会导致精度损失）；  
+    * 解释了下decoration的选项并做了个ablation；  
+    * learning-based特征编码方案严格好于手工设计的方案；作者给出了几个复现结果优于原文的可能性：  
+        * advanced data aug（引入gt采样、更好的超参设置）；  
+        * 各个超参选择的组合（网络参数设置、anchor box设计、localization loss w.r.t. 3D & angle、classification loss、optimizer参数等）；  
+
+
+
+
+
+
+
 
 
