@@ -29,6 +29,11 @@ down下来的3D检测文件目录如下所示：
                 * 记录了dataset_cfg, training flag, class_name(car, pedestrain, cyclist), logger, path等一系列乱七八糟的属性；  
                 * `point_cloud_range`是[0, -39.68, -3, 69.12, 39.68, 1],应该是数据集的属性，*但是各个维度的意义是什么呢？*  
                 * `self.point_feature_encoder`是`PointFeatureEncoder`(`./OpenPCDet/pcdet/datasets/processor/point_feature_encoder.py`)，看描述应该是坐标转换；  
+                * `self.data_augmentor`是`DataAugmentor`（`./OpenPCDet/pcdet/datasets/augmentor/data_augmentor.py`），字面意义能做data aug：  
+                    * `gt_sampling`  
+                    * `random_world_flip & rotation & scaling & translation`  
+                    * `random_local_flip & rotation & scaling & translation`  
+                    * ...  
                 * 
             * ..
         * 子类`KittiDataset` - `./OpenPCDet/pcdet/datasets/kitti/kitti_dataset.py`  
