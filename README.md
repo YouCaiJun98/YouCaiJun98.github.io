@@ -4,6 +4,9 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+### 2023/9/19  
+* Diving into 3D detection dataset [Kitti]() and read [pointpillars code]() in OpenPCDet.
+
 ### 2023/9/18  
 * [CVPR19][PointPillars] Read a classic 3D Detection paper [PointPillars: Fast Encoders for Object Detection from Point Clouds](https://youcaijun98.github.io/articles/CV/3D/Detection/%5BCVPR19%5DPointPillars.html).  
 
