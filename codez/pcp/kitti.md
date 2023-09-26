@@ -27,7 +27,10 @@ down下来的3D检测文件目录如下所示：
         * 基类`DatasetTemplate` - `./OpenPCDet/pcdet/datasets/dataset.py`  
             * `__init__`初始化函数：  
                 * 记录了dataset_cfg, training flag, class_name(car, pedestrain, cyclist), logger, path等一系列乱七八糟的属性；  
-                * `point_cloud_range`是[0, -39.68, -3, 69.12, 39.68, 1],应该是数据集的属性，*但是各个维度的意义是什么呢？*  
+                * `point_cloud_range`是[0, -39.68, -3, 69.12, 39.68, 1],应该是数据集的属性，~~但是各个维度的意义是什么呢？~~  
+                    * 在`PillarVFE`中有体现，似乎是[min_x, min_y, min_z, max_x, max_y, max_z]，用来计算三个坐标的offset；
+                    * 其中，voxel size是[0.16, 0.16, 4]，而z轴的上限正好是1 - (-3) = 4，符合pillar在z轴上没有划分voxel的描述；  
+                    * 看起来这里的单位是米；  
                 * `self.point_feature_encoder`是`PointFeatureEncoder`(`./OpenPCDet/pcdet/datasets/processor/point_feature_encoder.py`)，看描述应该是坐标转换；  
                 * `self.data_augmentor`是`DataAugmentor`（`./OpenPCDet/pcdet/datasets/augmentor/data_augmentor.py`），字面意义能做data aug；根据config往aug queue里面填aug function：  
                     * `gt_sampling`  
