@@ -4,6 +4,16 @@ Just A Private HomePage for Kaleido XD
 Happy New Year 🥳🥳🥳   
 
 ## What's up?  
+
+### 2023/10/16  
+* A tiring weekend, read 3 LLM quantization article:  
+    * [ICML23][SmoothQuant] An excellent LLM Quantization article [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models]().  
+    * [arxiv2305][LLM-QAT] A good LLM QAT article [LLM-QAT: Data-Free Quantization Aware Training for Large Language Models]().  
+    * [arxiv2306] A good Transformer quantization article [Quantizable Transformers: Removing Outliers by Helping Attention Heads Do Nothing]().  
+
+### 2023/9/28  
+* [ECCV20][DETR] Read a classic detection backbone [End-to-End Object Detection with Transformers]().  
+
 ### 2023/9/20  
 * [CVPR17][PointNet] Read a classic 3D backbone [PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation]().  
 
