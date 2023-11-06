@@ -22,3 +22,53 @@
 https://www.cnblogs.com/shuimuzhushui/p/9022549.html  
 
 鸽了。  
+
+
+### 开一个新分支并推到远端   
+2023/11/6 update
+**Do Not ask me why I update such basic concept so late.**  
+参考了[这篇博客](https://blog.csdn.net/wangfei0225_/article/details/130734732)。  
+* 首先在本地创建一个分支并切换过去：
+```bash
+git checkout -b <branch_name>
+```
+* 接着关联远程仓库  
+    * 需要注意的是这个关联可能已经做好了，比如把一个repo给clone到本地之后；可以先用下面的命令check是否已经关联了远程仓库：  
+    ```bash
+    git remote -v
+    ```  
+    一个已经关联了的情况是：
+    ```bash
+    origin  git@github.com:YouCaiJun98/Test4GitUsage.git (fetch)
+    origin  git@github.com:YouCaiJun98/Test4GitUsage.git (push)
+    ```  
+    * 否则就手动关联一下：  
+    ```bash  
+    git remote add origin <remote_repo_address>
+    ```  
+* 将本地分支推送到远程仓库（相当于在远程仓库创建一个新分支）  
+    ```bash  
+    git push origin <local_branch_name>:<remote_new_branch_name>  
+    ``` 
+
+    * 一个参考运行结果是：  
+    ```bash  
+    Total 0 (delta 0), reused 0 (delta 0)
+    remote:
+    remote: Create a pull request for 'new_branch' on GitHub by visiting:
+    remote:      https://github.com/YouCaiJun98/Test4GitUsage/pull/new/new_branch
+    remote:
+    To github.com:YouCaiJun98/Test4GitUsage.git
+    * [new branch]      new_branch -> new_branch
+    ```  
+* 上一步只是创建一个新的branch，但是还没**关联**起来，所以还需要一步：  
+    ```bash  
+    git push --set-upstream origin <local_branch_name>:<remote_new_branch_name>  
+    ```  
+
+    * 一个参考运行结果：  
+    ```bash  
+    Branch 'new_branch' set up to track remote branch 'new_branch' from 'origin'.
+    Everything up-to-date
+    ```  
+
