@@ -4,8 +4,22 @@
 
 建新仓库才发现自己之前git的命令都快忘得差不多了，简单开个新page记录一下用法，[参考](https://www.bootcss.com/p/git-guide/)。  
 
+## git设置代理  
+2023/11/13 update  
+**网络早晚出问题**
+* 设置git的HTTP代理，可以用以下命令：
+```bash  
+git config --global http.proxy 127.0.0.1:7890
+```  
+* 设置git的HTTPS代理，可以用以下命令：
+```bash  
+git config --global https.proxy 127.0.0.1:7890
+```  
+* 查看已经配置好的配置，在`~/.gitconfig`文件里  
+
 
 ## 创建新仓库  
+---
 在当前文件夹下使用`git init`应该就能生成对应的文件了？后续参考[这篇博客](https://blog.csdn.net/zamamiro/article/details/70172900)。但是直接在Web上创建repo然后再clone到本地不是更简单吗233.  
 
 ### 实例：从EVA8上将awnas项目迁移到EVA7上  
@@ -18,13 +32,14 @@
 * 将本地项目与远程项目建立联系：`git remote add 仓库名 仓库地址`，并将本地分支上传到远程分支：`git push --set-upstream bnn bnn`  
 * 将远程分支clone到EVA7上，注意我只要bnn这个分支，不要默认的master：`git clone -b bnn 仓库地址`  
 
-### 分支冲突解决  
+## 分支冲突解决  
+---
 https://www.cnblogs.com/shuimuzhushui/p/9022549.html  
 
 鸽了。  
 
 
-### 开一个新分支并推到远端   
+## 开一个新分支并推到远端   
 2023/11/6 update
 **Do Not ask me why I update such basic concept so late.**  
 参考了[这篇博客](https://blog.csdn.net/wangfei0225_/article/details/130734732)。  
@@ -38,7 +53,7 @@ git checkout -b <branch_name>
     git remote -v
     ```  
     一个已经关联了的情况是：
-    ```bash
+    ```command  
     origin  git@github.com:YouCaiJun98/Test4GitUsage.git (fetch)
     origin  git@github.com:YouCaiJun98/Test4GitUsage.git (push)
     ```  
@@ -52,7 +67,7 @@ git checkout -b <branch_name>
     ``` 
 
     * 一个参考运行结果是：  
-    ```bash  
+    ```command  
     Total 0 (delta 0), reused 0 (delta 0)
     remote:
     remote: Create a pull request for 'new_branch' on GitHub by visiting:
@@ -61,14 +76,16 @@ git checkout -b <branch_name>
     To github.com:YouCaiJun98/Test4GitUsage.git
     * [new branch]      new_branch -> new_branch
     ```  
+
 * 上一步只是创建一个新的branch，但是还没**关联**起来，所以还需要一步：  
     ```bash  
     git push --set-upstream origin <local_branch_name>:<remote_new_branch_name>  
     ```  
 
     * 一个参考运行结果：  
-    ```bash  
+    ```command  
     Branch 'new_branch' set up to track remote branch 'new_branch' from 'origin'.
     Everything up-to-date
     ```  
+
 
