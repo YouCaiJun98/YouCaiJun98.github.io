@@ -4,6 +4,27 @@
 
 建新仓库才发现自己之前git的命令都快忘得差不多了，简单开个新page记录一下用法，[参考](https://www.bootcss.com/p/git-guide/)。  
 
+## 在一个新服务器上关联账号，实现正常拉代码
+2023/11/27 update  
+
+**will encounter such circumstance from time to time.**  
+
+---  
+* 首先把自己的用户名和邮箱给关联上（这一步似乎无所谓）：  
+    ```bash  
+    git config --global user.name YouCaiJun98  
+    git config --global user.email <my_email_address>  
+    ```  
+* 接下来生成SSH密钥对：  
+    ```bash  
+    ssh-keygen -t rsa -b 4096 -C <my_email_address>
+    ```  
+    * 一路回车；最熟悉的环节；仿佛回到家了一样；  
+* 到`~/.ssh/id_rsa.pub`去把公钥给粘出来；  
+* 到GitHub页面去创建新的ssh key，路径是点右上角头像 -> settings -> SSH and GPG keys -> New SSH key。  
+
+
+
 ## git设置代理  
 2023/11/13 update  
 **网络早晚出问题**
