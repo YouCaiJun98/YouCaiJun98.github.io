@@ -59,6 +59,27 @@ https://www.cnblogs.com/shuimuzhushui/p/9022549.html
 
 鸽了。  
 
+## 拉取远端已有分支  
+2023/11/28 update  
+鸽了一个月还是遇到这个事了。
+
+---  
+* 利用`git branch -a`查看本地与远程的所有分支：  
+```bash  
+> git branch -a
+    * main  
+    remotes/origin/HEAD -> origin/main  
+    remotes/origin/branch_name_1
+    remotes/origin/main
+```  
+* 利用以下命令从远端拉取某个分支，并在本地创建一个新分支：  
+```bash
+> git fetch origin <remote_branch_name>:<local_branch_name>  
+    From github.com:<remote_repo_owner>/<remote_repo_name>  
+     * [new branch]      <local_branch_name>        -> <remote_branch_name>  
+```  
+* 再checkout到本地刚拉取的这个分支即可。  
+
 
 ## 开一个新分支并推到远端   
 2023/11/6 update
