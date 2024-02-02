@@ -130,4 +130,5 @@ git checkout -b <branch_name>
     Everything up-to-date
     ```  
 
+## 合并分支
 
