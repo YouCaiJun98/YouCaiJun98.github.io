@@ -12,4 +12,8 @@ Happy (Another) New Year 🥳🥳🥳
 * [arxiv21] Read a fair article about NN model performance prediction [DNNAbacus: Toward Accurate Computational Cost Prediction for Deep Neural Networks]().
 
 
+### 2024/3/5
+* [ECCV20] Read a classic NAS article [Neural Predictor for Neural Architecture
+Search]().  
+
 
