@@ -51,7 +51,20 @@ git config --global https.proxy 127.0.0.1:7890
 * （因为把这个项目依附于我fork的awnas项目的一个分支，所以）建立本地分支bnn：`git branch bnn`并切换到这个本地分支：`git checkout bnn`  
 * 同步内容（将本地分支内容加到git缓冲区）：`git add .` & `git commit -m ".."`  
 * 将本地项目与远程项目建立联系：`git remote add 仓库名 仓库地址`，并将本地分支上传到远程分支：`git push --set-upstream bnn bnn`  
-* 将远程分支clone到EVA7上，注意我只要bnn这个分支，不要默认的master：`git clone -b bnn 仓库地址`  
+* 将远程分支clone到EVA7上，注意我只要bnn这个分支，不要默认的master：`git clone -b bnn 仓库地址
+
+### 一些可能的坑
+* 如果在创建远程仓库的时候勾选了添加`.gitignore`文件或者`README.md`文件，那么同步就会变得非常痛苦。
+* 首先需要将本地分支和远程分支关联起来：
+```bash
+git branch --set-upstream-to=origin/<remote_branch_name> <local_branch_name>
+```
+* 接着需要`rebase`一下，从远端把远端的那两个文件拉下来
+```bash
+git pull --rebase origin main
+```
+
+
 
 ## 分支冲突解决  
 ---

@@ -17,3 +17,11 @@ Happy (Another) New Year 🥳🥳🥳
 Search]().  
 
 
+### 2024/3/19  
+* [CVPRW22][MAPLE-Edge] Finish reading a insightful article [MAPLE-Edge: A Runtime Latency Predictor for Edge Devices]().  
+
+### 2024/3/22  
+* [Mobisys21][nn-Meter] Read a good paper [nn-Meter: Towards Accurate Latency Prediction of Deep-Learning Model Inference on Diverse Edge Devices]().  
+
+
+
