@@ -23,5 +23,11 @@ Search]().
 ### 2024/3/22  
 * [Mobisys21][nn-Meter] Read a good paper [nn-Meter: Towards Accurate Latency Prediction of Deep-Learning Model Inference on Diverse Edge Devices]().  
 
+### 2024/3/26  
+* [ICLR20][NasBench-201] Read a classic NAS paper [NAS-BENCH-201: Extending the Scope of Reproducible Neural Architecture Search]().  
+
+### 2024/4/25  
+* [ICLR17][GCN] Read the classic GCN paper [Semi-Supervised Classification with Graph Convolutional Networks]().  
+
 
 
