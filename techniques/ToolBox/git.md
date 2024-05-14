@@ -64,6 +64,26 @@ git branch --set-upstream-to=origin/<remote_branch_name> <local_branch_name>
 git pull --rebase origin main
 ```
 
+## 提交代码的若干问题
+---
+### 提交代码 (push) 后要求填写用户密码，之后报错不支持该种方式登录
+2024/5/7 update  
+**不支持你还让我填个锤子**  
+* 尝试更新了ssh令牌，但是行不通；大概是因为当前本地仓库和远程仓库的关联方式是`https`；  
+* 首先执行`git remote -v`命令检查和远程仓库的关联，得到以下结果：  
+
+```bash
+origin  https://github.com/My_User_Name/My_Repo_Name.git (fetch)
+origin  https://github.com/My_User_Name/My_Repo_Name.git (push)
+```
+
+* 上述开头是`https`，把它改成`ssh`方式：  
+
+```bash
+git remote set-url origin git@github.com:My_User_Name/My_Repo_Name.git  
+```
+
+* 之后再push理论上就可以了（  
 
 
 ## 分支冲突解决  

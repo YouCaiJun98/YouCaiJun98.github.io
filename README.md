@@ -29,5 +29,8 @@ Search]().
 ### 2024/4/25  
 * [ICLR17][GCN] Read the classic GCN paper [Semi-Supervised Classification with Graph Convolutional Networks]().  
 
+### 2024/5/14  
+* [TPAMI22][GATES++] Read a NAS paper [A Generic Graph-based Neural Architecture  Encoding Scheme with Multifaceted Information]().  
+
 
 
