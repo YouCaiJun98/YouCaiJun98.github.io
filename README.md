@@ -32,5 +32,10 @@ Search]().
 ### 2024/5/14  
 * [TPAMI22][GATES++] Read a NAS paper [A Generic Graph-based Neural Architecture  Encoding Scheme with Multifaceted Information]().  
 
-
+### 2024/10/11  
+* Read the following articles in the past few months:
+    * [MLSys20][ParaDNN] Read a mlsys paper [A systematic methodology for analysis of deep learning hardware and software platforms]().  
+    * [MLSys20][TQT] Read a quantization paper [Trained quantization thresholds for accurate and efficient fixed-point inference of deep neural networks]().  
+        * It turns out that I have read this article before.  
+    * [ICLR21][ViT] Read a classis CV backbone paper [An image is worth 16x16 words: Transformers for image recognition at scale]().  
 
