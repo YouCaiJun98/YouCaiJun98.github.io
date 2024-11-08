@@ -39,3 +39,12 @@ Search]().
         * It turns out that I have read this article before.  
     * [ICLR21][ViT] Read a classis CV backbone paper [An image is worth 16x16 words: Transformers for image recognition at scale]().  
 
+### 2024/10/12  
+* [MLSys20workshop] Read a short article [Precious: Resource-Demand Estimation for Embedded Neural Network Accelerators]().  
+
+### 2024/11/1 
+* [MLSys22] Read an article about Pytorch.fx module [torch. fx: Practical program capture and transformation for deep learning in python]().  
+
+### 2024/11/7  
+* [MLSys22] Read an article about benchmarking the ML inference on smartphones [MLPerf Mobile Inference Benchmark]().  
+
