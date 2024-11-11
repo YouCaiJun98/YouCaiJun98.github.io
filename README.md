@@ -48,3 +48,7 @@ Search]().
 ### 2024/11/7  
 * [MLSys22] Read an article about benchmarking the ML inference on smartphones [MLPerf Mobile Inference Benchmark]().  
 
+### 2024/11/11  
+* [ISORC17] Read an article of lean help [An End-To-End Toolchain: From Automated Cost Modeling to Static WCET and WCEC Analysis]().  
+
+
