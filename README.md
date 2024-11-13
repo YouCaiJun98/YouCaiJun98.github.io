@@ -1,4 +1,4 @@
-# Kaleido's Personal Page 2024!  
+ # Kaleido's Personal Page 2024!  
 
 Just A Private HomePage for Kaleido XD  
 Happy (Another) New Year 🥳🥳🥳   
@@ -51,4 +51,5 @@ Search]().
 ### 2024/11/11  
 * [ISORC17] Read an article of lean help [An End-To-End Toolchain: From Automated Cost Modeling to Static WCET and WCEC Analysis]().  
 
-
+### 2024/11/13  
+* [NIPS19workshop] Read an article using NN models to predict latency of the XLA kernels [Learned TPU Cost Model for XLA Tensor Programs]().  
