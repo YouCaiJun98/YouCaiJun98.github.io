@@ -53,3 +53,6 @@ Search]().
 
 ### 2024/11/13  
 * [NIPS19workshop] Read an article using NN models to predict latency of the XLA kernels [Learned TPU Cost Model for XLA Tensor Programs]().  
+
+### 2024/11/20  
+* [MLSys21] Read the article extended from the last one [A Learned Performance Model for Tensor Processing Units]().  
