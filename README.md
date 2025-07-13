@@ -10,3 +10,6 @@ Happy (Another) New Year 🥳🥳🥳
 
 ### 2025/7/12  
 * [arxiv24] Finally finished this survey [ A Survey on Efficient Inference for Large Language Models]().  
+
+### 2025/7/13  
+* [LoRA] Read the famous article LoRA: [LORA: LOW-RANK ADAPTATION OF LARGE LANGUAGE MODELS]().  
