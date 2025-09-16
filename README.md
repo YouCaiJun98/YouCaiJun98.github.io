@@ -13,3 +13,6 @@ Happy (Another) New Year 🥳🥳🥳
 
 ### 2025/7/13  
 * [LoRA] Read the famous article LoRA: [LORA: LOW-RANK ADAPTATION OF LARGE LANGUAGE MODELS]().  
+
+### 2025/8/28  
+* [arxiv24] Finally finished a survey on VLA [A Survey on Vision-Language-Action Models for Embodied AI]().  
