@@ -16,3 +16,6 @@ Happy (Another) New Year 🥳🥳🥳
 
 ### 2025/8/28  
 * [arxiv24] Finally finished a survey on VLA [A Survey on Vision-Language-Action Models for Embodied AI]().  
+
+### 2025/9/17  
+* [COLM24] Read an introduction to AutoGen [AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversations]().  
