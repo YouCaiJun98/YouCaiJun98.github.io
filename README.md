@@ -19,3 +19,6 @@ Happy (Another) New Year 🥳🥳🥳
 
 ### 2025/9/17  
 * [COLM24] Read an introduction to AutoGen [AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversations]().  
+
+### 2025/9/23  
+* [NIPS23] Read a non-nutritious article about CamelAI [CAMEL:Communicative Agents for “Mind” Exploration of Large Language Model Society]().  
