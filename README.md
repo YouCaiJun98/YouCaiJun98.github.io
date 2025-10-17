@@ -22,3 +22,7 @@ Happy (Another) New Year 🥳🥳🥳
 
 ### 2025/9/23  
 * [NIPS23] Read a non-nutritious article about CamelAI [CAMEL:Communicative Agents for “Mind” Exploration of Large Language Model Society]().  
+
+### 2025/10/17  
+* [arxiv25] Read an Embodied-AI related article RoboOS [RoboOS: A Hierarchical Embodied Framework for Cross-Embodiment and Multi-Agent Collaboration]().  
+
