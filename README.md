@@ -26,3 +26,5 @@ Happy (Another) New Year 🥳🥳🥳
 ### 2025/10/17  
 * [arxiv25] Read an Embodied-AI related article RoboOS [RoboOS: A Hierarchical Embodied Framework for Cross-Embodiment and Multi-Agent Collaboration]().  
 
+### 2025/12/2  
+* [arxiv25] Read a survey on VLA [Large VLM-based Vision-Language-Action Models for Robotic Manipulation: A Survey]().  
