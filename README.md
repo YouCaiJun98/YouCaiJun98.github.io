@@ -28,3 +28,8 @@ Happy (Another) New Year 🥳🥳🥳
 
 ### 2025/12/2  
 * [arxiv25] Read a survey on VLA [Large VLM-based Vision-Language-Action Models for Robotic Manipulation: A Survey]().  
+
+### 2025/12/9  
+* [techreport25] Read a technical report [AIRSHIP: Empowering General-Purpose Intelligent Robots through Open-Source Embodied AI]().  
+
+### 
