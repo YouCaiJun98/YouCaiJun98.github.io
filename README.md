@@ -32,4 +32,7 @@ Happy (Another) New Year 🥳🥳🥳
 ### 2025/12/9  
 * [techreport25] Read a technical report [AIRSHIP: Empowering General-Purpose Intelligent Robots through Open-Source Embodied AI]().  
 
-### 
+### 2025/12/11  
+* [CVPR25] Read a VLM article [RoboBrain: A Unified Brain Model for Robotic Manipulation from Abstract to Concrete]().  
+* [techreport25] Read the following article of RoboBrain [RoboBrain 2.0 Technical Report]().  
+
