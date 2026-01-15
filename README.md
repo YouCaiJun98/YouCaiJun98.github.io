@@ -6,4 +6,11 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ## What's up?  
 
 ### 2026/1/4  
+* [arxiv2503] Read an article about embodied AI [Interactive Navigation for Legged Manipulators with Learned Arm-Pushing Controller]().  
+
+### 2026/1/7  
+* Read a nice [technical blog about model merging](https://cameronrwolfe.substack.com/p/model-merging#footnote-2-147448898).  
+
+### 2026/1/15  
+* [PAAMS Workshop 2025] Read an article about an embodied-AI framework [RAI: Flexible Agent Framework for Embodied AI]().  
 * 
