@@ -13,4 +13,5 @@ Happy (AnAnother) New Year 🥳🥳🥳
 
 ### 2026/1/15  
 * [PAAMS Workshop 2025] Read an article about an embodied-AI framework [RAI: Flexible Agent Framework for Embodied AI]().  
-* 
+* [arxiv2510] Read an article by school mate [Cache-to-Cache: Direct Semantic Communication Between Large Language Models]().  
+
