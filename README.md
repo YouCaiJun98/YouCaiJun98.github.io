@@ -18,3 +18,6 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/1/26  
 * [arxiv2508] Read a fancy efficient LLM article [Efficient Mixed-Precision Large Language Model Inference with TurboMind]().  
 
+### 2026/1/27  
+* [GPTQ] Read a classic LLM quantization article [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers]().  
+
