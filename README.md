@@ -15,3 +15,6 @@ Happy (AnAnother) New Year 🥳🥳🥳
 * [PAAMS Workshop 2025] Read an article about an embodied-AI framework [RAI: Flexible Agent Framework for Embodied AI]().  
 * [arxiv2510] Read an article by school mate [Cache-to-Cache: Direct Semantic Communication Between Large Language Models]().  
 
+### 2026/1/26  
+* [arxiv2508] Read a fancy efficient LLM article [Efficient Mixed-Precision Large Language Model Inference with TurboMind]().  
+
