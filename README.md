@@ -21,3 +21,5 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/1/27  
 * [GPTQ] Read a classic LLM quantization article [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers]().  
 
+### 2026/2/3  
+* [MLSys24][AWQ] Read a classic LLM quantization article [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration]().  
