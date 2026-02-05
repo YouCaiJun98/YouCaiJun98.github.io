@@ -23,3 +23,7 @@ Happy (AnAnother) New Year 🥳🥳🥳
 
 ### 2026/2/3  
 * [MLSys24][AWQ] Read a classic LLM quantization article [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration]().  
+
+### 2026/2/4  
+* [arxiv2508][AgentScope] Read an agent framework work [AgentScope 1.0: A Developer-Centric Framework for Building Agentic Applications]() & its implementation.  
+
