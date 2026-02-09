@@ -31,3 +31,4 @@ Happy (AnAnother) New Year 🥳🥳🥳
 * [arxiv2512] Read an Embodied-AI related work [Guardian: Detecting Robotic Planning and Execution Errors with Vision-Language Models]().  
 
 ### 2026/2/9  
+* [ICLR22][ReACT] Read a famous work [React: Synergizing reasoning and acting in language models]().  
