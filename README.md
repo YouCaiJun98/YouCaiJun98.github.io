@@ -28,5 +28,6 @@ Happy (AnAnother) New Year 🥳🥳🥳
 * [arxiv2508][AgentScope] Read an agent framework work [AgentScope 1.0: A Developer-Centric Framework for Building Agentic Applications]() & its implementation.  
 
 ### 2026/2/6  
-* [arxiv2510] Read an Embodied-AI related work [Guardian: Detecting Robotic Planning and Execution Errors with Vision-Language Models]().  
+* [arxiv2512] Read an Embodied-AI related work [Guardian: Detecting Robotic Planning and Execution Errors with Vision-Language Models]().  
 
+### 2026/2/9  
