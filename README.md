@@ -33,5 +33,7 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/2/9  
 * [ICLR22][ReACT] Read a famous work [React: Synergizing reasoning and acting in language models]().  
 
-### 2026/3/
-* 
+### 2026/3/13
+* Fast read several articles about agentic evaluations:
+    * [arxiv2509][Plan Verification for LLM-Based Embodied Task Completion Agents]().
+    * 
