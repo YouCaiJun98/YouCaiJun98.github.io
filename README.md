@@ -36,4 +36,6 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/3/13
 * Fast read several articles about agentic evaluations:
     * [arxiv2509][Plan Verification for LLM-Based Embodied Task Completion Agents]().
-    * 
+
+### 2026/3/16
+* Read an article about VLN simulation & dataset creating [VLNVerse: A Benchmark for Vision-Language Navigation with Versatile, Embodied, Realistic Simulation and Evaluation]().  
