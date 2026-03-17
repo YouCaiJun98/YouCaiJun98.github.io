@@ -39,3 +39,14 @@ Happy (AnAnother) New Year 🥳🥳🥳
 
 ### 2026/3/16
 * Read an article about VLN simulation & dataset creating [VLNVerse: A Benchmark for Vision-Language Navigation with Versatile, Embodied, Realistic Simulation and Evaluation]().  
+
+### 2026/3/17
+* Fast read several articles about agentic evaluations with the help of ChatGPT:
+    * [arxiv2507][VerifyLLM: LLM-Based Pre-Execution Task Plan Verification for Robots]().  
+    * [arxiv2510][SENTINEL: A Multi-Level Formal Framework for Safety Evaluation of Foundation Model-based Embodied Agents]().
+    * [arxiv2510][VeriGuard: Enhancing LLM Agent Safety via Verified Code Generation]().  
+
+### 2026/3/18
+* Fast read several articles about agentic evaluations with the help of ChatGPT:
+    * 
+
