@@ -48,5 +48,9 @@ Happy (AnAnother) New Year 🥳🥳🥳
 
 ### 2026/3/18
 * Fast read several articles about agentic evaluations with the help of ChatGPT:
-    * 
+    * [arxiv2511][Evidence-Bound Autonomous Research (EviBound): A Governance Framework for Eliminating False Claims](). 
+    * [arxiv2503][VeriLA: A Human-Centered Evaluation Framework for Interpretable Verification of LLM Agent Failures]().
 
+### 2026/3/19
+* [CVPR25] Read a VLN article [UniGoal: Towards Universal Zero-shot Goal-oriented Navigation]().  
+* 
