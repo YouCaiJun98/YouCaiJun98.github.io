@@ -57,4 +57,3 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/3/20
 * [arxiv2509] Read an article about how agent fails [Where LLM Agents Fail and How They can Learn From Failures]().
 
-### 

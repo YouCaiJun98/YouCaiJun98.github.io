@@ -54,6 +54,16 @@
 
     docker build -t unigoal:ver0 .
     ```
+* 为了让docker在某一行运行报错时立即退出，可以在开头加这个：
+    ```docker
+    SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+    ```
+    * 并且避免`conda run -n <env_name> pip install`吞掉pip的报错信息，可以改成这个：
+    ```docker
+    RUN source /opt/conda/etc/profile.d/conda.sh && \
+        conda activate unigoal && \
+        pip install -e GroundingDINO
+    ```
 
 ### Step 1 - 创建一个Minimal docker
 * 在本地新建一个名称为`Dockerfile`的文件，在里面填入以下内容：
@@ -206,6 +216,9 @@
 * 运行docker时，让容器能解析到宿主机地址：
     ```bash
     docker run --gpus all -it --rm \
+        --runtime=nvidia \
+        -e NVIDIA_VISIBLE_DEVICES=all \
+        -e NVIDIA_DRIVER_CAPABILITIES=compute,utility,graphics \
         --add-host=host.docker.internal:host-gateway \
         -v "$(pwd)/data:/workspace/UniGoal/data" \
         -w /workspace/UniGoal \
@@ -215,7 +228,7 @@
 ### Finally
 * 最终的`Dockerfile`长成这个样子：
     ```docker
-    FROM nvidia/cuda:11.8.0-cudnn8-runtime-ubuntu22.04
+    FROM nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04
 
     ENV DEBIAN_FRONTEND=noninteractive
     WORKDIR /workspace
@@ -224,11 +237,13 @@
     && sed -i 's@http://security.ubuntu.com/ubuntu/@https://mirrors.tuna.tsinghua.edu.cn/ubuntu/@g' /etc/apt/sources.list \
     && apt-get update \
     && apt-get install -y \
-        git wget curl ca-certificates build-essential \
-        vim\
+        git wget curl ca-certificates build-essential vim \
         libglib2.0-0 libsm6 libxext6 libxrender1 libgl1 \
+        libegl1 libopengl0 \
         ffmpeg ninja-build \
     && rm -rf /var/lib/apt/lists/*
+
+    ENV IMAGEIO_FFMPEG_EXE=/usr/bin/ffmpeg
 
     # miniforge  
     # use local file if github inacessible  
@@ -238,6 +253,7 @@
     RUN rm /tmp/miniforge.sh
         
     ENV PATH=/opt/conda/bin:$PATH
+    ENV CUDA_HOME=/usr/local/cuda
 
     RUN conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge \
     && conda config --set show_channel_urls yes
@@ -269,15 +285,14 @@
     RUN conda run -n unigoal pip install /workspace/vendor/detectron2
     RUN conda run -n unigoal pip install /workspace/vendor/pytorch3d
 
+    ENV LD_LIBRARY_PATH=/opt/conda/envs/unigoal/lib:/opt/conda/envs/unigoal/lib/python3.8/site-packages/torch/lib:$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+
     # install Grounded-Segment-Anything submodules from local source
     WORKDIR /workspace/UniGoal/third_party/Grounded-Segment-Anything
     RUN conda run -n unigoal pip install -e segment_anything
     RUN conda run -n unigoal pip install --no-build-isolation -e GroundingDINO
-
-    # copy checkpoints into UniGoal expected path
-    RUN mkdir -p /workspace/UniGoal/data/models
-    COPY assets/models/sam_vit_h_4b8939.pth /workspace/UniGoal/data/models/sam_vit_h_4b8939.pth
-    COPY assets/models/groundingdino_swint_ogc.pth /workspace/UniGoal/data/models/groundingdino_swint_ogc.pth
+    # sanity check for GroundingDINO
+    RUN /opt/conda/envs/unigoal/bin/python -c "from groundingdino import _C; print(_C)"
 
     # install faiss-gpu & project requirements
     RUN conda install -n unigoal -y -c pytorch faiss-gpu
@@ -286,9 +301,14 @@
     # sanity check
     RUN conda run -n unigoal python -c "import faiss; print('faiss ok')"
 
+    # set the hugging-face source
+    ENV HF_ENDPOINT=https://hf-mirror.com
+    ENV HUGGINGFACE_HUB_CACHE=/root/.cache/huggingface
+    ENV TRANSFORMERS_CACHE=/root/.cache/huggingface/transformers
 
     WORKDIR /workspace/UniGoal
     CMD ["/bin/bash"]
+
     ```
 
 * 此外，还有搭配的`build.sh`文件：
