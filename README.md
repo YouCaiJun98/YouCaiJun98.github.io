@@ -53,4 +53,8 @@ Happy (AnAnother) New Year 🥳🥳🥳
 
 ### 2026/3/19
 * [CVPR25] Read a VLN article [UniGoal: Towards Universal Zero-shot Goal-oriented Navigation]().  
-* 
+
+### 2026/3/20
+* [arxiv2509] Read an article about how agent fails [Where LLM Agents Fail and How They can Learn From Failures]().
+
+### 
