@@ -23,6 +23,16 @@
     * `--rm`：退出自动删除容器
     * `my-cuda-env`：刚 build 的镜像
 
+### docker翻墙
+* 想让docker通过本地代理翻墙，可以这么写：
+    ```bash
+    docker run -it \
+        --network host \
+        --cap-add=NET_ADMIN \
+        -e http_proxy=http://127.0.0.1:7890 \
+        -e https_proxy=http://127.0.0.1:7890 \
+        <image_name>:<image_tag>
+    ```
 
 ## 开始搭建
 ### Step 0 - 101 Notes
@@ -64,6 +74,28 @@
         conda activate unigoal && \
         pip install -e GroundingDINO
     ```
+* docker在build的时候有可能遇到一个神必机制，ChatGPT的解释是，“`pip install --no-build-isolation -e GroundingDINO`在Docker build里走的是setuptools的 “editable / PEP 660” 路线，扩展模块_C.so没有稳定地落到源码目录里。结果是，build时这条命令看起来成功，但进入容器后，editable安装指向的源码树里没有可用的_C.so，你再手动跑一次同样命令，它这次把_C.so 真正编到源码树里了，于是sanity check 才通过”。这和setuptools对editable + C/CUDA extension这类项目经常不稳定的行为吻合。
+    * 为解决这个问题，不能在Docker里依赖`pip install -e ...`去顺带编译扩展，可以在dockerfile里这么去写：
+    ```docker
+    WORKDIR /workspace/UniGoal/third_party/Grounded-Segment-Anything/GroundingDINO
+
+    RUN rm -rf build && \
+        find . -name "*.egg-info" -type d -exec rm -rf {} + && \
+        find . -name "_C*.so" -delete && \
+        /opt/conda/envs/unigoal/bin/python setup.py build_ext --inplace && \
+        /opt/conda/envs/unigoal/bin/pip uninstall -y groundingdino || true && \
+        /opt/conda/envs/unigoal/bin/pip install -v --no-cache-dir --no-build-isolation -e .
+
+    WORKDIR /tmp
+    RUN /opt/conda/envs/unigoal/bin/python -c "import groundingdino._C as _C; print(_C)"
+    ```
+    * 不在于“同样命令为什么 build 和手动结果不一样”，而在于：
+        * -e 安装本质上是“让 Python 指向源码目录”
+        * 你的源码目录里必须有_C.so
+        * pip install -e ... 不保证每次都把这个扩展稳定地“就地编译”进去
+        * python setup.py build_ext --inplace 才是明确告诉它，把扩展编到当前源码目录，
+    * 所以这版把“编译扩展”和“安装包”拆开了，不再赌editable的隐式行为。
+
 
 ### Step 1 - 创建一个Minimal docker
 * 在本地新建一个名称为`Dockerfile`的文件，在里面填入以下内容：

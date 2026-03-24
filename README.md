@@ -57,3 +57,10 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/3/20
 * [arxiv2509] Read an article about how agent fails [Where LLM Agents Fail and How They can Learn From Failures]().
 
+### 2026/3/23
+* [arxiv2512] Fast read an article about embodied AI safety guardrail [RoboSafe: Safeguarding Embodied Agents via Executable Safety Logic]().  
+
+### 2026/3/24
+* [arxiv2502] Fast read an article about agent safety guardrail [AGENTGUARD: Repurposing Agentic Orchestrator for Safety Evaluation of Tool Orchestration]().
+
+
