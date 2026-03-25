@@ -63,4 +63,7 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/3/24
 * [arxiv2502] Fast read an article about agent safety guardrail [AGENTGUARD: Repurposing Agentic Orchestrator for Safety Evaluation of Tool Orchestration]().
 
+### 2026/3/25  
+* [ICMLW25] Fast read an Embodied-AI framework article [PhysiAgent: An Embodied Agent Framework in Physical World]().  
+
 
