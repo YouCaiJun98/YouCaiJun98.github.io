@@ -634,3 +634,13 @@ docker restart my-ubuntu  # 重启容器
     ```bash
     docker rmi ubuntu:latest     # 删除指定镜像
     ```
+### 导出镜像
+```bash
+# 格式：docker save -o 文件名.tar 镜像名:标签
+docker save -o cuda11.8.tar nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04
+```
+
+### 导入镜像
+```bash
+docker load -i /目标路径/cuda11.8.tar
+```

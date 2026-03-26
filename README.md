@@ -66,4 +66,7 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/3/25  
 * [ICMLW25] Fast read an Embodied-AI framework article [PhysiAgent: An Embodied Agent Framework in Physical World]().  
 
+### 2026/3/26  
+* [arxiv2411] Read an article shared by bro.chao [WildLMa: Long Horizon Loco-Manipulation in the Wild]().  
 
+### 🎂2026/3/27
