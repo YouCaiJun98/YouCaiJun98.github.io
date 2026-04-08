@@ -71,5 +71,8 @@ Happy (AnAnother) New Year 🥳🥳🥳
 
 ### 🎂2026/3/27
 
+### 2026/4/8
+* [RSS25] Read a classic VLN article [NaVILA: Legged Robot Vision-Language-Action Model for Navigation]().
+
 
 

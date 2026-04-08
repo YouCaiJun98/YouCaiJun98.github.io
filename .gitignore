@@ -32,3 +32,6 @@ action.changelog.md
 
 # large file
 Backups\Talks_and_Lectures\Workshops\Valse2021\*
+
+# cuda related
+*.cu
