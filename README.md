@@ -74,5 +74,8 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/4/8
 * [RSS25] Read a classic VLN article [NaVILA: Legged Robot Vision-Language-Action Model for Navigation]().
 
+### 2026/4/12
+* [Transformer] Read the very basic article finally. [Attention Is All You Need]().
+
 
 
