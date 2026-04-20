@@ -77,5 +77,7 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/4/12
 * [Transformer] Read the very basic article finally. [Attention Is All You Need]().
 
+### 2026/4/20
+* [MQA][arxiv1911] Read a classic attention article [Fast Transformer Decoding: One Write-Head is All You Need]().
 
 
