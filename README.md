@@ -80,4 +80,9 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/4/20
 * [MQA][arxiv1911] Read a classic attention article [Fast Transformer Decoding: One Write-Head is All You Need]().
 
+### 2026/4/22
+* [GQA][ENMLP23] Read a classic attention article [GQA:Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints]().
+
+### 2026/5/7
+* [arxiv2603] Read an article about VLA memory [MEM: Multi-Scale Embodied Memory for Vision Language Action Models]().
 
