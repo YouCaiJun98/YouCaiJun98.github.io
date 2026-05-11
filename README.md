@@ -86,3 +86,5 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/5/7
 * [arxiv2603] Read an article about VLA memory [MEM: Multi-Scale Embodied Memory for Vision Language Action Models]().
 
+### 2026/5/11
+* [Science Robotics25] Read an article about foothold control [High-speed control and navigation for quadrupedal robots on complex and discrete terrain]().
