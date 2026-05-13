@@ -88,3 +88,6 @@ Happy (AnAnother) New Year 🥳🥳🥳
 
 ### 2026/5/11
 * [Science Robotics25] Read an article about foothold control [High-speed control and navigation for quadrupedal robots on complex and discrete terrain]().
+
+### 2026/5/12
+* [RAL25] Read an article about foothold control [START: Traversing Sparse Footholds with Terrain Reconstruction]().
