@@ -91,3 +91,7 @@ Happy (AnAnother) New Year 🥳🥳🥳
 
 ### 2026/5/12
 * [RAL25] Read an article about foothold control [START: Traversing Sparse Footholds with Terrain Reconstruction]().
+
+### 2026/5/14
+* [RSS25] Read a classic VLA article [π0: A Vision-Language-Action Flow Model for General Robot Control]().
+
