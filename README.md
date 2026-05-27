@@ -95,3 +95,6 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/5/14
 * [RSS25] Read a classic VLA article [π0: A Vision-Language-Action Flow Model for General Robot Control]().
 
+### 2026/5/27
+* [ICRA22] Read an article about gait low-level control [Vision-aided Dynamic Quadrupedal Locomotion on Discrete Terrain using Motion Libraries]().
+
