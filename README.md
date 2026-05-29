@@ -98,3 +98,6 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/5/27
 * [ICRA22] Read an article about gait low-level control [Vision-aided Dynamic Quadrupedal Locomotion on Discrete Terrain using Motion Libraries]().
 
+### 2026/5/28
+* [IROS24] Read an article about risky terrain passing by end-to-end RL [Learning Agile Locomotion on Risky Terrains]().
+
