@@ -108,4 +108,5 @@ Happy (AnAnother) New Year 🥳🥳🥳
 * [RSS25] Read an qudrupedal operation article [Human2LocoMan: Learning Versatile Quadrupedal Manipulation with Human Pretraining]().  
 
 ### 2026/6/14
+* [Science Robotics 25] Fast Read an legged locomotion article [Attention-Based Map Encoding for Learning Generalized Legged Locomotion]().
 * 
