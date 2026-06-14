@@ -102,6 +102,10 @@ Happy (AnAnother) New Year 🥳🥳🥳
 * [IROS24] Read an article about risky terrain passing by end-to-end RL [Learning Agile Locomotion on Risky Terrains]().
 
 ### 2026/6/9
-* [CoRL22] Read an quadrupedal locomotion article [Legged Locomotion in Challenging Terrains using Egocentric Vision]().  
+* [CoRL22] Read an quadrupedal locomotion article. [Legged Locomotion in Challenging Terrains using Egocentric Vision]().  
 
-### 2026/6/
+### 2026/6/12
+* [RSS25] Read an qudrupedal operation article [Human2LocoMan: Learning Versatile Quadrupedal Manipulation with Human Pretraining]().  
+
+### 2026/6/14
+* 
