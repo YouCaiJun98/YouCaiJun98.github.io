@@ -109,4 +109,6 @@ Happy (AnAnother) New Year 🥳🥳🥳
 
 ### 2026/6/14
 * [Science Robotics 25] Fast Read an legged locomotion article [Attention-Based Map Encoding for Learning Generalized Legged Locomotion]().
-* 
+
+### 2026/6/15
+* [RSS22] Fast read an locomotion article [Neural Scene Representation for Locomotion on Structured Terrain]().
