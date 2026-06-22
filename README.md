@@ -112,3 +112,8 @@ Happy (AnAnother) New Year 🥳🥳🥳
 
 ### 2026/6/15
 * [RSS22] Fast read an locomotion article [Neural Scene Representation for Locomotion on Structured Terrain]().
+
+### 2026/6/22
+* [arxiv2601] Read AME-2 [AME-2: Agile and Generalized Legged Locomotion via Attention-Based Neural Map Encoding](). 
+
+### 2026/6/
