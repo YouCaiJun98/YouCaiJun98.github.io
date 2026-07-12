@@ -116,4 +116,11 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/6/22
 * [arxiv2601] Read AME-2 [AME-2: Agile and Generalized Legged Locomotion via Attention-Based Neural Map Encoding](). 
 
-### 2026/6/
+### 2026/7/2
+* [arxiv2504][Pi0.5] Read Pi-0.5 [π0.5: a Vision-Language-Action Model with Open-World Generalization]().
+
+### 2026/7/7
+* Fast read several robotics articles:
+    * [arxiv1909][mini-Cheetah] Fast read read a classic robotical article [Highly Dynamic Quadruped Locomotion via Whole-Body Impulse Control and Model Predictive Control]().
+    * [TOR22][TAMOLS] Fast read a classic robotical article [TAMOLS: Terrain-Aware Motion Optimization for Legged Systems]().
+
