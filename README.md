@@ -124,3 +124,5 @@ Happy (AnAnother) New Year 🥳🥳🥳
     * [arxiv1909][mini-Cheetah] Fast read read a classic robotical article [Highly Dynamic Quadruped Locomotion via Whole-Body Impulse Control and Model Predictive Control]().
     * [TOR22][TAMOLS] Fast read a classic robotical article [TAMOLS: Terrain-Aware Motion Optimization for Legged Systems]().
 
+### 2026/7/12
+* [PPO] Read a classical RL article PPO: [Proximal Policy Optimization Algorithms]().
