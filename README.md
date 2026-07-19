@@ -128,4 +128,7 @@ Happy (AnAnother) New Year 🥳🥳🥳
 * [PPO] Read a classical RL article PPO: [Proximal Policy Optimization Algorithms]().
 
 ### 2026/7/14  
-* [ICRA26] Read a VLN article StreamVLN: []().
+* [ICRA26] Read a VLN article StreamVLN: [StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling]().  
+
+### 2026/7/19  
+* [CoRL23] Read a classic VLA article RT-2: [RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control]().  
