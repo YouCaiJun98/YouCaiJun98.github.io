@@ -132,3 +132,7 @@ Happy (AnAnother) New Year 🥳🥳🥳
 
 ### 2026/7/19  
 * [CoRL23] Read a classic VLA article RT-2: [RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control]().  
+
+### 2026/7/26  
+* [OpenVLA][arxiv2406] Read a classic VLA article OpenVLA: [OpenVLA: An Open-Source Vision-Language-Action Model]().  
+
