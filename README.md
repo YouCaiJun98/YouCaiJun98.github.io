@@ -136,3 +136,6 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/7/26  
 * [OpenVLA][arxiv2406] Read a classic VLA article OpenVLA: [OpenVLA: An Open-Source Vision-Language-Action Model]().  
 
+### 2026/7/27  
+* [CLIP][ICML21] Read a classic image embedding method CLIP: [Learning Transferable Visual Models From Natural Language Supervision]().  
+
