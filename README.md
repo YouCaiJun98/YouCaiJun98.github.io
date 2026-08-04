@@ -139,3 +139,7 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/7/27  
 * [CLIP][ICML21] Read a classic image embedding method CLIP: [Learning Transferable Visual Models From Natural Language Supervision]().  
 
+### 2026/8/4  
+* [arxiv2306] Fast read an article [SayTap: Language to Quadrupedal Locomotion]().  
+
+
