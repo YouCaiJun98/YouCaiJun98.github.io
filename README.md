@@ -142,4 +142,8 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/8/4  
 * [arxiv2306] Fast read an article [SayTap: Language to Quadrupedal Locomotion]().  
 
+### 2026/8/5  
+* [arxiv2603] Fast read a related article [Watch Your Step: Learning Semantically-Guided Locomotion in Cluttered Environments]().  
+
+
 
