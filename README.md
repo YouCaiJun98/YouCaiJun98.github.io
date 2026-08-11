@@ -145,5 +145,9 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/8/5  
 * [arxiv2603] Fast read a related article [Watch Your Step: Learning Semantically-Guided Locomotion in Cluttered Environments]().  
 
+### 2026/8/10  
+* [SigLIP][ICCV23] Read a classic image embedding method SigLIP: [Sigmoid Loss for Language Image Pre-Training]().  
+
+
 
 
