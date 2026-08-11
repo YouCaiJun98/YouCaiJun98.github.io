@@ -148,6 +148,9 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/8/10  
 * [SigLIP][ICCV23] Read a classic image embedding method SigLIP: [Sigmoid Loss for Language Image Pre-Training]().  
 
+### 2026/8/11
+* [DINOv2][TMLR23] Read a classic image encoder method DINOv2: [DINOv2: Learning Robust Visual Features without Supervision]().  
+
 
 
 
