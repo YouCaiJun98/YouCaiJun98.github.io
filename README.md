@@ -151,6 +151,10 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/8/11
 * [DINOv2][TMLR23] Read a classic image encoder method DINOv2: [DINOv2: Learning Robust Visual Features without Supervision]().  
 
+### 2026/8/17  
+* [Speculative Decoding][ICML23] Read a classic LLM inference optimization work [Fast Inference from Transformers via Speculative Decoding]().  
 
+### 2026/8/20  
+* [WAM/DreamZero][arxiv2602] Read a classic WAM work [World Action Models are Zero-shot Policies]().   
 
 
