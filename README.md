@@ -157,4 +157,7 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/8/20  
 * [WAM/DreamZero][arxiv2602] Read a classic WAM work [World Action Models are Zero-shot Policies]().   
 
+### 2026/9/15  
+* [LingBot-VLA] Read a VLA work from LingBot [A Pragmatic VLA Foundation Model]().  
+
 
