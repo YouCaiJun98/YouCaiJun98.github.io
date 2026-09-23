@@ -163,3 +163,6 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/9/18  
 * [DualVLN][ICLR26] Read a classic double-system VLN work [Ground Slow, Move Fast: A Dual-System Foundation Model for Generalizable Vision-and-Language Navigation]().  
 
+### 2026/9/21  
+* [LingBot-VLA2][arxiv2607] Read a VLA work from LingBot [From Foundation to Application: Improving VLA Models in Practice]().  
+
