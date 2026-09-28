@@ -166,3 +166,7 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/9/21  
 * [LingBot-VLA2][arxiv2607] Read a VLA work from LingBot [From Foundation to Application: Improving VLA Models in Practice]().  
 
+
+
+
+
