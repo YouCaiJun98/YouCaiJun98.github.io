@@ -166,7 +166,8 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/9/21  
 * [LingBot-VLA2][arxiv2607] Read a VLA work from LingBot [From Foundation to Application: Improving VLA Models in Practice]().  
 
-
+### 2026/9/28  
+* [GR00T][arxiv2503] Read a classic VLA work by NVIDIA [GR00T N1: An Open Foundation Model for Generalist Humanoid Robots]().  
 
 
 
