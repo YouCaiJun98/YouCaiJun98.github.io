@@ -169,5 +169,8 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/9/28  
 * [GR00T][arxiv2503] Read a classic VLA work by NVIDIA [GR00T N1: An Open Foundation Model for Generalist Humanoid Robots]().  
 
+### 2026/10/16  
+* [arxiv2609] Read a whole-body-control VLA [TANGO : Humanoid Navigation in Cluttered Environments with a Whole-Body Vision-Language-Action Model]().  
+
 
 
