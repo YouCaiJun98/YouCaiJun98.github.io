@@ -172,5 +172,6 @@ Happy (AnAnother) New Year 🥳🥳🥳
 ### 2026/10/16  
 * [arxiv2609] Read a whole-body-control VLA [TANGO : Humanoid Navigation in Cluttered Environments with a Whole-Body Vision-Language-Action Model]().  
 
-
+### 2026/10/20
+* [RTC][NIPS25] Read a classic VLA enhancement method RTC [Real-Time Execution of Action Chunking Flow Policies]().  
 
